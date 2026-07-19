@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import SpecialityMenu from '../components/SpecialityMenu'
 import Doctor from '../components/Doctor'
-import Homoeopathy from '../components/Homeopathy'
+import Homeopathy from '../components/Homeopathy'
 import Banner from '../components/Banner'
 
-const home = () => {
+const Home = () => {
   return (
-    <div>
+    <div style={{ background: 'var(--navy)' }}>
       <Header />
       <SpecialityMenu />
       <Doctor />
-      <Homoeopathy/>
+      <Homeopathy />
+      <Banner />
     </div>
   )
 }
 
-export default home
+export default Home

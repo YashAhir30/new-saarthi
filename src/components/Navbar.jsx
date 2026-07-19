@@ -1,61 +1,260 @@
-import React, { useState } from 'react'
-
+import React, { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { assets } from '../assets/assets';
-const Navbar = () => {
+import { Phone, Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../context/ThemeContext'
 
-  const navigate = useNavigate();
-  const [showMenu, setShowMenu] = useState(false);
-  const [token, setToken] = useState(true);
+const NAV_LINKS = [
+  { to: '/',        label: 'Home'    },
+  { to: '/about',   label: 'About'   },
+  { to: '/contact', label: 'Contact' },
+]
+
+const Navbar = () => {
+  const navigate = useNavigate()
+  const [showMenu, setShowMenu] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const { theme, toggleTheme } = useTheme()
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = showMenu ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [showMenu])
+
+  const linkStyle = (isActive) => ({
+    position: 'relative',
+    padding: '8px 18px',
+    borderRadius: '999px',
+    fontSize: '14px',
+    fontWeight: isActive ? 600 : 500,
+    color: isActive ? `var(--white, #ffffff)` : `var(--text-muted, rgba(200,215,255,0.65))`,
+    background: isActive ? 'rgba(0,102,255,0.22)' : 'transparent',
+    border: isActive ? '1px solid rgba(0,102,255,0.35)' : '1px solid transparent',
+    transition: 'all 0.25s ease',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    display: 'inline-block',
+  })
 
   return (
-    <div className='flex items-center justify-between text-sm py-1.5 mb-5 border-b border-b-gray-400'>
-      <img src="./src/assets/logo.png" className='w-20 cursor-pointer' alt="cd" srcset="" />
-      <ul className='hidden md:flex items-center gap-5 font-semibold text-[9px]'>
-        <NavLink to='/'>
-          <li className='py-0.5'>HOME</li>
-          <hr className='border-none outline-none h-0.5 bg-gray-500 w-4/5 m-auto hidden' />
-        </NavLink>
-        <NavLink to='/about'>
-          <li className='py-0.5'>ABOUT</li>
-          <hr className='border-none outline-none h-0.5   bg-gray-500 w-4/5 m-auto hidden' />
-        </NavLink>
-        <NavLink to='/contact'>
-          <li className='py-0.5'>CONTACT</li>
-          <hr className='border-none outline-none h-0.5   bg-gray-500 w-4/5 m-auto hidden' />
-        </NavLink>
-      </ul>
-      <div className='flex items-center gap-4'>
-        {/* {
-          token
-            ? <div className='flex items-center gap-2 cursor-pointer group relative' >
-              <img src="./src/assets/profile_pic.jpg" className='w-8 rounded-full' alt="" srcset="" />
-              <img src="./src/assets/Drop-down.png" className='w-2.5' alt="" srcset="" />
-              <div className='absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block'>
-                <div className='text-[10px] min-w-30 bg-stone-100 rounded flex flex-col gap-3 p-3'>
-                  <p onClick={() => navigate('myprofile')} className='hover:text-black cursor-pointer'>My Profile</p>
-                  <p onClick={() => navigate('myappointments')} className='hover:text-black cursor-pointer'>My Appointments</p>
-                  <p onClick={() => setToken(false)} className='hover:text-black cursor-pointer'>Logout</p>
-                </div>
-              </div>
+    <>
+      {/* ── Floating Navbar ── */}
+      <nav
+        className={`navbar-glass${scrolled ? ' scrolled' : ''}`}
+        style={{
+          position: 'fixed',
+          top: scrolled ? '12px' : '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 'min(calc(100% - 40px), 1100px)',
+          zIndex: 1000,
+          padding: scrolled ? '10px 20px' : '14px 24px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          transition: 'top 0.4s ease, padding 0.4s ease',
+        }}
+      >
+        {/* Logo */}
+        <button
+          onClick={() => navigate('/')}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
+        >
+          <img
+            src="./src/assets/logo.png"
+            alt="Saarthi Homeopathy"
+            style={{ height: scrolled ? '34px' : '40px', width: 'auto', transition: 'height 0.4s ease' }}
+          />
+        </button>
+
+        {/* Desktop Links */}
+        <ul
+          className="desktop-nav"
+          style={{ display: 'none', alignItems: 'center', gap: '4px', listStyle: 'none', margin: 0, padding: 0 }}
+        >
+          {NAV_LINKS.map(({ to, label }) => (
+            <NavLink key={to} to={to} style={{ textDecoration: 'none' }}>
+              {({ isActive }) => (
+                <li style={linkStyle(isActive)}>
+                  {label}
+                  {isActive && (
+                    <span style={{
+                      position: 'absolute', bottom: '5px', left: '50%', transform: 'translateX(-50%)',
+                      width: '5px', height: '5px', borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #0066FF, #00D4FF)',
+                      boxShadow: '0 0 6px rgba(0,212,255,0.8)',
+                    }} />
+                  )}
+                </li>
+              )}
+            </NavLink>
+          ))}
+        </ul>
+
+        {/* CTA + Hamburger */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <a
+            href="tel:8733905727"
+            className="btn-primary"
+            style={{ fontSize: '13px', padding: '10px 22px', textDecoration: 'none' }}
+            id="nav-call-btn"
+          >
+            <Phone size={14} />
+            Call Us
+          </a>
+
+          <button
+            onClick={toggleTheme}
+            style={{
+              background: `var(--glass-light, rgba(255,255,255,0.06))`,
+              border: '1px solid rgba(255,255,255,0.12)',
+              borderRadius: '14px',
+              padding: '9px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              color: `var(--text-muted, rgba(200,215,255,0.80))`,
+              transition: 'all 0.5s ease',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transform: theme === 'dark' ? 'translateY(0)' : 'translateY(30px)',
+              opacity: theme === 'dark' ? 1 : 0,
+              transition: 'all 0.5s cubic-bezier(0.23,1,0.32,1)',
+              position: theme === 'dark' ? 'relative' : 'absolute',
+            }}>
+              <Moon size={20} />
             </div>
-            : <button onClick={() => navigate('/login')} className='bg-cyan-600 text-white py-2 px-4 rounded-full font-light hidden md:block text-[10px]'>Create Account</button>
-        } */}
-        <img onClick={() => setShowMenu(true)} className='w-6 md:hidden' src={assets.menu_icon} alt="" srcset="" />
-        {/* Mobile menu */}
-        <div className={`${showMenu ? 'fixed w-full' : 'h-0 w-0'} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white  transtion-all duration-70 `}>
-          <div className='flex items-center justify-between px-3 py-4'>
-            <img className='w-20' src="./src/assets/logo.png" alt="" srcset="" />
-            <img className='w-7' onClick={() => setShowMenu(false)} src={assets.cross_icon} alt="" srcset="" />
-          </div>
-          <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
-            <NavLink onClick={() => setShowMenu(false)} to='/'><p className='px-4 py-2 rounded inline-block ' >Home</p></NavLink>
-            <NavLink onClick={() => setShowMenu(false)} to='/about'><p className='px-4 py-2 rounded inline-block ' >About</p></NavLink>
-            <NavLink onClick={() => setShowMenu(false)} to='/contact'><p className='px-4 py-2 rounded inline-block ' >Contact</p></NavLink>
-          </ul>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transform: theme === 'light' ? 'translateY(0)' : 'translateY(-30px)',
+              opacity: theme === 'light' ? 1 : 0,
+              transition: 'all 0.5s cubic-bezier(0.23,1,0.32,1)',
+              position: theme === 'light' ? 'relative' : 'absolute',
+            }}>
+              <Sun size={20} />
+            </div>
+          </button>
+
+          <button
+            onClick={() => setShowMenu(true)}
+            id="nav-hamburger"
+            style={{
+              background: `var(--glass-light, rgba(255,255,255,0.06))`,
+              border: '1px solid rgba(255,255,255,0.12)',
+              borderRadius: '14px',
+              padding: '9px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              color: `var(--text-muted, rgba(200,215,255,0.80))`,
+              transition: 'all 0.25s ease',
+            }}
+          >
+            <Menu size={20} />
+          </button>
+        </div>
+      </nav>
+
+      {/* ── Mobile Full-Screen Menu ── */}
+      <div
+        className="mobile-nav-overlay"
+        style={{
+          position: 'fixed', inset: 0, zIndex: 2000,
+          display: 'flex', flexDirection: 'column', padding: '28px 24px',
+          transform: showMenu ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.45s cubic-bezier(0.23,1,0.32,1)',
+        }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>
+          <img src="./src/assets/logo.png" alt="Saarthi" style={{ height: '38px' }} />
+          <button onClick={() => setShowMenu(false)} style={{
+            background: `var(--glass-light, rgba(255,255,255,0.06))`,
+            border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: '14px', padding: '9px',
+            cursor: 'pointer', color: `var(--text-muted, rgba(200,215,255,0.80))`,
+          }}>
+            <X size={22} />
+          </button>
+        </div>
+
+        <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {NAV_LINKS.map(({ to, label }, i) => (
+            <NavLink key={to} to={to} onClick={() => setShowMenu(false)} style={{ textDecoration: 'none' }}>
+              {({ isActive }) => (
+                <div style={{
+                  padding: '20px 24px',
+                  borderRadius: '16px',
+                  fontSize: '22px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 700,
+                  color: isActive ? `var(--white, #ffffff)` : `var(--text-muted, rgba(200,215,255,0.6))`,
+                  background: isActive ? 'rgba(0,102,255,0.15)' : 'transparent',
+                  borderLeft: isActive ? '3px solid #0066FF' : '3px solid transparent',
+                  transition: 'all 0.25s ease',
+                  animation: `fade-up 0.5s ease ${i * 0.08}s both`,
+                }}>
+                  {label}
+                </div>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <button
+            onClick={toggleTheme}
+            style={{
+              background: `var(--glass-light, rgba(255,255,255,0.06))`,
+              border: '1px solid rgba(255,255,255,0.12)',
+              borderRadius: '16px',
+              padding: '16px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              color: `var(--white, #ffffff)`,
+              fontSize: '18px',
+              fontWeight: 600,
+              fontFamily: 'var(--font-display)',
+              transition: 'all 0.5s ease',
+            }}
+          >
+            {theme === 'dark' ? <><Moon size={20} /> Switch to Light Mode</> : <><Sun size={20} /> Switch to Dark Mode</>}
+          </button>
+
+          <a
+            href="tel:8733905727"
+            className="btn-primary"
+            onClick={() => setShowMenu(false)}
+            style={{ width: '100%', justifyContent: 'center', padding: '18px', fontSize: '17px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}
+          >
+            <Phone size={18} />
+            Call Us Now
+          </a>
         </div>
       </div>
-    </div>
+
+      <style>{`
+        @media (min-width: 768px) {
+          .desktop-nav { display: flex !important; }
+          #nav-hamburger { display: none !important; }
+        }
+      `}</style>
+    </>
   )
 }
 

@@ -1,89 +1,138 @@
 import React, { useState } from 'react'
-
+import { Camera, Mail, Phone, MapPin, User, Calendar, Save, Edit3 } from 'lucide-react'
 
 const MyProfile = () => {
-
   const [userData, setUserData] = useState({
-    name: "Yogin Baldaniya",
-    image: "./src/assets/yoginAppoinment.jpg",
-    email: "yoginbaldaniya30@gmail.com",
-    phone: "+91 8238905727",
-    address: {
-      line1: "51,nandanvan row house",
-      line2: "surat,gujarat,india",
-
-    },
+    name: 'Yogin Baldaniya',
+    image: './src/assets/yoginAppoinment.jpg',
+    email: 'yoginbaldaniya30@gmail.com',
+    phone: '+91 8238905727',
+    address: { line1: '51, nandanvan row house', line2: 'surat, gujarat, india' },
     gender: 'Male',
     dob: '2000-10-30',
   })
+  const [isEdit, setIsEdit] = useState(false)
 
-  const [isEdit, setIsEdit] = useState(true)
+  const inp = {
+    background: 'rgba(255,255,255,0.04)',
+    border: `1px solid var(--glass-border)`,
+    borderRadius: '12px',
+    padding: '12px 16px',
+    color: `var(--white, #ffffff)`,
+    fontFamily: 'var(--font-body)',
+    fontSize: '14px',
+    fontWeight: 500,
+    outline: 'none',
+    width: '100%',
+    transition: 'all 0.3s ease',
+  }
+  const foc = (e) => {
+    e.target.style.borderColor = 'rgba(0,102,255,0.60)'
+    e.target.style.boxShadow = '0 0 0 3px rgba(0,102,255,0.10)'
+    e.target.style.background = 'rgba(255,255,255,0.07)'
+  }
+  const bl = (e) => {
+    e.target.style.borderColor = `var(--glass-strong, rgba(255,255,255,0.10))`
+    e.target.style.boxShadow = 'none'
+    e.target.style.background = 'rgba(255,255,255,0.04)'
+  }
+
+  const InfoRow = ({ icon: Icon, label, children }) => (
+    <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start', padding: '16px 0', borderBottom: `1px solid var(--glass-border)` }}>
+      <div style={{ flexShrink: 0, width: '36px', height: '36px', borderRadius: '12px', background: `var(--glass-light, rgba(0,102,255,0.12))`, border: `1px solid var(--glass-border-hi)`, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '2px' }}>
+        <Icon size={15} color="var(--cyan)" />
+      </div>
+      <div style={{ flex: 1 }}>
+        <p style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>{label}</p>
+        {children}
+      </div>
+    </div>
+  )
+
   return (
-    <div className='max-w-lg flex flex-col gap-2 text-sm'>
-        <img className='w-36 rounded' src={userData.image} alt="" srcset="" />
-        {
-          isEdit
-            ? <input className='bg-gray-50 text-3xl font-medium max-w-60 mt-4' type="text" value={userData.name} onChange={e => setUserData(prev => ({ ...prev, name: e.target.value }))} />
-            : <p className='font-medium text-3xl text-neutral-800 mt-4'>{userData.name}</p>
-        }  
-      <hr className='bg-zinc-400 h-[1px] border-none' />
-      <div>
-        <p className='text-neutral-500 underline mt-3'>CONTACT INFORMATION</p>
-        <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
-          <p className='font-medium '>Email id:</p>
-          <p className='text-blue-400'>{userData.email}</p>
-          <p className='font-medium'>Phone:</p>
-          {
-            isEdit
-              ? <input className='bg-gray-100 max-w-52' type="text" value={userData.phone} onChange={e => setUserData(prev => ({ ...prev, phone: e.target.value }))} />
-              : <p className='text-blue-300'>{userData.phone}</p>
-          }
-          <p className='font-medium'>Address:</p>
-          {
-            isEdit
-              ? <p>
-                <input className='bg-gray-50' onChange={(e) => setUserData(prev => ({ ...prev, address: { ...prev.address, line1: e.target.value } }))} value={userData.address.line1} type="text" />
-                <br />
-                <input className='bg-gray-50' onChange={(e) => setUserData(prev => ({ ...prev, address: { ...prev.address, line2: e.target.value } }))} value={userData.address.line2} type="text" />
+    <div style={{ background: 'var(--navy)', paddingTop: '80px', minHeight: '100vh' }}>
+      <div aria-hidden style={{ position: 'fixed', top: '20%', left: '50%', transform: 'translateX(-50%)', width: 600, height: 500, borderRadius: '50%', background: `var(--mesh-color-2, radial-gradient(ellipse, rgba(0,102,255, 0.1), transparent 65%))`, filter: 'blur(90px)', pointerEvents: 'none', zIndex: 0 }} />
 
-              </p>
+      <div style={{ maxWidth: '680px', margin: '0 auto', padding: 'clamp(40px,5vw,60px) clamp(20px,5vw,40px)', position: 'relative', zIndex: 1, animation: 'fade-up 0.7s ease 0.1s both' }}>
 
-              : <p className='text-gray-500' >{userData.address.line1}
-                <br />
-                {userData.address.line2}
-              </p>
-          }
-        </div>
-        <div>
-          <p className='text-neutral-500 underline mt-3'>BASIC INFORMATION</p>
-          <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
-            <p className='font-medium' >Gender:</p>
-            {
-              isEdit
-                ? <select className='max-w-20 bg-gray-100' onChange={(e) => setUserData(prev => ({ ...prev, gender: e.target.value }))} value={userData.gender}>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                </select>
-                : <p className='text-gray-400'>{userData.gender}</p>
-            }
-            <p className='font-medium'>Birthday:</p>
-            {
-              isEdit
-              ?<input className='max-w-28 bg-gray-100 ' type="date"  onChange={(e) => setUserData(prev => ({ ...prev, dob: e.target.value }))} value={userData.dob}/>
-              : <p className='text-gray-400'>{userData.dob}</p>
-             
-            }
+        {/* Profile header */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '24px', marginBottom: '36px' }}>
+          <div style={{ position: 'relative', flexShrink: 0 }}>
+            <div style={{ width: '100px', height: '100px', borderRadius: '50%', padding: '4px', background: 'linear-gradient(135deg, #0066FF, #00D4FF)', boxShadow: '0 0 0 4px rgba(0,102,255,0.15), 0 12px 30px rgba(0,102,255,0.25)' }}>
+              <img src={userData.image} alt={userData.name} style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
+            </div>
+            {isEdit && (
+              <div style={{ position: 'absolute', bottom: '2px', right: '2px', width: '30px', height: '30px', borderRadius: '50%', background: 'linear-gradient(135deg, #0066FF, #00D4FF)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,102,255,0.40)' }}>
+                <Camera size={14} color={`var(--white, #ffffff)`} />
+              </div>
+            )}
           </div>
-        </div >
-        <div className='mt-10'>
-          {
-            isEdit
-            ?<button className='border border-cyan-700 px-8 py-2 rounded-full hover:bg-cyan-700 hover:text-white transition-all' onClick={()=>setIsEdit(false)}>Save Information</button>
-            :<button className='border border-cyan-700 px-8 py-2 rounded-full hover:bg-cyan-700 hover:text-white transition-all' onClick={()=>setIsEdit(true)}>Edit</button>
-          }
+          <div style={{ flex: 1 }}>
+            {isEdit ? (
+              <input type="text" value={userData.name} onChange={e => setUserData(p => ({ ...p, name: e.target.value }))} style={{ ...inp, fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, marginBottom: '4px', padding: '10px 16px' }} onFocus={foc} onBlur={bl} />
+            ) : (
+              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '4px' }}>{userData.name}</h1>
+            )}
+            <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Saarthi Homeopathy Patient</p>
+          </div>
+          <button
+            onClick={() => setIsEdit(!isEdit)}
+            className={isEdit ? 'btn-primary' : 'btn-ghost'}
+            style={{ padding: '10px 22px', fontSize: '14px' }}
+          >
+            {isEdit ? <><Save size={14} /> Save</> : <><Edit3 size={14} /> Edit</>}
+          </button>
+        </div>
+
+        {/* Info card */}
+        <div className="glass-card" style={{ padding: '8px 28px' }}>
+          <p style={{ fontSize: '12px', fontWeight: 700, color: 'var(--cyan)', letterSpacing: '2px', textTransform: 'uppercase', padding: '20px 0 4px' }}>Contact Information</p>
+
+          <InfoRow icon={Mail} label="Email">
+            <p style={{ fontSize: '14px', color: `var(--text-muted, #7dd3fc)` }}>{userData.email}</p>
+          </InfoRow>
+
+          <InfoRow icon={Phone} label="Phone">
+            {isEdit ? (
+              <input type="tel" value={userData.phone} onChange={e => setUserData(p => ({ ...p, phone: e.target.value }))} style={inp} onFocus={foc} onBlur={bl} />
+            ) : (
+              <p style={{ fontSize: '14px', color: `var(--text-muted, #7dd3fc)` }}>{userData.phone}</p>
+            )}
+          </InfoRow>
+
+          <InfoRow icon={MapPin} label="Address">
+            {isEdit ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <input type="text" value={userData.address.line1} onChange={e => setUserData(p => ({ ...p, address: { ...p.address, line1: e.target.value } }))} style={inp} onFocus={foc} onBlur={bl} />
+                <input type="text" value={userData.address.line2} onChange={e => setUserData(p => ({ ...p, address: { ...p.address, line2: e.target.value } }))} style={inp} onFocus={foc} onBlur={bl} />
+              </div>
+            ) : (
+              <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6 }}>{userData.address.line1}<br />{userData.address.line2}</p>
+            )}
+          </InfoRow>
+
+          <p style={{ fontSize: '12px', fontWeight: 700, color: 'var(--cyan)', letterSpacing: '2px', textTransform: 'uppercase', padding: '20px 0 4px' }}>Basic Information</p>
+
+          <InfoRow icon={User} label="Gender">
+            {isEdit ? (
+              <select value={userData.gender} onChange={e => setUserData(p => ({ ...p, gender: e.target.value }))} style={{ ...inp, width: 'auto' }} onFocus={foc} onBlur={bl}>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            ) : (
+              <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>{userData.gender}</p>
+            )}
+          </InfoRow>
+
+          <InfoRow icon={Calendar} label="Date of Birth">
+            {isEdit ? (
+              <input type="date" value={userData.dob} onChange={e => setUserData(p => ({ ...p, dob: e.target.value }))} style={{ ...inp, width: 'auto', colorScheme: 'dark' }} onFocus={foc} onBlur={bl} />
+            ) : (
+              <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>{userData.dob}</p>
+            )}
+          </InfoRow>
         </div>
       </div>
-
     </div>
   )
 }
