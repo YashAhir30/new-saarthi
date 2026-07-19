@@ -244,12 +244,7 @@ const Header = () => {
               animation: 'float-gentle 8s ease-in-out infinite',
             }}
           >
-            {/* Rim light */}
-            <div aria-hidden style={{
-              position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none',
-              background: 'linear-gradient(115deg, rgba(255,255,255,0.08) 0%, transparent 55%)',
-              borderRadius: '8px',
-            }} />
+
             <img
               src={assets.header_img}
               alt="Dr. Yogin Baldaniya"

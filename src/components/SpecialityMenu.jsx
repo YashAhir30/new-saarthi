@@ -3,6 +3,7 @@ import { specialityData } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
 import { Stethoscope, ArrowRight } from 'lucide-react'
 import ScrollReveal from './animations/ScrollReveal'
+import { useTheme } from '../context/ThemeContext'
 
 /* Vanilla JS tilt effect — no deps */
 const useTilt = () => {
@@ -65,7 +66,11 @@ const TiltCard = ({ item, index }) => {
       }}>
         <img src={item.image} alt={item.speciality} style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
       </div>
-      <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 700, color: `var(--text-muted, rgba(200,215,255,0.90))`, lineHeight: 1.4, margin: 0 }}>
+      <p style={{ 
+        fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 700, 
+        color: `var(--text-muted, rgba(200,215,255,0.90))`, lineHeight: 1.4, margin: 0,
+        height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center'
+      }}>
         {item.speciality}
       </p>
     </div>
@@ -74,6 +79,7 @@ const TiltCard = ({ item, index }) => {
 
 const SpecialityMenu = () => {
   const navigate = useNavigate()
+  const { theme } = useTheme()
   return (
     <section id="speciality" style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,5vw,60px)', position: 'relative', overflow: 'hidden' }}>
 
@@ -119,7 +125,11 @@ const SpecialityMenu = () => {
 
         {/* View all CTA */}
         <ScrollReveal delay={0.4} style={{ textAlign: 'center', marginTop: '48px' }}>
-          <button onClick={() => navigate('/contact')} className="btn-outline">
+          <button 
+            onClick={() => navigate('/contact')} 
+            className="btn-outline"
+            style={{ color: theme === 'light' ? '#0F172A' : '#ffffff' }}
+          >
             Book for Any Condition <ArrowRight size={16} />
           </button>
         </ScrollReveal>

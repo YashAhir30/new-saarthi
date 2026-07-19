@@ -6,10 +6,12 @@ import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 import Fotter from './components/Fotter'
 import { AppProvider } from './context/AppProvider'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
     <AppProvider>
+      <ScrollToTop />
       <Navbar />
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Routes>
