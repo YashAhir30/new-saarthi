@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { Phone, Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
-
+import { assets } from "../assets/assets";
 const NAV_LINKS = [
-  { to: '/',        label: 'Home'    },
-  { to: '/about',   label: 'About'   },
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -66,9 +66,13 @@ const Navbar = () => {
           style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}
         >
           <img
-            src="./src/assets/logo.png"
+            src={assets.logo}
             alt="Saarthi Homeopathy"
-            style={{ height: scrolled ? '34px' : '40px', width: 'auto', transition: 'height 0.4s ease' }}
+            style={{
+              height: scrolled ? "34px" : "40px",
+              width: "auto",
+              transition: "height 0.4s ease",
+            }}
           />
         </button>
 
@@ -170,21 +174,27 @@ const Navbar = () => {
 
       {/* ── Mobile Full-Screen Menu ── */}
       <div
-        className="mobile-nav-overlay"
+        className={`mobile-nav-overlay ${theme === 'light' ? 'bg-[#f8fbff] text-[#0f172a]' : 'bg-[#081423] text-white'}`}
         style={{
           position: 'fixed', inset: 0, zIndex: 2000,
           display: 'flex', flexDirection: 'column', padding: '28px 24px',
           transform: showMenu ? 'translateX(0)' : 'translateX(100%)',
-          transition: 'transform 0.45s cubic-bezier(0.23,1,0.32,1)',
+          transition: 'all 0.45s cubic-bezier(0.23,1,0.32,1)',
+          background: theme === 'light' ? '#f8fbff' : 'rgba(5,13,26,0.97)',
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>
-          <img src="./src/assets/logo.png" alt="Saarthi" style={{ height: '38px' }} />
+          <img
+            src={assets.logo}
+            alt="Saarthi"
+            style={{ height: "38px" }}
+          />
           <button onClick={() => setShowMenu(false)} style={{
-            background: `var(--glass-light, rgba(255,255,255,0.06))`,
-            border: '1px solid rgba(255,255,255,0.12)',
+            background: theme === 'light' ? '#ffffff' : `var(--glass-light, rgba(255,255,255,0.06))`,
+            border: theme === 'light' ? '1px solid #dbeafe' : '1px solid rgba(255,255,255,0.12)',
             borderRadius: '14px', padding: '9px',
-            cursor: 'pointer', color: `var(--text-muted, rgba(200,215,255,0.80))`,
+            cursor: 'pointer', color: theme === 'light' ? '#0f172a' : `var(--text-muted, rgba(200,215,255,0.80))`,
+            boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
           }}>
             <X size={22} />
           </button>
@@ -200,9 +210,15 @@ const Navbar = () => {
                   fontSize: '22px',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 700,
-                  color: isActive ? `var(--white, #ffffff)` : `var(--text-muted, rgba(200,215,255,0.6))`,
-                  background: isActive ? 'rgba(0,102,255,0.15)' : 'transparent',
-                  borderLeft: isActive ? '3px solid #0066FF' : '3px solid transparent',
+                  color: isActive 
+                    ? (theme === 'light' ? '#0284c7' : '#ffffff') 
+                    : (theme === 'light' ? '#475569' : 'rgba(200,215,255,0.6)'),
+                  background: isActive 
+                    ? (theme === 'light' ? '#e0f2fe' : 'rgba(0,102,255,0.15)') 
+                    : 'transparent',
+                  borderLeft: isActive 
+                    ? (theme === 'light' ? '3px solid #0284c7' : '3px solid #0066FF') 
+                    : '3px solid transparent',
                   transition: 'all 0.25s ease',
                   animation: `fade-up 0.5s ease ${i * 0.08}s both`,
                 }}>
@@ -217,8 +233,8 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             style={{
-              background: `var(--glass-light, rgba(255,255,255,0.06))`,
-              border: '1px solid rgba(255,255,255,0.12)',
+              background: theme === 'light' ? '#ffffff' : `var(--glass-light, rgba(255,255,255,0.06))`,
+              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid rgba(255,255,255,0.12)',
               borderRadius: '16px',
               padding: '16px',
               cursor: 'pointer',
@@ -226,7 +242,8 @@ const Navbar = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '12px',
-              color: `var(--white, #ffffff)`,
+              color: theme === 'light' ? '#0284c7' : `var(--white, #ffffff)`,
+              boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
               fontSize: '18px',
               fontWeight: 600,
               fontFamily: 'var(--font-display)',

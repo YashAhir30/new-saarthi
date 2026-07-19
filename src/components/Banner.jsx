@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, Phone, CalendarDays } from 'lucide-react'
 import ScrollReveal from './animations/ScrollReveal'
+import { assets } from "../assets/assets";
 
 const Banner = () => {
   const navigate = useNavigate()
@@ -83,9 +84,14 @@ const Banner = () => {
                   maxWidth: '380px', width: '100%',
                 }}>
                   <img
-                    src="./src/assets/appointment_img.png"
+                    src={assets.appointment_img}
                     alt="Book appointment"
-                    style={{ width: '100%', height: '260px', objectFit: 'cover', display: 'block' }}
+                    style={{
+                      width: "100%",
+                      height: "260px",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
                   />
                   {/* glass overlay card */}
                   <div style={{

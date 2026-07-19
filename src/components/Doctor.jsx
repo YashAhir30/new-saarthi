@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { BadgeCheck, Star, GraduationCap, UserCheck, CalendarDays, Award } from 'lucide-react'
 import ScrollReveal from './animations/ScrollReveal'
-
+import profilePic from "../assets/profile_pic.JPG";
 /* Animated number counter */
 const AnimatedCounter = ({ target, suffix = '', duration = 2000 }) => {
   const ref = useRef(null)
@@ -41,10 +41,10 @@ const Ring = ({ size, delay, color = 'rgba(0,102,255,0.20)', dashed }) => (
 )
 
 const statItems = [
-  { icon: Star,          label: 'Happy Patients',      value: 5000, suffix: '+' },
-  { icon: Award,         label: 'Years of Excellence', value: 10,   suffix: '+' },
-  { icon: BadgeCheck,    label: 'Success Rate',        value: 98,   suffix: '%' },
-  { icon: UserCheck,     label: 'Recoveries',          value: 4800, suffix: '+' },
+  { icon: Star, label: 'Happy Patients', value: 5000, suffix: '+' },
+  { icon: Award, label: 'Years of Excellence', value: 10, suffix: '+' },
+  { icon: BadgeCheck, label: 'Success Rate', value: 98, suffix: '%' },
+  { icon: UserCheck, label: 'Recoveries', value: 4800, suffix: '+' },
 ]
 
 const Doctor = () => {
@@ -98,11 +98,15 @@ const Doctor = () => {
               boxShadow: '0 0 0 1px rgba(0,102,255,0.15), 0 24px 60px rgba(0,102,255,0.25)',
             }}>
               <img
-                src="./src/assets/profile_pic.jpg"
+                src={profilePic}
                 alt="Dr. Yogin Baldaniya"
                 style={{
-                  width: '280px', height: '280px', objectFit: 'cover', borderRadius: '50%', display: 'block',
-                  filter: 'drop-shadow(0 12px 40px rgba(0,102,255,0.30))',
+                  width: "280px",
+                  height: "280px",
+                  objectFit: "cover",
+                  borderRadius: "50%",
+                  display: "block",
+                  filter: "drop-shadow(0 12px 40px rgba(0,102,255,0.30))",
                 }}
               />
             </div>
