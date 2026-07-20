@@ -155,16 +155,16 @@ const Navbar = () => {
           <button
             onClick={() => setShowMenu(true)}
             id="nav-hamburger"
+            className={theme === 'light' ? 'mobile-menu-btn-light' : ''}
             style={{
-              background: theme === 'light' ? 'var(--text-main)' : `var(--glass-light, var(--glass-light))`,
-              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid var(--glass-border)',
+              background: `var(--glass-light, var(--glass-light))`,
+              border: '1px solid var(--glass-border)',
               borderRadius: '14px',
               padding: '9px',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              color: theme === 'light' ? '#0f172a' : 'var(--text-muted)',
-              boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
+              color: 'var(--text-muted)',
               transition: 'all 0.25s ease',
             }}
           >
@@ -175,13 +175,13 @@ const Navbar = () => {
 
       {/* ── Mobile Full-Screen Menu ── */}
       <div
-        className="mobile-nav-overlay"
+        className={`mobile-nav-overlay ${theme === 'light' ? 'mobile-drawer-light' : ''}`}
         style={{
           position: 'fixed', inset: 0, zIndex: 2000,
           display: 'flex', flexDirection: 'column', padding: '28px 24px',
           transform: showMenu ? 'translateX(0)' : 'translateX(100%)',
           transition: 'all 0.45s cubic-bezier(0.23,1,0.32,1)',
-          background: theme === 'light' ? 'rgba(248, 251, 255, 0.95)' : 'rgba(5, 13, 26, 0.97)',
+          background: theme === 'dark' ? 'rgba(5, 13, 26, 0.97)' : undefined,
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>
@@ -190,12 +190,12 @@ const Navbar = () => {
             alt="Saarthi"
             style={{ height: "38px" }}
           />
-          <button onClick={() => setShowMenu(false)} style={{
-            background: theme === 'light' ? 'var(--text-main)' : `var(--glass-light, var(--glass-light))`,
-            border: theme === 'light' ? '1px solid #dbeafe' : '1px solid var(--glass-border)',
+          <button onClick={() => setShowMenu(false)} className={theme === 'light' ? 'mobile-menu-btn-light' : ''} style={{
+            background: `var(--glass-light, var(--glass-light))`,
+            border: '1px solid var(--glass-border)',
             borderRadius: '14px', padding: '9px',
-            cursor: 'pointer', color: theme === 'light' ? '#0f172a' : 'var(--text-muted)',
-            boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
+            cursor: 'pointer', color: 'var(--text-muted)',
+            transition: 'all 0.25s ease',
           }}>
             <X size={22} />
           </button>
@@ -205,21 +205,17 @@ const Navbar = () => {
           {NAV_LINKS.map(({ to, label }, i) => (
             <NavLink key={to} to={to} onClick={() => setShowMenu(false)} style={{ textDecoration: 'none' }}>
               {({ isActive }) => (
-                <div style={{
+                <div 
+                  className={theme === 'light' ? `mobile-nav-link-light ${isActive ? 'active' : ''}` : ''}
+                  style={{
                   padding: '20px 24px',
                   borderRadius: '16px',
                   fontSize: '22px',
                   fontFamily: 'var(--font-display)',
                   fontWeight: 700,
-                  color: isActive 
-                    ? (theme === 'light' ? '#0284c7' : 'var(--text-main)') 
-                    : (theme === 'light' ? '#475569' : 'rgba(200,215,255,0.6)'),
-                  background: isActive 
-                    ? (theme === 'light' ? '#e0f2fe' : 'rgba(0,102,255,0.15)') 
-                    : 'transparent',
-                  borderLeft: isActive 
-                    ? (theme === 'light' ? '3px solid #0284c7' : '3px solid #0066FF') 
-                    : '3px solid transparent',
+                  color: theme === 'dark' ? (isActive ? 'var(--text-main)' : 'rgba(200,215,255,0.6)') : undefined,
+                  background: theme === 'dark' ? (isActive ? 'rgba(0,102,255,0.15)' : 'transparent') : undefined,
+                  borderLeft: theme === 'dark' ? (isActive ? '3px solid #0066FF' : '3px solid transparent') : undefined,
                   transition: 'all 0.25s ease',
                   animation: `fade-up 0.5s ease ${i * 0.08}s both`,
                 }}>
@@ -233,9 +229,10 @@ const Navbar = () => {
         <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <button
             onClick={toggleTheme}
+            className={theme === 'light' ? 'theme-btn-light' : ''}
             style={{
-              background: theme === 'light' ? 'var(--text-main)' : `var(--glass-light, var(--glass-light))`,
-              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid var(--glass-border)',
+              background: `var(--glass-light, var(--glass-light))`,
+              border: '1px solid var(--glass-border)',
               borderRadius: '16px',
               padding: '16px',
               cursor: 'pointer',
@@ -243,8 +240,7 @@ const Navbar = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '12px',
-              color: theme === 'light' ? '#0284c7' : 'var(--text-main)',
-              boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
+              color: 'var(--text-main)',
               fontSize: '18px',
               fontWeight: 600,
               fontFamily: 'var(--font-display)',
@@ -256,7 +252,7 @@ const Navbar = () => {
 
           <a
             href="tel:8733905727"
-            className="btn-primary"
+            className={theme === 'light' ? 'call-btn-light' : 'btn-primary'}
             onClick={() => setShowMenu(false)}
             style={{ width: '100%', justifyContent: 'center', padding: '18px', fontSize: '17px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}
           >
@@ -270,6 +266,59 @@ const Navbar = () => {
         @media (min-width: 768px) {
           .desktop-nav { display: flex !important; }
           #nav-hamburger { display: none !important; }
+        }
+        .mobile-menu-btn-light {
+          background: #ffffff !important;
+          border: 1px solid #e2e8f0 !important;
+          color: #0f172a !important;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+        }
+        .mobile-menu-btn-light:hover {
+          background: #f8fafc !important;
+          border-color: #3b82f6 !important;
+          color: #2563eb !important;
+        }
+        .mobile-drawer-light {
+          background: rgba(255, 255, 255, 0.96) !important;
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border-left: 1px solid #e2e8f0;
+          box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+        }
+        .mobile-nav-link-light {
+          color: #334155 !important;
+          border-left: 3px solid transparent !important;
+        }
+        .mobile-nav-link-light:hover {
+          background: #f8fafc !important;
+          color: #0284c7 !important;
+        }
+        .mobile-nav-link-light.active {
+          background: #e0f2fe !important;
+          border-left: 3px solid #0284c7 !important;
+          color: #0284c7 !important;
+        }
+        .theme-btn-light {
+          background: linear-gradient(135deg, #0ea5e9, #38bdf8) !important;
+          color: #ffffff !important;
+          border: none !important;
+          box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
+        }
+        .theme-btn-light:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4) !important;
+        }
+        .call-btn-light {
+          background: linear-gradient(135deg, #0ea5e9, #38bdf8) !important;
+          border-radius: 9999px !important;
+          color: #ffffff !important;
+          border: none !important;
+          box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
+          transition: all 0.3s ease;
+        }
+        .call-btn-light:hover {
+          box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4) !important;
+          transform: translateY(-2px);
         }
       `}</style>
     </>
