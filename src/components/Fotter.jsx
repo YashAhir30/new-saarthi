@@ -25,24 +25,24 @@ const SocialBtn = ({ href, icon: Icon, label, color }) => (
     aria-label={label}
     style={{
       width: '44px', height: '44px', borderRadius: '14px',
-      background: 'rgba(255,255,255,0.05)',
+      background: 'var(--glass-light)',
       border: `1px solid var(--glass-border)`,
       display: 'flex', alignItems: 'center', justifyContent: 'center',
-      color: `var(--text-muted, rgba(200,215,255,0.60))`,
+      color: 'var(--text-muted)',
       transition: 'all 0.3s ease',
       cursor: 'pointer', textDecoration: 'none',
     }}
     onMouseEnter={e => {
       e.currentTarget.style.background = color || 'rgba(0,102,255,0.15)'
       e.currentTarget.style.borderColor = 'rgba(0,102,255,0.40)'
-      e.currentTarget.style.color = `var(--white, #ffffff)`
+      e.currentTarget.style.color = 'var(--text-main)'
       e.currentTarget.style.transform = 'translateY(-3px)'
       e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,102,255,0.25)'
     }}
     onMouseLeave={e => {
-      e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
-      e.currentTarget.style.borderColor = `var(--glass-strong, rgba(255,255,255,0.10))`
-      e.currentTarget.style.color = `var(--text-muted, rgba(200,215,255,0.60))`
+      e.currentTarget.style.background = 'var(--glass-light)'
+      e.currentTarget.style.borderColor = `var(--glass-strong, var(--glass-border))`
+      e.currentTarget.style.color = 'var(--text-muted)'
       e.currentTarget.style.transform = 'translateY(0)'
       e.currentTarget.style.boxShadow = 'none'
     }}
@@ -82,7 +82,7 @@ const Fotter = () => {
           <div style={{ gridColumn: 'span 1' }}>
             <img
               src={assets.logo}
-              alt="Saarthi Homeopathy"
+              alt="Saarthi Homoeopathy"
               style={{
                 height: '48px',
                 width: 'auto',
@@ -91,7 +91,7 @@ const Fotter = () => {
               }}
             />
             <p style={{ fontSize: '14px', lineHeight: 1.8, color: 'var(--text-muted)', maxWidth: '260px', marginBottom: '24px' }}>
-              Trusted homeopathic healing with a modern, personalised approach. Your wellness is our mission.
+              Trusted homoeopathic healing with a modern, personalised approach. Your wellness is our mission.
             </p>
             <div style={{ display: 'flex', gap: '10px' }}>
               <SocialBtn href="https://www.instagram.com/saarthihomoeopathy/" icon={InstagramIcon} label="Instagram" />
@@ -102,7 +102,7 @@ const Fotter = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '13px', fontWeight: 700, color: `var(--white, #ffffff)`, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px' }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '13px', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px' }}>
               Quick Links
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -129,7 +129,7 @@ const Fotter = () => {
 
           {/* Contact */}
           <div>
-            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '13px', fontWeight: 700, color: `var(--white, #ffffff)`, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px' }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '13px', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px' }}>
               Contact
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -157,7 +157,7 @@ const Fotter = () => {
 
           {/* Hours */}
           <div>
-            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '13px', fontWeight: 700, color: `var(--white, #ffffff)`, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px' }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '13px', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px' }}>
               Hours
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -166,8 +166,8 @@ const Fotter = () => {
                 { day: 'Sunday', time: '10:00 AM – 1:00 PM', open: true },
                 { day: 'Emergency', time: 'WhatsApp 24/7', open: true },
               ].map(({ day, time, open }, i) => (
-                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', padding: '10px 14px', borderRadius: '10px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                  <span style={{ fontSize: '13px', fontWeight: 600, color: `var(--text-muted, rgba(200,215,255,0.80))` }}>{day}</span>
+                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', padding: '10px 14px', borderRadius: '10px', background: 'var(--glass-light)', border: '1px solid var(--glass-light)' }}>
+                  <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-muted)' }}>{day}</span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: `var(--success-color, #10b981)`, boxShadow: '0 0 6px #10b981' }} />
                     <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{time}</span>
@@ -184,7 +184,7 @@ const Fotter = () => {
         {/* Bottom bar */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center', justifyContent: 'space-between' }}>
           <p style={{ fontSize: '13px', color: 'var(--text-dim)' }}>
-            © {new Date().getFullYear()} Saarthi Homeopathy. All rights reserved.
+            © {new Date().getFullYear()} Saarthi Homoeopathy. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: '24px' }}>
             {['Privacy Policy', 'Terms of Service'].map(link => (

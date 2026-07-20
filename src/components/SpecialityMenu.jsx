@@ -1,9 +1,31 @@
-import React, { useRef, useEffect } from 'react'
-import { specialityData } from '../assets/assets'
+import React, { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Stethoscope, ArrowRight } from 'lucide-react'
+import { 
+  Stethoscope, ArrowRight, Thermometer, Wind, Activity, Dna, HeartPulse, 
+  Droplets, Bone, Brain, Sparkles, Heart, Baby, Smile, ShieldCheck, Coffee, Infinity
+} from 'lucide-react'
 import ScrollReveal from './animations/ScrollReveal'
 import { useTheme } from '../context/ThemeContext'
+import { diseasesData } from '../data/diseases'
+
+const CategoryIconMap = {
+  'general-diseases': Thermometer,
+  'respiratory-diseases': Wind,
+  'digestive-diseases': Activity,
+  'endocrine-metabolic-disorders': Dna,
+  'heart-blood-pressure': HeartPulse,
+  'kidney-urinary-diseases': Droplets,
+  'bone-joint-muscle-disorders': Bone,
+  'neurological-disorders': Brain,
+  'skin-diseases': Sparkles,
+  'womens-health': Heart,
+  'mens-health': Activity,
+  'child-health': Baby,
+  'mental-emotional-health': Smile,
+  'allergy-immune-disorders': ShieldCheck,
+  'lifestyle-disorders': Coffee,
+  'chronic-diseases': Infinity
+};
 
 /* Vanilla JS tilt effect — no deps */
 const useTilt = () => {
@@ -43,6 +65,7 @@ const useTilt = () => {
 
 const TiltCard = ({ item, index }) => {
   const tiltRef = useTilt()
+  const Icon = CategoryIconMap[item.slug] || Activity;
   return (
     <div
       ref={tiltRef}
@@ -50,9 +73,11 @@ const TiltCard = ({ item, index }) => {
       style={{
         padding: '32px 20px', width: '150px', textAlign: 'center',
         display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px',
-        animation: `fade-up 0.6s ease ${0.1 + index * 0.07}s both`,
-        transformStyle: 'preserve-3d',
+        animation: `fade-up 0.6s ease ${0.1 + index * 0.05}s both`,
         willChange: 'transform',
+        backfaceVisibility: 'hidden',
+        WebkitFontSmoothing: 'antialiased',
+        transform: 'translateZ(0)',
       }}
     >
       {/* Gradient border glow on hover via CSS */}
@@ -64,14 +89,14 @@ const TiltCard = ({ item, index }) => {
         boxShadow: 'var(--shadow-glow)',
         transition: 'all 0.4s ease',
       }}>
-        <img src={item.image} alt={item.speciality} loading="lazy" decoding="async" width="48" height="48" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
+        <Icon size={36} color="var(--cyan)" strokeWidth={1.5} />
       </div>
       <p style={{ 
         fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 700, 
-        color: `var(--text-muted, rgba(200,215,255,0.90))`, lineHeight: 1.4, margin: 0,
+        color: 'var(--text-muted)', lineHeight: 1.4, margin: 0,
         height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center'
       }}>
-        {item.speciality}
+        {item.title}
       </p>
     </div>
   )
@@ -80,6 +105,33 @@ const TiltCard = ({ item, index }) => {
 const SpecialityMenu = () => {
   const navigate = useNavigate()
   const { theme } = useTheme()
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Split data based on screen size
+  const row1 = isMobile ? diseasesData : diseasesData.slice(0, 8);
+  const row2 = isMobile ? [] : diseasesData.slice(8, 16);
+
+  const renderMarqueeTrack = (items, direction) => {
+    if (!items.length) return null;
+    // Duplicate 4 times for seamless math on ultra-wide screens (even number of copies required)
+    const trackItems = [...items, ...items, ...items, ...items];
+    return (
+      <div className={`marquee-track ${direction}`}>
+        {trackItems.map((item, i) => (
+          <div key={`${item.slug}-${i}`} onClick={() => navigate(`/disease/${item.slug}`)} style={{ cursor: 'pointer' }}>
+            <TiltCard item={item} index={i} />
+          </div>
+        ))}
+      </div>
+    );
+  };
   return (
     <section id="speciality" style={{ padding: 'clamp(80px,10vw,140px) clamp(20px,5vw,60px)', position: 'relative', overflow: 'hidden' }}>
 
@@ -102,7 +154,7 @@ const SpecialityMenu = () => {
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(32px, 4.5vw, 58px)',
             fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 1.0,
-            color: `var(--white, #ffffff)`, marginBottom: '16px',
+            color: 'var(--text-main)', marginBottom: '16px',
           }}>
             What We Treat <span style={{
               background: `var(--grad-primary)`,
@@ -110,17 +162,16 @@ const SpecialityMenu = () => {
             }}>Best</span>
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '16px', maxWidth: '440px', margin: '0 auto', lineHeight: 1.7 }}>
-            Holistic homeopathic care across a wide spectrum of conditions — delivered with precision and compassion.
+            Holistic homoeopathic care across a wide spectrum of conditions — delivered with precision and compassion.
           </p>
         </ScrollReveal>
 
-        {/* Cards */}
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
-          {specialityData.map((item, i) => (
-            <div key={i} onClick={() => navigate(`/disease/${item.slug}`)} style={{ cursor: 'pointer' }}>
-              <TiltCard item={item} index={i} />
-            </div>
-          ))}
+        {/* Infinite Marquee Cards */}
+        <div className="marquee-wrapper">
+          <div className="marquee-container">
+            {renderMarqueeTrack(row1, 'left')}
+            {renderMarqueeTrack(row2, 'right')}
+          </div>
         </div>
 
         {/* View all CTA */}
@@ -128,7 +179,7 @@ const SpecialityMenu = () => {
           <button 
             onClick={() => navigate('/contact')} 
             className="btn-outline"
-            style={{ color: theme === 'light' ? '#0F172A' : '#ffffff' }}
+            style={{ color: theme === 'light' ? '#0F172A' : 'var(--text-main)' }}
           >
             Book for Any Condition <ArrowRight size={16} />
           </button>

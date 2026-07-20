@@ -42,6 +42,7 @@ import heart from './heart.png'
 import kidney from './kidney.png'
 import organ from './organ.png'
 import hairloss from './hair-loss.png'
+import yoginAppoinment from './yoginAppoinment.jpg'
 
 
 
@@ -62,40 +63,41 @@ export const assets = {
     dropdown_icon,
     upload_icon,
     stripe_logo,
-    razorpay_logo
+    razorpay_logo,
+    yoginAppoinment
 }
 
 export const specialityData = [
     {
-        speciality: 'Fibroids',
+        speciality: "Women's Health",
         image: fibroids,
-        slug: 'fibroids'
+        slug: 'womens-health'
     },
     {
-        speciality: 'Cancer',
+        speciality: 'Chronic Diseases',
         image: cancer,
-        slug: 'cancer'
+        slug: 'chronic-diseases'
     },
     {
-        speciality: 'Hair Loss',
+        speciality: 'Skin Diseases',
         image: hairloss,
-        slug: 'hair-loss'
+        slug: 'skin-diseases'
     },
     {
-        speciality: 'Kidney Disorders',
+        speciality: 'Kidney & Urinary',
         image: kidney,
-        slug: 'kidney-disorders'
+        slug: 'kidney-urinary-diseases'
     },
     {
-        speciality: 'Thyroid Disorders',
+        speciality: 'Endocrine & Metabolic',
         image: organ,
-        slug: 'thyroid-disorders'
+        slug: 'endocrine-metabolic-disorders'
     },
     {
-        speciality: 'Heart Diseases',
+        speciality: 'Heart & BP',
         image: heart,
-        slug: 'heart-diseases'
-    },
+        slug: 'heart-blood-pressure'
+    }
 ]
 
 export const doctors = [

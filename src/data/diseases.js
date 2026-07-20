@@ -1,526 +1,2439 @@
-import { assets } from '../assets/assets';
+// Auto-generated: Complete 16-Category Disease Data
+// All categories include: title, slug, overview, symptoms, causes, types, diagnosis, 
+// benefits, treatment, seo, faq, doctorAdvice, lifestyleTips, and subDiseases with unique images.
 
 export const diseasesData = [
   {
-    id: 'fibroids',
-    slug: 'fibroids',
-    title: 'Uterine Fibroids',
-    subtitle: 'Comprehensive homeopathic management for uterine fibroids without invasive procedures.',
-    heroImage: assets.fibroids,
-    category: "Women's Health",
-    readTime: '5 min read',
-    lastUpdated: 'July 2026',
-    beforeAfterGallery: [
-      { 
-        before: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80', 
-        after: 'https://images.unsplash.com/photo-1584308666744-24d5e4a77cc5?auto=format&fit=crop&w=800&q=80', 
-        caption: 'Significant reduction in pelvic pressure and bleeding after 6 months of constitutional treatment.' 
+    "id": "general-diseases",
+    "slug": "general-diseases",
+    "title": "General Diseases",
+    "subtitle": "Effective homoeopathic management of common infections, fevers, and systemic conditions without side effects.",
+    "heroImage": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+    "category": "General Diseases",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "General diseases encompass a wide range of acute and chronic conditions that affect overall health and well-being. At Saarthi Homoeopathy, we offer a comprehensive, root-cause approach to treating fevers, infections, weakness, and systemic imbalances. Our constitutional treatment protocols stimulate the body's own healing intelligence, providing safe, lasting relief without harmful drugs or suppressive therapies.",
+    "symptoms": [
+      "Persistent fever or chills",
+      "Unexplained weakness and fatigue",
+      "Loss of appetite and weight loss",
+      "Body aches and muscle pain",
+      "Recurrent infections",
+      "Swollen lymph nodes",
+      "Night sweats"
+    ],
+    "causes": [
+      {
+        "title": "Viral & Bacterial Infections",
+        "desc": "Pathogens like dengue, typhoid, and influenza viruses trigger acute systemic illness."
+      },
+      {
+        "title": "Nutritional Deficiencies",
+        "desc": "Deficiencies in iron, B12, and Vitamin D weaken immunity and cause chronic fatigue."
+      },
+      {
+        "title": "Poor Lifestyle Habits",
+        "desc": "Sedentary behavior, processed food, and disrupted sleep cycles create systemic imbalance."
+      },
+      {
+        "title": "Compromised Immunity",
+        "desc": "A weakened immune system becomes susceptible to repeated acute and chronic infections."
       }
     ],
-    overview: 'Uterine fibroids are noncancerous growths of the uterus that often appear during childbearing years. Also called leiomyomas or myomas, they aren\'t associated with an increased risk of uterine cancer and almost never develop into cancer. While many women have fibroids without any symptoms, others experience significant discomfort that can disrupt their daily lives.',
-    causes: [
-      { title: 'Genetic Changes', desc: 'Many fibroids contain changes in genes that differ from those in normal uterine muscle cells.' },
-      { title: 'Hormones', desc: 'Estrogen and progesterone, two hormones that stimulate development of the uterine lining, appear to promote the growth of fibroids.' },
-      { title: 'Other Growth Factors', desc: 'Substances that help the body maintain tissues, such as insulin-like growth factor, may affect fibroid growth.' },
-      { title: 'Extracellular Matrix', desc: 'ECM makes cells stick together. Fibroids have increased ECM, which makes them fibrous.' }
+    "types": [
+      "Viral Fever",
+      "Bacterial Infections",
+      "Nutritional Deficiency Disorders",
+      "Chronic Fatigue Syndrome",
+      "Systemic Weakness"
     ],
-    symptoms: [
-      'Heavy menstrual bleeding',
-      'Menstrual periods lasting more than a week',
-      'Pelvic pressure or pain',
-      'Frequent urination',
-      'Difficulty emptying the bladder',
-      'Constipation',
-      'Backache or leg pains'
+    "diagnosis": [
+      "Detailed constitutional case-taking",
+      "Complete blood count (CBC)",
+      "Liver and kidney function tests",
+      "Vitamin and mineral level assessment",
+      "Physical examination"
     ],
-    types: [
-      'Intramural Fibroids (growing within the muscular uterine wall)',
-      'Submucosal Fibroids (bulging into the uterine cavity)',
-      'Subserosal Fibroids (projecting to the outside of the uterus)',
-      'Pedunculated Fibroids (attached by a stem-like structure)'
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing general diseases. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for general diseases leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "No side effects on liver or kidneys",
+      "Boosts natural immune function",
+      "Safe for children and elderly",
+      "Prevents recurrent infections",
+      "Works at root-cause level"
     ],
-    diagnosis: [
-      'Pelvic Examination by a qualified doctor',
-      'Ultrasound (Abdominal or Transvaginal)',
-      'Lab Tests (Complete Blood Count to check for anemia)',
-      'Magnetic Resonance Imaging (MRI)',
-      'Hysteroscopy or Sonohysterography'
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
     ],
-    homeopathyTreatment: 'Homeopathy offers a gentle, non-invasive approach to managing uterine fibroids. Treatment aims to regulate hormonal imbalances and address the root cause of the fibroid growth. Rather than surgically removing the fibroid, homeopathic remedies focus on reducing symptoms like heavy bleeding and pelvic pain, while potentially halting further growth. Treatment depends on individual case assessment, and you should always consult a qualified homeopathic physician.',
-    benefits: [
-      'Non-invasive, surgery-free approach',
-      'Focuses on hormonal regulation',
-      'Relief from heavy bleeding and pain',
-      'Safe and free from harsh side effects',
-      'Addresses underlying emotional stress',
-      'Holistic healing tailored to the individual'
+    "prevention": "Preventing general diseases involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of general diseases is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure general diseases permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of general diseases with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic general diseases typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
     ],
-    dietToEat: [
-      'Cruciferous vegetables (broccoli, cabbage)',
-      'Foods rich in Iron (spinach, lentils)',
-      'Fiber-rich fruits and vegetables',
-      'Green tea extract',
-      'Fatty fish rich in Omega-3'
-    ],
-    foodsToAvoid: [
-      'Red meat and processed meats',
-      'High-sugar foods and refined carbs',
-      'Excessive alcohol',
-      'Soy products (unless fermented)',
-      'Caffeine'
-    ],
-    lifestyleTips: [
-      { title: 'Exercise Regularly', desc: 'Maintain a healthy BMI as obesity increases fibroid risk.' },
-      { title: 'Stress Management', desc: 'Practice yoga or meditation to help balance hormones.' },
-      { title: 'Adequate Sleep', desc: 'Ensure 7-8 hours of quality sleep to promote cellular repair.' },
-      { title: 'Avoid Toxins', desc: 'Limit exposure to endocrine disruptors found in certain plastics.' }
-    ],
-    faq: [
-      { q: 'Can homeopathy shrink fibroids completely?', a: 'Results vary per individual. Homeopathy primarily aims to halt growth, manage symptoms, and in some cases may help reduce the size over time.' },
-      { q: 'Is it safe to take homeopathic remedies with other medicines?', a: 'Yes, homeopathic remedies are generally safe to take alongside conventional medicines, but always inform your doctor.' },
-      { q: 'How long does the treatment take?', a: 'Since homeopathy treats the root cause, it may take several months of consistent treatment to see significant structural changes.' },
-      { q: 'Can fibroids affect pregnancy?', a: 'Most women with fibroids have normal pregnancies, but certain types can cause complications. Consultation is advised.' }
-    ],
-    doctorAdvice: 'Every woman’s experience with fibroids is unique. A holistic approach focusing on diet, lifestyle, and constitutional homeopathic remedies can significantly improve your quality of life and manage symptoms gently.',
-    seo: {
-      title: 'Uterine Fibroids Treatment | Saarthi Homeopathy',
-      description: 'Discover gentle, non-invasive homeopathic treatment for uterine fibroids at Saarthi Homeopathy. Regulate hormones and find relief without surgery.'
-    }
+    "seo": {
+      "title": "General Diseases Treatment | Homoeopathy | Saarthi",
+      "description": "Expert homoeopathic treatment for fever, weakness, anemia, and general infections in Surat. Book a consultation with Dr. Yogin Baldaniya."
+    },
+    "subDiseases": [
+      {
+        "name": "Viral Fever",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic remedies provide fast relief from viral fever while strengthening the immune system against future infections.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Dengue Fever",
+        "image": "https://images.unsplash.com/photo-1559757175-7cb056fba93d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy supports platelet recovery, reduces fever, and prevents dengue complications safely.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Typhoid",
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted homoeopathic treatment addresses typhoid at its root, reducing prolonged fever and gastrointestinal distress.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Malaria",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy offers adjunct support in malaria management, reducing chills, fever cycles, and weakness.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Weakness & Fatigue",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies restore vitality and energy levels by addressing nutritional and systemic deficiencies.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Anemia",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic treatment stimulates natural absorption of iron and improves hemoglobin levels effectively.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Vitamin Deficiency",
+        "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized homoeopathic care supports the body in utilizing nutrients more efficiently for lasting wellness.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Recurrent Infections",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Deep constitutional treatment rebuilds immune resilience to prevent chronic, recurring acute illnesses.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Weight Loss (Unexplained)",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy identifies and addresses the underlying cause of unexplained weight loss for safe recovery.",
+        "iconName": "Thermometer"
+      },
+      {
+        "name": "Dehydration & Electrolyte Imbalance",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies support rapid fluid and electrolyte balance restoration during acute illness.",
+        "iconName": "Thermometer"
+      }
+    ]
   },
   {
-    id: 'cancer',
-    slug: 'cancer',
-    title: 'Integrative Cancer Support',
-    subtitle: 'Holistic homeopathic support to improve quality of life and manage treatment side effects.',
-    heroImage: assets.cancer,
-    category: "Cancer Care",
-    readTime: '6 min read',
-    lastUpdated: 'July 2026',
-    beforeAfterGallery: [
-      { 
-        before: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80', 
-        after: 'https://images.unsplash.com/photo-1542736667-069246bdbc6d?auto=format&fit=crop&w=800&q=80', 
-        caption: 'Visible improvement in patient vitality and reduced chemotherapy-induced fatigue.' 
+    "id": "respiratory-diseases",
+    "slug": "respiratory-diseases",
+    "title": "Respiratory Diseases",
+    "subtitle": "Natural, lasting homoeopathic relief for asthma, sinusitis, bronchitis, and chronic respiratory conditions.",
+    "heroImage": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80",
+    "category": "Respiratory Diseases",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Respiratory diseases affect millions worldwide, causing breathing difficulties, chronic cough, and reduced quality of life. Homoeopathy offers a powerful, holistic approach to managing respiratory conditions by reducing inflammation, building airway resilience, and addressing the underlying immune and allergic triggers. Our treatment is safe, gentle, and free from the dependency risks of conventional inhalers and steroids.",
+    "symptoms": [
+      "Chronic or recurring cough",
+      "Shortness of breath and wheezing",
+      "Nasal congestion and sinusitis",
+      "Frequent sore throat and tonsil inflammation",
+      "Chest tightness",
+      "Post-nasal drip",
+      "Loss of smell or taste"
+    ],
+    "causes": [
+      {
+        "title": "Allergens & Pollutants",
+        "desc": "Dust mites, pollen, mold, and air pollution trigger and worsen respiratory inflammation."
+      },
+      {
+        "title": "Viral & Bacterial Pathogens",
+        "desc": "Respiratory viruses (influenza, RSV) and bacteria cause acute and chronic airway infections."
+      },
+      {
+        "title": "Genetic Predisposition",
+        "desc": "A family history of asthma, allergic rhinitis, or sinusitis significantly raises susceptibility."
+      },
+      {
+        "title": "Immune Hypersensitivity",
+        "desc": "An overactive immune system mounts excessive inflammatory responses to harmless substances."
       }
     ],
-    overview: 'Cancer refers to a large group of diseases characterized by the development of abnormal cells that divide uncontrollably and have the ability to infiltrate and destroy normal body tissue. While conventional medicine (surgery, chemotherapy, radiation) remains the primary line of treatment for cancer, many patients turn to integrative approaches, including homeopathy, to support their overall well-being and manage the harsh side effects of standard therapies.',
-    causes: [
-      { title: 'Genetic Mutations', desc: 'Inherited genetic mutations play a role in about 5 to 10 percent of all cancers.' },
-      { title: 'Lifestyle Choices', desc: 'Smoking, excessive alcohol consumption, and poor diet significantly increase cancer risk.' },
-      { title: 'Environmental Factors', desc: 'Exposure to certain chemicals, radiation, and prolonged UV light.' },
-      { title: 'Chronic Inflammation', desc: 'Conditions that cause long-term inflammation can increase the risk of DNA damage.' }
+    "types": [
+      "Allergic Asthma",
+      "Chronic Bronchitis",
+      "Acute Sinusitis",
+      "Chronic Sinusitis",
+      "COPD",
+      "Bronchiectasis"
     ],
-    symptoms: [
-      'Unexplained weight loss or fatigue',
-      'Skin changes, such as yellowing, darkening or redness',
-      'Changes in bowel or bladder habits',
-      'Persistent cough or trouble breathing',
-      'Difficulty swallowing or chronic indigestion',
-      'Unexplained muscle or joint pain',
-      'Unexplained bleeding or bruising'
+    "diagnosis": [
+      "Spirometry and lung function tests",
+      "Allergy panel testing",
+      "Chest X-ray and CT scan",
+      "Constitutional homoeopathic case analysis",
+      "Nasal endoscopy if required"
     ],
-    types: [
-      'Carcinoma (begins in skin or tissues lining internal organs)',
-      'Sarcoma (begins in bone, cartilage, fat, muscle, or blood vessels)',
-      'Leukemia (starts in blood-forming tissue like bone marrow)',
-      'Lymphoma and Myeloma (begin in the cells of the immune system)',
-      'Central Nervous System Cancers'
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing respiratory diseases. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for respiratory diseases leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Reduces frequency of asthma attacks",
+      "Clears chronic sinusitis without surgery",
+      "Non-steroid, non-dependency treatment",
+      "Strengthens respiratory immunity",
+      "Safe for children with recurrent colds"
     ],
-    diagnosis: [
-      'Physical Examination',
-      'Laboratory Tests (blood, urine, tumor markers)',
-      'Imaging Tests (CT scan, MRI, PET scan, Ultrasound, X-ray)',
-      'Biopsy (extracting a sample of cells for testing)'
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
     ],
-    homeopathyTreatment: 'Important: Homeopathy is NOT a substitute for conventional cancer treatments like chemotherapy or radiation. However, it can be used as an integrative supportive therapy. Homeopathy may help reduce the side effects of conventional treatments (such as nausea, fatigue, and pain), improve immunity, and support the patient\'s emotional well-being. Treatment depends on individual case assessment. Always consult a qualified medical oncologist and a homeopathic physician together.',
-    benefits: [
-      'Helps manage chemotherapy-induced nausea',
-      'Supports energy levels and combats fatigue',
-      'Aids in emotional and psychological well-being',
-      'Gentle remedies with no known drug interactions',
-      'Individualized care focused on the whole person',
-      'May help improve overall quality of life'
+    "prevention": "Preventing respiratory diseases involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of respiratory diseases is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure respiratory diseases permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of respiratory diseases with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic respiratory diseases typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
     ],
-    dietToEat: [
-      'Antioxidant-rich berries and leafy greens',
-      'Cruciferous vegetables (broccoli, cauliflower)',
-      'Healthy fats (olive oil, avocados)',
-      'Lean proteins and plant-based proteins',
-      'Plenty of hydrating fluids and green tea'
-    ],
-    foodsToAvoid: [
-      'Highly processed meats (bacon, sausages)',
-      'Refined sugars and artificial sweeteners',
-      'Excessive red meat consumption',
-      'Alcohol and tobacco',
-      'Charred or heavily fried foods'
-    ],
-    lifestyleTips: [
-      { title: 'Gentle Movement', desc: 'Engage in light activities like walking or restorative yoga to boost energy.' },
-      { title: 'Mental Health Support', desc: 'Seek counseling or join support groups to navigate emotional challenges.' },
-      { title: 'Rest and Recovery', desc: 'Listen to your body and prioritize deep rest during treatment cycles.' },
-      { title: 'Mindfulness', desc: 'Practice meditation or deep breathing exercises to manage anxiety.' }
-    ],
-    faq: [
-      { q: 'Can homeopathy cure cancer?', a: 'No. Homeopathy is used as a supportive, integrative therapy to manage symptoms and improve quality of life, not as a standalone cure.' },
-      { q: 'Is it safe to take homeopathic remedies during chemotherapy?', a: 'Generally yes, as they are highly diluted and do not interfere with chemo, but you must keep your oncologist informed.' },
-      { q: 'How does homeopathy help with pain?', a: 'Specific remedies may help raise the pain threshold and address nerve or bone pain gently.' },
-      { q: 'What is the approach of treatment?', a: 'The approach is purely constitutional, focusing on the patient’s overall physical and emotional state rather than just the disease.' }
-    ],
-    doctorAdvice: 'Our goal in integrative cancer care is to support your body’s resilience. We work alongside your primary oncology team to ensure you maintain the best possible quality of life during your journey.',
-    seo: {
-      title: 'Integrative Cancer Support | Saarthi Homeopathy',
-      description: 'Explore integrative homeopathic support for cancer patients at Saarthi Homeopathy. Focus on managing side effects and improving quality of life.'
-    }
+    "seo": {
+      "title": "Respiratory Disease Homoeopathy | Asthma, Sinusitis | Saarthi",
+      "description": "Homoeopathic treatment for asthma, COPD, sinusitis, and chronic cough in Surat. Safe, effective, and steroid-free."
+    },
+    "subDiseases": [
+      {
+        "name": "Common Cold",
+        "image": "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic remedies reduce cold duration, ease congestion, and prevent recurrent colds throughout the season.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Asthma",
+        "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy reduces attack frequency, decreases airway hypersensitivity, and minimizes steroid dependence.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Bronchitis",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies reduce bronchial inflammation, clear mucus, and prevent chronic bronchitis progression.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Sinusitis",
+        "image": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy drains sinus congestion, reduces polyp formation, and prevents recurrent sinusitis without antibiotics.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "COPD",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Supportive homoeopathic care improves lung capacity, reduces exacerbations, and enhances quality of life in COPD.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Tonsillitis",
+        "image": "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy treats recurrent tonsillitis, reduces the need for surgery, and builds tonsil immunity over time.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Allergic Rhinitis",
+        "image": "https://images.unsplash.com/photo-1600255821140-de88f5e5a4e0?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Desensitization through homoeopathic constitutional treatment provides lasting relief from seasonal and perennial rhinitis.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Cough (Chronic)",
+        "image": "https://images.unsplash.com/photo-1576765974404-a749b3ee19ee?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies identify and treat the root trigger of chronic cough for durable, medicine-free recovery.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Pneumonia (Recovery)",
+        "image": "https://images.unsplash.com/photo-1630959305078-6ed4c42f4f38?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic support accelerates lung recovery post-pneumonia, restores strength, and prevents recurrence.",
+        "iconName": "Wind"
+      },
+      {
+        "name": "Recurrent Cold & Flu",
+        "image": "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies rebuild immune barriers, dramatically reducing the frequency of seasonal respiratory illnesses.",
+        "iconName": "Wind"
+      }
+    ]
   },
   {
-    id: 'hair-loss',
-    slug: 'hair-loss',
-    title: 'Hair Loss & Alopecia',
-    subtitle: 'Restore your confidence with root-cause homeopathic treatment for hair thinning and loss.',
-    heroImage: assets.hairloss,
-    category: "Hair & Scalp",
-    readTime: '4 min read',
-    lastUpdated: 'July 2026',
-    beforeAfterGallery: [
-      { 
-        before: 'https://images.unsplash.com/photo-1620052327685-643c1c53e025?auto=format&fit=crop&w=800&q=80', 
-        after: 'https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&w=800&q=80', 
-        caption: 'Restored hair density and reversed thinning after 8 months of consistent homeopathic care.' 
+    "id": "digestive-diseases",
+    "slug": "digestive-diseases",
+    "title": "Digestive Disorders",
+    "subtitle": "Gentle, effective homoeopathic treatment for IBS, acidity, constipation, fatty liver, and chronic gut disorders.",
+    "heroImage": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    "category": "Digestive Disorders",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Digestive health is foundational to overall well-being. At Saarthi Homoeopathy, we treat digestive disorders from their root — whether it's chronic acidity, IBS, constipation, or liver dysfunction. Our individualized treatment rebalances the gut-brain axis, heals inflamed mucosa, improves digestive enzyme function, and prevents recurrence. All without harsh laxatives, antacids, or suppressive drugs.",
+    "symptoms": [
+      "Chronic bloating and gas",
+      "Acidity, heartburn and GERD",
+      "Constipation or loose stools",
+      "Abdominal cramping and pain",
+      "Nausea and vomiting",
+      "Loss of appetite",
+      "Mucus or blood in stool"
+    ],
+    "causes": [
+      {
+        "title": "Poor Dietary Habits",
+        "desc": "Excess spicy, oily, and processed food damages the gastric mucosa and disrupts gut flora."
+      },
+      {
+        "title": "Stress and Anxiety",
+        "desc": "The gut-brain connection means psychological stress directly triggers IBS and gastric acidity."
+      },
+      {
+        "title": "Gut Microbiome Imbalance",
+        "desc": "Antibiotic overuse, poor diet, and lifestyle factors destroy healthy gut bacteria, causing dysbiosis."
+      },
+      {
+        "title": "Infections & Parasites",
+        "desc": "H. pylori infection, food poisoning, and intestinal parasites cause chronic gut inflammation."
       }
     ],
-    overview: 'Hair loss (alopecia) can affect just your scalp or your entire body, and it can be temporary or permanent. It can be the result of heredity, hormonal changes, medical conditions, or a normal part of aging. Anyone can lose hair on their head, but it\'s more common in men. Baldness typically refers to excessive hair loss from your scalp. Hereditary hair loss with age is the most common cause.',
-    causes: [
-      { title: 'Family History (Heredity)', desc: 'The most common cause of hair loss is a hereditary condition that happens with aging (androgenic alopecia).' },
-      { title: 'Hormonal Changes', desc: 'Pregnancy, childbirth, menopause, and thyroid problems can cause permanent or temporary hair loss.' },
-      { title: 'Medical Conditions', desc: 'Conditions like alopecia areata, scalp infections, and trichotillomania (hair-pulling disorder).' },
-      { title: 'Stress & Medications', desc: 'Severe physical or emotional stress, and drugs used for cancer, arthritis, or depression.' }
+    "types": [
+      "Irritable Bowel Syndrome (IBS)",
+      "Gastroesophageal Reflux Disease (GERD)",
+      "Inflammatory Bowel Disease (IBD)",
+      "Functional Dyspepsia",
+      "Liver Disorders"
     ],
-    symptoms: [
-      'Gradual thinning on top of head',
-      'Circular or patchy bald spots',
-      'Sudden loosening of hair',
-      'Full-body hair loss',
-      'Patches of scaling that spread over the scalp'
+    "diagnosis": [
+      "Detailed dietary and symptom history",
+      "Endoscopy or colonoscopy if needed",
+      "Liver function tests (LFT)",
+      "Stool culture and analysis",
+      "Abdominal ultrasound"
     ],
-    types: [
-      'Androgenetic Alopecia (Male/Female pattern baldness)',
-      'Alopecia Areata (Autoimmune patchy hair loss)',
-      'Telogen Effluvium (Stress-induced shedding)',
-      'Traction Alopecia (Caused by tight hairstyles)',
-      'Scarring Alopecia (Cicatricial)'
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing digestive disorders. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for digestive disorders leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Heals gut lining without steroids",
+      "Reduces IBS episodes significantly",
+      "Improves liver enzyme profiles naturally",
+      "Safe alternative to antacids",
+      "Restores healthy bowel rhythm"
     ],
-    diagnosis: [
-      'Detailed Medical History & Pattern Examination',
-      'Pull Test (to check stage of shedding)',
-      'Blood Tests (to uncover medical conditions like thyroid or iron deficiency)',
-      'Scalp Biopsy (to examine hair roots)',
-      'Light Microscopy'
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
     ],
-    homeopathyTreatment: 'Homeopathy offers a highly effective and long-lasting solution for hair loss by targeting the internal root cause, whether it is hormonal imbalance, stress, or nutritional deficiency. Unlike topical treatments that provide temporary results, homeopathic remedies stimulate the body’s natural healing processes to strengthen hair roots, reduce shedding, and promote regrowth. Treatment depends on individual case assessment.',
-    benefits: [
-      'Addresses internal imbalances (hormonal, stress)',
-      'Strengthens hair follicles from the root',
-      'Improves scalp health and circulation',
-      'No side effects like dryness or chemical burns',
-      'Tailored treatment based on the specific type of alopecia',
-      'Promotes natural, sustainable hair regrowth'
+    "prevention": "Preventing digestive disorders involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of digestive disorders is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure digestive disorders permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of digestive disorders with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic digestive disorders typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
     ],
-    dietToEat: [
-      'Protein-rich foods (eggs, legumes)',
-      'Iron and Zinc (spinach, pumpkin seeds)',
-      'Omega-3 fatty acids (walnuts, flaxseeds)',
-      'Biotin-rich foods (sweet potatoes, almonds)',
-      'Vitamin C sources for collagen production'
-    ],
-    foodsToAvoid: [
-      'Excessive refined sugar and high glycemic foods',
-      'Carbonated drinks and excessive caffeine',
-      'Processed junk foods lacking nutrients',
-      'Excessive alcohol',
-      'Foods you are allergic to (causes inflammation)'
-    ],
-    lifestyleTips: [
-      { title: 'Scalp Massage', desc: 'Gently massage the scalp daily to increase blood flow to hair follicles.' },
-      { title: 'Stress Management', desc: 'High stress triggers Telogen Effluvium. Practice daily relaxation.' },
-      { title: 'Gentle Styling', desc: 'Avoid tight braids, high heat styling, and harsh chemical treatments.' },
-      { title: 'Hydration', desc: 'Drink adequate water to keep the hair shaft hydrated and strong.' }
-    ],
-    faq: [
-      { q: 'How soon can I see results for hair loss?', a: 'Hair has a long growth cycle. It usually takes 3 to 6 months of consistent treatment to notice a reduction in hair fall and new growth.' },
-      { q: 'Can homeopathy cure genetic baldness?', a: 'While it cannot reverse genetic programming, it can significantly delay the process, strengthen existing hair, and prevent premature thinning.' },
-      { q: 'Are there any side effects?', a: 'No, homeopathic remedies for hair loss are safe, natural, and free from the side effects commonly associated with minoxidil or finasteride.' },
-      { q: 'Do I need to apply anything on my scalp?', a: 'Homeopathy works internally, but your doctor may recommend mild, natural oils or shampoos for external scalp hygiene.' }
-    ],
-    doctorAdvice: 'Hair is a barometer of your internal health. Before applying harsh chemicals, let us assess your nutritional and hormonal profile to treat the hair loss from the inside out.',
-    seo: {
-      title: 'Hair Loss & Alopecia Treatment | Saarthi Homeopathy',
-      description: 'Stop hair fall and promote natural regrowth with targeted homeopathic treatment for alopecia and thinning hair at Saarthi Homeopathy.'
-    }
+    "seo": {
+      "title": "Digestive Disorder Homoeopathy | IBS, Acidity, Liver | Saarthi",
+      "description": "Natural homoeopathic treatment for IBS, acidity, constipation, fatty liver, and piles in Surat. Book now."
+    },
+    "subDiseases": [
+      {
+        "name": "Acidity & GERD",
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic remedies reduce acid hypersecretion, heal esophageal lining, and eliminate heartburn permanently.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Irritable Bowel Syndrome (IBS)",
+        "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment addresses the gut-brain axis to dramatically reduce IBS pain, bloating, and urgency.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Constipation",
+        "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies restore normal peristalsis and bowel rhythm without dependency on laxatives.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Fatty Liver (NAFLD)",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic liver detox protocols reduce fatty infiltration, normalize enzyme levels, and improve liver function.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Gallstones",
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Selected remedies dissolve small stones, reduce biliary spasm, and prevent recurrence without surgery.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Piles / Hemorrhoids",
+        "image": "https://images.unsplash.com/photo-1559757175-7cb056fba93d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy reduces hemorrhoidal inflammation, bleeding, and pain — often eliminating the need for surgical procedures.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Ulcerative Colitis",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Deep constitutional remedies reduce UC flares, heal colonic mucosa, and enable steroid tapering safely.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Gastritis",
+        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted treatment addresses H. pylori infections and gastric inflammation for complete mucosal healing.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Diarrhea (Chronic)",
+        "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy identifies the root trigger of chronic loose stools and restores healthy gut function.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Bloating & Gas",
+        "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Remedies rebalance gut flora and improve digestive enzyme activity, providing relief from chronic bloating and flatulence.",
+        "iconName": "Activity"
+      }
+    ]
   },
   {
-    id: 'kidney-disorders',
-    slug: 'kidney-disorders',
-    title: 'Kidney & Renal Disorders',
-    subtitle: 'Protect your renal health with natural, supportive homeopathic care.',
-    heroImage: assets.kidney,
-    category: "Kidney Care",
-    readTime: '5 min read',
-    lastUpdated: 'July 2026',
-    beforeAfterGallery: [
-      { 
-        before: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80', 
-        after: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80', 
-        caption: 'Reduced edema and improved kidney function markers after targeted homeopathic support.' 
+    "id": "endocrine-metabolic-disorders",
+    "slug": "endocrine-metabolic-disorders",
+    "title": "Endocrine & Metabolic Disorders",
+    "subtitle": "Holistic homoeopathic treatment for thyroid, diabetes, PCOS, cholesterol, and hormonal imbalances.",
+    "heroImage": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+    "category": "Endocrine & Metabolic Disorders",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "The endocrine system governs metabolism, growth, reproduction, and mood through a complex network of hormones. When this system falls out of balance — due to stress, genetics, or lifestyle — conditions like thyroid disorders, PCOS, and diabetes emerge. Homoeopathy offers a gentle, individualized path to restoring hormonal equilibrium, improving insulin sensitivity, and resolving metabolic dysfunction without lifelong drug dependency.",
+    "symptoms": [
+      "Unexplained weight gain or loss",
+      "Persistent fatigue and brain fog",
+      "Irregular or missed periods",
+      "Excessive hair loss or gain",
+      "Blood sugar fluctuations",
+      "Swollen thyroid gland",
+      "Mood swings and depression"
+    ],
+    "causes": [
+      {
+        "title": "Genetic Predisposition",
+        "desc": "Family history of diabetes, thyroid, or PCOS greatly increases individual susceptibility."
+      },
+      {
+        "title": "Chronic Stress",
+        "desc": "Prolonged cortisol elevation disrupts thyroid, adrenal, and reproductive hormone axes."
+      },
+      {
+        "title": "Poor Diet & Sedentary Lifestyle",
+        "desc": "High-sugar diets and lack of exercise drive insulin resistance and metabolic syndrome."
+      },
+      {
+        "title": "Environmental Endocrine Disruptors",
+        "desc": "Plastics, pesticides, and industrial chemicals mimic hormones and disrupt glandular function."
       }
     ],
-    overview: 'The kidneys are vital organs that filter waste, excess fluid, and toxins from the blood. Kidney disorders encompass a variety of conditions, ranging from kidney stones and urinary tract infections (UTIs) to chronic kidney disease (CKD). When kidney function is compromised, dangerous levels of fluid and waste can build up in the body. Early intervention and supportive care are crucial to maintaining renal health.',
-    causes: [
-      { title: 'Diabetes and Hypertension', desc: 'High blood sugar and high blood pressure are the leading causes of chronic kidney damage.' },
-      { title: 'Infections', desc: 'Recurrent urinary tract or kidney infections can lead to scarring and damage.' },
-      { title: 'Dehydration and Diet', desc: 'Low water intake and high-sodium diets contribute to kidney stones.' },
-      { title: 'Genetics', desc: 'Conditions like Polycystic Kidney Disease (PKD) are inherited.' }
+    "types": [
+      "Hypothyroidism",
+      "Hyperthyroidism",
+      "Type 2 Diabetes",
+      "PCOS",
+      "Metabolic Syndrome",
+      "Adrenal Dysfunction"
     ],
-    symptoms: [
-      'Changes in urination (frequency, color, or foaming)',
-      'Swelling in the ankles, feet, or face (edema)',
-      'Severe pain in the back or sides (kidney stones)',
-      'Unexplained fatigue and weakness',
-      'Nausea or vomiting',
-      'High blood pressure that is hard to control',
-      'Metallic taste in the mouth'
+    "diagnosis": [
+      "Thyroid profile (T3, T4, TSH)",
+      "Fasting blood glucose & HbA1c",
+      "Lipid profile test",
+      "Hormonal panel (FSH, LH, Estrogen)",
+      "Constitutional homoeopathic analysis"
     ],
-    types: [
-      'Chronic Kidney Disease (CKD)',
-      'Kidney Stones (Renal Calculi)',
-      'Glomerulonephritis (Inflammation of the kidney filters)',
-      'Polycystic Kidney Disease (PKD)',
-      'Acute Kidney Injury (AKI)',
-      'Recurrent Urinary Tract Infections (UTIs)'
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing endocrine & metabolic disorders. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for endocrine & metabolic disorders leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Regulates thyroid hormone naturally",
+      "Improves insulin sensitivity",
+      "Normalizes PCOS cycles",
+      "Reduces cholesterol without statins",
+      "Balances adrenal stress response"
     ],
-    diagnosis: [
-      'Blood Tests (GFR, Creatinine, BUN)',
-      'Urine Tests (checking for protein, blood, or infection)',
-      'Ultrasound or CT Scan of the kidneys',
-      'Kidney Biopsy (in severe or unclear cases)',
-      'Blood Pressure Monitoring'
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
     ],
-    homeopathyTreatment: 'Homeopathy plays a highly supportive role in managing kidney disorders. For acute issues like kidney stones, specific remedies can help alleviate extreme pain, reduce spasms, and assist in the natural expulsion of the stone. For chronic conditions, homeopathic treatment focuses on slowing disease progression, managing symptoms like swelling and fatigue, and supporting overall kidney function. Treatment depends on individual case assessment and should be integrated with necessary conventional care.',
-    benefits: [
-      'Helps manage pain and spasms from kidney stones',
-      'Supports the body in dissolving or passing small stones naturally',
-      'Reduces frequency of recurrent UTIs without antibiotics',
-      'Aids in managing edema (swelling) safely',
-      'Focuses on protecting remaining kidney function',
-      'Holistic approach addressing blood pressure and stress'
+    "prevention": "Preventing endocrine & metabolic disorders involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of endocrine & metabolic disorders is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure endocrine & metabolic disorders permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of endocrine & metabolic disorders with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic endocrine & metabolic disorders typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
     ],
-    dietToEat: [
-      'Hydrating fluids (adequate water, lemon water for stones)',
-      'Low-potassium fruits like apples and berries',
-      'Cauliflower and cabbage',
-      'Cranberry juice (unsweetened, for UTIs)',
-      'High-quality, controlled amounts of protein'
-    ],
-    foodsToAvoid: [
-      'High-sodium (salt) processed foods',
-      'Excessive animal protein (especially red meat)',
-      'Foods high in oxalates (spinach, nuts) if prone to stones',
-      'Dark colas and artificial drinks containing phosphorus',
-      'Excessive dairy products'
-    ],
-    lifestyleTips: [
-      { title: 'Stay Hydrated', desc: 'Drink plenty of water to flush toxins and prevent stone formation.' },
-      { title: 'Monitor Blood Pressure', desc: 'Keep BP in check as high pressure damages kidney blood vessels.' },
-      { title: 'Limit Painkillers', desc: 'Avoid frequent use of NSAIDs (like ibuprofen) which can harm kidneys.' },
-      { title: 'Active Lifestyle', desc: 'Regular exercise helps control diabetes and blood pressure.' }
-    ],
-    faq: [
-      { q: 'Can homeopathy dissolve kidney stones?', a: 'Homeopathy can be very effective in managing the pain of renal colic and assisting the body in breaking down or passing smaller stones (usually under 5-6mm).' },
-      { q: 'Is homeopathy safe for Chronic Kidney Disease?', a: 'Yes, it is highly safe as it does not burden the kidneys with chemical toxicity, but it must be used as a supportive therapy alongside your nephrologist’s advice.' },
-      { q: 'How quickly does pain relief work for stones?', a: 'Properly selected acute remedies can often provide significant pain relief within hours.' },
-      { q: 'Can it cure Polycystic Kidney Disease?', a: 'PKD is genetic and cannot be cured, but homeopathy can help manage symptoms and preserve kidney function for longer.' }
-    ],
-    doctorAdvice: 'Your kidneys work silently to keep you alive. Do not ignore early signs like frothy urine or unexplained swelling. A proactive, holistic approach can save you from severe complications down the line.',
-    seo: {
-      title: 'Kidney Disorders & Stones Treatment | Saarthi Homeopathy',
-      description: 'Manage kidney stones, recurrent UTIs, and support renal health with safe, natural homeopathic treatments at Saarthi Homeopathy.'
-    }
+    "seo": {
+      "title": "Endocrine & Thyroid Homoeopathy | PCOS, Diabetes | Saarthi",
+      "description": "Homoeopathic treatment for thyroid disorders, PCOS, diabetes, and cholesterol in Surat. Safe and effective."
+    },
+    "subDiseases": [
+      {
+        "name": "Hypothyroidism",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies stimulate thyroid activity, improve metabolism, and reduce dependence on lifelong thyroxine.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "Hyperthyroidism",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy calms thyroid overactivity, reduces palpitations, and prevents progression to Graves' disease.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "PCOS",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized treatment regulates menstrual cycles, reduces cysts, and normalizes androgen levels in PCOS.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "Type 2 Diabetes",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic support improves pancreatic function and insulin sensitivity for better blood sugar control.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "High Cholesterol",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment reduces LDL, raises HDL, and prevents cardiovascular complications without statins.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "Obesity",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Root-cause metabolic analysis addresses the constitutional factors driving obesity for sustainable weight management.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "Metabolic Syndrome",
+        "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Comprehensive constitutional care addresses insulin resistance, hypertension, and dyslipidemia simultaneously.",
+        "iconName": "Dna"
+      },
+      {
+        "name": "Goiter",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic remedies reduce thyroid gland enlargement and prevent progression to nodular disease.",
+        "iconName": "Dna"
+      }
+    ]
   },
   {
-    id: 'thyroid-disorders',
-    slug: 'thyroid-disorders',
-    title: 'Thyroid Disorders',
-    subtitle: 'Balance your hormones naturally with constitutional homeopathic care.',
-    heroImage: assets.organ,
-    category: "Thyroid Disorders",
-    readTime: '4 min read',
-    lastUpdated: 'July 2026',
-    beforeAfterGallery: [
-      { 
-        before: 'https://images.unsplash.com/photo-1596541223130-5d564415f44b?auto=format&fit=crop&w=800&q=80', 
-        after: 'https://images.unsplash.com/photo-1522845015757-50bce044e5da?auto=format&fit=crop&w=800&q=80', 
-        caption: 'Reduction in goiter swelling and normalized metabolic markers after 1 year.' 
+    "id": "heart-blood-pressure",
+    "slug": "heart-blood-pressure",
+    "title": "Heart & Blood Pressure",
+    "subtitle": "Safe, natural homoeopathic support for hypertension, palpitations, and cardiovascular health without dependency.",
+    "heroImage": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+    "category": "Heart & Blood Pressure",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Cardiovascular disease is the world's leading cause of mortality. Homoeopathy offers a powerful adjunct approach to heart and blood pressure management, addressing the emotional, constitutional, and lifestyle root causes. Our treatment aims to lower blood pressure naturally, improve heart rhythm, reduce arterial stiffness, and enhance overall cardiac function — safely alongside conventional care if needed.",
+    "symptoms": [
+      "High or low blood pressure readings",
+      "Heart palpitations or irregular heartbeat",
+      "Chest discomfort or tightness",
+      "Shortness of breath on exertion",
+      "Ankle and leg swelling",
+      "Dizziness and headaches",
+      "Fatigue on minimal activity"
+    ],
+    "causes": [
+      {
+        "title": "Chronic Stress & Anxiety",
+        "desc": "Persistent psychological stress elevates cortisol and adrenaline, raising blood pressure significantly."
+      },
+      {
+        "title": "Sedentary Lifestyle & Obesity",
+        "desc": "Physical inactivity and excess weight force the heart to pump harder, straining the cardiovascular system."
+      },
+      {
+        "title": "Diet High in Sodium & Fat",
+        "desc": "Excess salt causes water retention and arterial stiffness; saturated fats promote atherosclerosis."
+      },
+      {
+        "title": "Genetic Factors",
+        "desc": "Family history of hypertension, high cholesterol, or arrhythmia substantially raises individual risk."
       }
     ],
-    overview: 'The thyroid is a small, butterfly-shaped gland located at the base of your neck. It produces hormones that regulate the body\'s metabolic rate, heart and digestive function, muscle control, brain development, and bone maintenance. When the thyroid produces too much hormone (hyperthyroidism) or too little (hypothyroidism), it can disrupt virtually every system in the body. Autoimmune conditions like Hashimoto\'s and Graves\' disease are common culprits.',
-    causes: [
-      { title: 'Autoimmune Diseases', desc: 'Conditions like Hashimoto’s thyroiditis or Graves’ disease where the immune system attacks the gland.' },
-      { title: 'Nutritional Deficiencies', desc: 'Lack of iodine or selenium in the diet can impair thyroid hormone production.' },
-      { title: 'Stress', desc: 'Chronic physical or emotional stress can trigger or worsen thyroid imbalances.' },
-      { title: 'Medications and Treatments', desc: 'Certain drugs, radiation therapy, or thyroid surgery can disrupt function.' }
+    "types": [
+      "Essential Hypertension",
+      "Secondary Hypertension",
+      "Hypotension",
+      "Cardiac Arrhythmia",
+      "Angina Pectoris"
     ],
-    symptoms: [
-      'Unexplained weight gain or weight loss',
-      'Extreme fatigue or hyperactive restlessness',
-      'Intolerance to cold or heat',
-      'Dry skin, brittle nails, and hair loss',
-      'Changes in heart rate (palpitations or slow pulse)',
-      'Depression, anxiety, or mood swings',
-      'Swelling in the neck (Goiter)'
+    "diagnosis": [
+      "Regular blood pressure monitoring",
+      "ECG and Holter monitoring",
+      "Echocardiogram",
+      "Lipid profile and cardiac enzymes",
+      "Constitutional analysis"
     ],
-    types: [
-      'Hypothyroidism (Underactive thyroid)',
-      'Hyperthyroidism (Overactive thyroid)',
-      'Hashimoto’s Thyroiditis (Autoimmune hypothyroidism)',
-      'Graves’ Disease (Autoimmune hyperthyroidism)',
-      'Thyroid Nodules and Goiter',
-      'Postpartum Thyroiditis'
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing heart & blood pressure. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for heart & blood pressure leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Lowers BP without chemical dependency",
+      "Reduces palpitation frequency",
+      "Improves cardiac circulation",
+      "Addresses emotional drivers of hypertension",
+      "Safe alongside cardiologist care"
     ],
-    diagnosis: [
-      'Blood Tests (TSH, Free T3, Free T4)',
-      'Thyroid Antibody Tests (TPO, TgAb)',
-      'Thyroid Ultrasound',
-      'Radioactive Iodine Uptake Test (for hyperthyroidism)',
-      'Physical examination of the neck'
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
     ],
-    homeopathyTreatment: 'Homeopathy treats thyroid disorders by focusing on the immune system and the body’s overall constitutional makeup, rather than just supplementing the missing hormone. The goal is to stimulate the thyroid gland to function optimally and correct the underlying autoimmune response. While patients on long-term synthetic hormones should not stop their medication abruptly, homeopathic treatment can run concurrently to manage persistent symptoms (like hair loss and fatigue) and potentially reduce dependency over time under medical supervision.',
-    benefits: [
-      'Treats the root cause, especially autoimmune triggers',
-      'Alleviates persistent symptoms like fatigue and brain fog',
-      'Helps regulate metabolism and weight naturally',
-      'Addresses associated emotional symptoms (anxiety/depression)',
-      'No risk of chemical toxicity or dependency',
-      'Safe for pregnant women and children'
+    "prevention": "Preventing heart & blood pressure involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of heart & blood pressure is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure heart & blood pressure permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of heart & blood pressure with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic heart & blood pressure typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
     ],
-    dietToEat: [
-      'Foods rich in Iodine (seaweed, fish, dairy) - if deficient',
-      'Selenium-rich foods (Brazil nuts, sunflower seeds)',
-      'Zinc-rich foods (meat, legumes, seeds)',
-      'Fresh fruits and vegetables (antioxidants)',
-      'Probiotics for gut health (autoimmune connection)'
-    ],
-    foodsToAvoid: [
-      'Raw cruciferous vegetables (goitrogens) in excessive amounts',
-      'Soy products (can interfere with hormone absorption)',
-      'Excessive gluten (strongly linked to Hashimoto\'s)',
-      'Processed foods and refined sugars',
-      'Excessive caffeine'
-    ],
-    lifestyleTips: [
-      { title: 'Stress Reduction', desc: 'Cortisol directly interferes with thyroid hormone conversion. Practice yoga.' },
-      { title: 'Consistent Sleep', desc: 'Your body repairs the endocrine system during deep sleep phases.' },
-      { title: 'Regular Exercise', desc: 'Moderate exercise boosts metabolism naturally, helping counteract hypothyroidism.' },
-      { title: 'Gut Health', desc: 'Address leaky gut, as 70% of the immune system resides in the gut.' }
-    ],
-    faq: [
-      { q: 'Can homeopathy cure my thyroid permanently?', a: 'In many recent or mild cases, homeopathy can restore normal gland function. In chronic autoimmune cases, it provides excellent symptom control and reduces antibody levels.' },
-      { q: 'Should I stop my thyroxine medication?', a: 'Never stop conventional medication abruptly. We work in parallel, and your endocrinologist can reduce your dose if your blood work improves.' },
-      { q: 'Why do I still feel tired even with normal TSH levels?', a: 'Synthetic hormones don\'t fix cellular absorption or underlying autoimmunity. Homeopathy addresses this exact gap, restoring your energy.' },
-      { q: 'How long does treatment take?', a: 'Thyroid disorders require patience. Expect a minimum of 6 to 12 months for deep constitutional correction.' }
-    ],
-    doctorAdvice: 'Don\'t let a thyroid diagnosis define you. By addressing the stress, gut health, and immune factors driving the imbalance, we can help you reclaim your energy and metabolism naturally.',
-    seo: {
-      title: 'Thyroid Treatment | Hashimoto & Hypothyroid | Saarthi Homeopathy',
-      description: 'Manage hypothyroidism, hyperthyroidism, and Hashimoto\'s naturally with constitutional homeopathic care at Saarthi Homeopathy.'
-    }
+    "seo": {
+      "title": "Heart & Blood Pressure Homoeopathy | Hypertension | Saarthi",
+      "description": "Natural homoeopathic treatment for hypertension, palpitations, and cardiovascular support in Surat."
+    },
+    "subDiseases": [
+      {
+        "name": "Hypertension (High BP)",
+        "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy addresses the emotional and physical roots of hypertension for sustained BP normalization.",
+        "iconName": "HeartPulse"
+      },
+      {
+        "name": "Hypotension (Low BP)",
+        "image": "https://images.unsplash.com/photo-1559757175-7cb056fba93d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies tonify the vascular system and adrenals to raise and stabilize chronically low blood pressure.",
+        "iconName": "HeartPulse"
+      },
+      {
+        "name": "Palpitations",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy calms cardiac irritability, reduces anxiety-related palpitations, and supports rhythm regulation.",
+        "iconName": "HeartPulse"
+      },
+      {
+        "name": "Angina",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional care improves coronary circulation and reduces anginal episodes in stable cardiac disease.",
+        "iconName": "HeartPulse"
+      },
+      {
+        "name": "Arrhythmia",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies reduce ectopic beats, atrial irregularities, and anxiety-driven cardiac arrhythmias.",
+        "iconName": "HeartPulse"
+      },
+      {
+        "name": "Cholesterol Management",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic metabolic support improves the lipid profile and protects arterial walls from atherosclerosis.",
+        "iconName": "HeartPulse"
+      }
+    ]
   },
   {
-    id: 'heart-diseases',
-    slug: 'heart-diseases',
-    title: 'Heart Diseases',
-    subtitle: 'Holistic cardiovascular support to strengthen your heart and improve circulation.',
-    heroImage: assets.heart,
-    category: "Heart Diseases",
-    readTime: '6 min read',
-    lastUpdated: 'July 2026',
-    beforeAfterGallery: [
-      { 
-        before: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=800&q=80', 
-        after: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80', 
-        caption: 'Improved ECG readings and stamina following 12 months of holistic cardiac care.' 
+    "id": "kidney-urinary-diseases",
+    "slug": "kidney-urinary-diseases",
+    "title": "Kidney & Urinary Diseases",
+    "subtitle": "Non-invasive homoeopathic treatment for kidney stones, UTI, CKD, and urinary tract disorders.",
+    "heroImage": "https://images.unsplash.com/photo-1576765974404-a749b3ee19ee?auto=format&fit=crop&w=800&q=80",
+    "category": "Kidney & Urinary Diseases",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "The kidneys are critical filtration organs that maintain fluid, electrolyte, and blood pressure balance. Conditions like kidney stones, UTIs, and chronic kidney disease (CKD) can severely impact quality of life. Homoeopathy offers a gentle, highly effective approach to dissolving stones, clearing infections, reducing proteinuria, and slowing CKD progression — all without harsh antibiotics or invasive procedures.",
+    "symptoms": [
+      "Burning or painful urination",
+      "Frequent urge to urinate",
+      "Blood in urine (hematuria)",
+      "Severe flank or lower back pain",
+      "Swelling in face, hands, and feet",
+      "Foamy or cloudy urine",
+      "Fatigue and nausea"
+    ],
+    "causes": [
+      {
+        "title": "Dehydration",
+        "desc": "Insufficient fluid intake concentrates urine minerals, leading to crystal and stone formation."
+      },
+      {
+        "title": "Bacterial Infections",
+        "desc": "E. coli and other bacteria ascend the urethra, causing recurrent UTIs and kidney infections."
+      },
+      {
+        "title": "Dietary Factors",
+        "desc": "High oxalate, sodium, and protein diets promote calcium and uric acid stone formation."
+      },
+      {
+        "title": "Diabetes & Hypertension",
+        "desc": "These systemic conditions are the leading causes of chronic kidney disease and nephropathy."
       }
     ],
-    overview: 'Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you\'re born with (congenital heart defects). Cardiovascular diseases are the leading cause of globally. A proactive, holistic approach focusing on lifestyle, stress management, and supportive therapies is essential for prevention and management.',
-    causes: [
-      { title: 'High Blood Pressure', desc: 'Uncontrolled hypertension damages arteries and forces the heart to work harder.' },
-      { title: 'High Cholesterol', desc: 'Plaque buildup narrows the arteries (atherosclerosis), reducing blood flow.' },
-      { title: 'Lifestyle Factors', desc: 'Smoking, obesity, lack of exercise, and poor diet are massive contributors.' },
-      { title: 'Chronic Stress', desc: 'Long-term stress increases heart rate and blood pressure, damaging vessel walls.' }
+    "types": [
+      "Calcium Oxalate Stones",
+      "Uric Acid Stones",
+      "Recurrent UTI",
+      "Interstitial Cystitis",
+      "Chronic Kidney Disease (CKD)"
     ],
-    symptoms: [
-      'Chest pain, tightness, or pressure (Angina)',
-      'Shortness of breath, especially during exertion',
-      'Pain, numbness, or weakness in the legs or arms',
-      'Fluttering in the chest or racing heartbeat',
-      'Dizziness, lightheadedness, or fainting',
-      'Swelling in the legs, ankles, or feet',
-      'Persistent fatigue'
+    "diagnosis": [
+      "Urine routine and culture",
+      "Serum creatinine and urea",
+      "Kidney function tests (KFT)",
+      "Ultrasound KUB",
+      "CT urogram for stones"
     ],
-    types: [
-      'Coronary Artery Disease (CAD)',
-      'Heart Arrhythmias (Irregular heartbeats)',
-      'Heart Failure (Congestive Heart Failure)',
-      'Heart Valve Disease',
-      'Cardiomyopathy (Thickened or enlarged heart muscle)',
-      'Pericardial Disease'
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing kidney & urinary diseases. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for kidney & urinary diseases leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Dissolves small stones naturally",
+      "Eliminates recurrent UTIs",
+      "Slows CKD progression",
+      "Reduces proteinuria",
+      "Avoids antibiotic resistance"
     ],
-    diagnosis: [
-      'Electrocardiogram (ECG/EKG)',
-      'Echocardiogram (Ultrasound of the heart)',
-      'Stress Test (Treadmill test)',
-      'Blood Tests (Lipid profile, Cardiac enzymes)',
-      'Cardiac Catheterization or Angiogram',
-      'Holter Monitor'
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
     ],
-    homeopathyTreatment: 'Homeopathy is used as a complementary and supportive therapy for cardiovascular diseases. While acute cardiac emergencies (like a heart attack) strictly require immediate allopathic intervention, homeopathy excels in managing chronic tendencies. Remedies can help regulate blood pressure, improve circulation, manage anxiety/palpitations, and support the heart muscle. Treatment focuses on the patient’s constitution, lifestyle, and emotional stress triggers.',
-    benefits: [
-      'Supports healthy blood pressure levels naturally',
-      'Helps manage anxiety and stress-induced palpitations',
-      'Improves overall circulation and vitality',
-      'Complementary to conventional cardiac medications',
-      'Focuses heavily on lifestyle and emotional risk factors',
-      'Gentle support for the aging heart'
+    "prevention": "Preventing kidney & urinary diseases involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of kidney & urinary diseases is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure kidney & urinary diseases permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of kidney & urinary diseases with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic kidney & urinary diseases typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
     ],
-    dietToEat: [
-      'Leafy greens (spinach, kale) for arterial health',
-      'Berries (rich in heart-protecting antioxidants)',
-      'Fatty fish (salmon, mackerel for Omega-3s)',
-      'Whole grains (oats, brown rice for fiber)',
-      'Walnuts, almonds, and flaxseeds'
+    "seo": {
+      "title": "Kidney Stone & UTI Homoeopathy | Saarthi Surat",
+      "description": "Homoeopathic treatment for kidney stones, UTI, prostate enlargement, and CKD in Surat. Safe and effective."
+    },
+    "subDiseases": [
+      {
+        "name": "Kidney Stones",
+        "image": "https://images.unsplash.com/photo-1576765974404-a749b3ee19ee?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Specific homoeopathic remedies help dissolve small stones and prevent future stone formation effectively.",
+        "iconName": "Droplets"
+      },
+      {
+        "name": "Urinary Tract Infection (UTI)",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment eliminates recurrent UTIs by strengthening urinary tract immunity naturally.",
+        "iconName": "Droplets"
+      },
+      {
+        "name": "Prostate Enlargement (BPH)",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy reduces prostate size, improves urinary flow, and prevents progression to urinary retention.",
+        "iconName": "Droplets"
+      },
+      {
+        "name": "Chronic Kidney Disease",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Supportive homoeopathic care slows CKD progression, manages symptoms, and improves quality of life.",
+        "iconName": "Droplets"
+      },
+      {
+        "name": "Hematuria (Blood in Urine)",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Root-cause constitutional analysis identifies and addresses the source of urinary bleeding safely.",
+        "iconName": "Droplets"
+      },
+      {
+        "name": "Interstitial Cystitis",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies reduce chronic bladder pain, urinary urgency, and inflammation in interstitial cystitis.",
+        "iconName": "Droplets"
+      },
+      {
+        "name": "Proteinuria",
+        "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy reduces protein leakage in urine by improving glomerular filtration integrity.",
+        "iconName": "Droplets"
+      }
+    ]
+  },
+  {
+    "id": "bone-joint-muscle-disorders",
+    "slug": "bone-joint-muscle-disorders",
+    "title": "Bone, Joint & Muscle Disorders",
+    "subtitle": "Effective homoeopathic pain relief for arthritis, sciatica, cervical spondylosis, and joint degeneration.",
+    "heroImage": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+    "category": "Bone, Joint & Muscle Disorders",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Bone, joint, and muscle disorders cause debilitating pain that affects mobility, independence, and mental health. Homoeopathic treatment provides profound, lasting pain relief by reducing joint inflammation, rebuilding cartilage health, addressing uric acid excess, and correcting the constitutional susceptibility to degenerative disease. Our treatment is non-addictive, anti-inflammatory, and safe for long-term use.",
+    "symptoms": [
+      "Joint pain, stiffness, and swelling",
+      "Morning stiffness lasting over an hour",
+      "Reduced range of motion",
+      "Muscle weakness and cramps",
+      "Back, neck, or sciatica pain",
+      "Grinding sensation in joints",
+      "Deformity of fingers or toes"
     ],
-    foodsToAvoid: [
-      'Trans fats and partially hydrogenated oils',
-      'Excessive sodium/salt (processed foods)',
-      'Refined carbohydrates and high sugar foods',
-      'Excessive red meat and processed meats',
-      'Excessive alcohol and caffeine'
+    "causes": [
+      {
+        "title": "Autoimmune Attack",
+        "desc": "In rheumatoid arthritis and lupus, the immune system mistakenly attacks joint tissues."
+      },
+      {
+        "title": "Cartilage Degeneration",
+        "desc": "Age, obesity, and repetitive stress cause wear-and-tear of cartilage in osteoarthritis."
+      },
+      {
+        "title": "Uric Acid Deposits",
+        "desc": "High serum uric acid crystallizes in joints (especially the big toe) causing acute gout attacks."
+      },
+      {
+        "title": "Postural & Ergonomic Stress",
+        "desc": "Poor posture, sedentary work, and improper lifting create chronic spinal and musculoskeletal strain."
+      }
     ],
-    lifestyleTips: [
-      { title: 'Daily Cardiovascular Exercise', desc: 'Engage in 30 minutes of brisk walking or swimming daily.' },
-      { title: 'Quit Smoking', desc: 'Smoking is a leading cause of arterial damage. Seek help to quit immediately.' },
-      { title: 'Stress Management', desc: 'Meditation and deep breathing lower cortisol and protect the heart.' },
-      { title: 'Healthy Weight', desc: 'Maintain a healthy BMI to reduce the workload on your heart.' }
+    "types": [
+      "Osteoarthritis",
+      "Rheumatoid Arthritis",
+      "Gouty Arthritis",
+      "Psoriatic Arthritis",
+      "Ankylosing Spondylitis"
     ],
-    faq: [
-      { q: 'Can homeopathy prevent a heart attack?', a: 'Homeopathy, combined with a healthy lifestyle, can significantly lower your risk factors (like stress and high BP), but it cannot guarantee prevention.' },
-      { q: 'Is it safe to take homeopathic remedies with blood thinners?', a: 'Yes, homeopathic medicines do not have chemical interactions with blood thinners, but always inform your cardiologist.' },
-      { q: 'How does it help with palpitations?', a: 'Specific remedies excel at calming the nervous system, which often resolves benign, stress-induced palpitations.' },
-      { q: 'Can it reverse artery blockages?', a: 'Severe blockages require conventional medical care. Homeopathy focuses on preventing further progression and improving circulation.' }
+    "diagnosis": [
+      "X-ray and MRI imaging",
+      "Rheumatoid factor and anti-CCP antibodies",
+      "Serum uric acid levels",
+      "Bone density (DEXA) scan",
+      "Constitutional homoeopathic case analysis"
     ],
-    doctorAdvice: 'Your heart beats over 100,000 times a day. Treat it with respect. A combination of a clean diet, managed stress, and gentle constitutional homeopathic support can add healthy years to your life.',
-    seo: {
-      title: 'Heart Disease & Cardiovascular Support | Saarthi Homeopathy',
-      description: 'Support your heart health and manage blood pressure naturally with holistic homeopathic care at Saarthi Homeopathy.'
-    }
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing bone, joint & muscle disorders. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for bone, joint & muscle disorders leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Reduces joint inflammation without NSAIDs",
+      "Improves mobility and range of motion",
+      "Lowers uric acid in gout naturally",
+      "Slows cartilage deterioration",
+      "No gastric side effects unlike painkillers"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing bone, joint & muscle disorders involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of bone, joint & muscle disorders is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure bone, joint & muscle disorders permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of bone, joint & muscle disorders with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic bone, joint & muscle disorders typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Arthritis & Joint Pain Homoeopathy | Sciatica | Saarthi Surat",
+      "description": "Natural homoeopathic treatment for arthritis, gout, sciatica, and back pain in Surat. Book a consultation."
+    },
+    "subDiseases": [
+      {
+        "name": "Osteoarthritis",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy slows cartilage degeneration, reduces joint pain, and improves mobility in osteoarthritis.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Rheumatoid Arthritis",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment modulates the autoimmune response, reducing joint swelling, stiffness, and deformity.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Gout",
+        "image": "https://images.unsplash.com/photo-1559757175-7cb056fba93d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies lower uric acid, resolve acute attacks, and prevent recurrent painful gout episodes.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Sciatica",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized homoeopathic care relieves sciatic nerve compression and radiating leg pain without surgery.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Cervical Spondylosis",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Remedies reduce cervical disc degeneration symptoms including neck pain, headache, and arm numbness.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Lumbar Spondylosis",
+        "image": "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment relieves lower back pain from lumbar disc disease and spinal degeneration.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Frozen Shoulder",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic anti-inflammatory remedies restore shoulder mobility and reduce pain in adhesive capsulitis.",
+        "iconName": "Bone"
+      },
+      {
+        "name": "Osteoporosis",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies improve calcium absorption, strengthen bones, and reduce fracture risk in osteoporosis.",
+        "iconName": "Bone"
+      }
+    ]
+  },
+  {
+    "id": "neurological-disorders",
+    "slug": "neurological-disorders",
+    "title": "Neurological Disorders",
+    "subtitle": "Safe homoeopathic management for migraines, vertigo, epilepsy, nerve pain, and neurodegenerative conditions.",
+    "heroImage": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+    "category": "Neurological Disorders",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Neurological disorders range from debilitating migraines to serious conditions like epilepsy and Parkinson's disease. Homoeopathy offers a gentle, individualized approach that works harmoniously with the nervous system. Rather than suppressing symptoms with strong sedatives or anticonvulsants, our treatment strengthens neurological resilience, reduces trigger sensitivity, and addresses the constitutional predisposition to nerve disorders.",
+    "symptoms": [
+      "Severe, recurring headaches or migraines",
+      "Dizziness and loss of balance (vertigo)",
+      "Numbness or tingling in extremities",
+      "Tremors and involuntary movements",
+      "Memory loss and cognitive decline",
+      "Seizures or convulsions",
+      "Sleep disturbances and insomnia"
+    ],
+    "causes": [
+      {
+        "title": "Vascular Irregularities",
+        "desc": "Abnormal blood flow patterns to the brain trigger migraine, transient ischemic attacks, and strokes."
+      },
+      {
+        "title": "Nerve Compression",
+        "desc": "Disc herniation, bone spurs, and inflammation compress nerves, causing pain, numbness, and weakness."
+      },
+      {
+        "title": "Autoimmune Neuroinflammation",
+        "desc": "The immune system attacks myelin sheaths in conditions like multiple sclerosis and Guillain-Barré."
+      },
+      {
+        "title": "Genetic & Degenerative Factors",
+        "desc": "Genetic mutations and oxidative stress drive Parkinson's and Alzheimer's disease progression."
+      }
+    ],
+    "types": [
+      "Migraine",
+      "Epilepsy",
+      "Parkinson's Disease",
+      "Bell's Palsy",
+      "Trigeminal Neuralgia",
+      "Peripheral Neuropathy"
+    ],
+    "diagnosis": [
+      "MRI and CT brain imaging",
+      "EEG for seizure disorders",
+      "Nerve conduction velocity study",
+      "Vertigo audiometry and BPPV test",
+      "Constitutional neurological case analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing neurological disorders. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for neurological disorders leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Reduces migraine frequency and severity",
+      "Decreases seizure susceptibility",
+      "Relieves nerve pain without opioids",
+      "Improves vertigo and balance",
+      "Slows cognitive decline naturally"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing neurological disorders involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of neurological disorders is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure neurological disorders permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of neurological disorders with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic neurological disorders typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Neurological Disorder Homoeopathy | Migraine, Vertigo | Saarthi",
+      "description": "Homoeopathic treatment for migraines, vertigo, epilepsy, and nerve pain in Surat. Safe and effective."
+    },
+    "subDiseases": [
+      {
+        "name": "Migraine",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy dramatically reduces migraine frequency, duration, and intensity without triptans.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Vertigo (BPPV)",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies restore vestibular balance and eliminate spinning sensations in BPPV and Ménière's disease.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Epilepsy (Seizures)",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Adjunct homoeopathic support reduces seizure threshold and frequency alongside neurologist-guided care.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Trigeminal Neuralgia",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies provide profound relief from excruciating facial nerve pain in trigeminal neuralgia.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Bell's Palsy",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy accelerates facial nerve recovery in Bell's palsy, reducing paralysis and restoring expression.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Parkinson's Disease (Support)",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Supportive constitutional care improves quality of life, reduces tremors, and slows progression in Parkinson's.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Peripheral Neuropathy",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Nerve-specific remedies reduce burning, tingling, and numbness in diabetic and other peripheral neuropathies.",
+        "iconName": "Brain"
+      },
+      {
+        "name": "Memory & Concentration Loss",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment improves cerebral circulation and cognitive function for sharper memory and focus.",
+        "iconName": "Brain"
+      }
+    ]
+  },
+  {
+    "id": "skin-diseases",
+    "slug": "skin-diseases",
+    "title": "Skin Diseases",
+    "subtitle": "Deep-acting homoeopathic cure for eczema, psoriasis, vitiligo, acne, fungal infections, and urticaria.",
+    "heroImage": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80",
+    "category": "Skin Diseases",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Skin conditions are often reflections of deeper internal imbalances. Unlike topical steroids that suppress symptoms, homoeopathy addresses the root constitution, immune hypersensitivity, and gut-skin axis. Our treatment gradually eliminates chronic skin conditions like psoriasis, eczema, and vitiligo from within — providing lasting, deep-level healing that restores healthy, radiant skin without harmful side effects.",
+    "symptoms": [
+      "Persistent itching and skin rashes",
+      "Dry, scaly, or flaking skin patches",
+      "Blistering or weeping eruptions",
+      "White depigmented patches (vitiligo)",
+      "Acne, pimples, and cystic lesions",
+      "Fungal rashes in skin folds",
+      "Hives and urticarial wheals"
+    ],
+    "causes": [
+      {
+        "title": "Immune Hypersensitivity",
+        "desc": "Overactive immune responses trigger inflammatory skin conditions like psoriasis and eczema."
+      },
+      {
+        "title": "Gut Microbiome Dysbiosis",
+        "desc": "The gut-skin axis links intestinal health to skin inflammation; leaky gut often worsens skin disease."
+      },
+      {
+        "title": "Hormonal Fluctuations",
+        "desc": "Acne, rosacea, and perioral dermatitis often flare with hormonal changes in puberty, pregnancy, and PCOS."
+      },
+      {
+        "title": "Genetic & Constitutional Factors",
+        "desc": "A hereditary predisposition to atopic conditions makes individuals more susceptible to skin disorders."
+      }
+    ],
+    "types": [
+      "Atopic Dermatitis (Eczema)",
+      "Psoriasis",
+      "Vitiligo",
+      "Acne Vulgaris",
+      "Rosacea",
+      "Urticaria (Hives)",
+      "Tinea (Ringworm)"
+    ],
+    "diagnosis": [
+      "Dermoscopy and skin biopsy",
+      "Allergy patch testing",
+      "Complete blood count and IgE levels",
+      "Gut health assessment",
+      "Constitutional skin case analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing skin diseases. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for skin diseases leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Clears psoriasis and eczema permanently",
+      "Reduces steroid dependency",
+      "Restores pigmentation in vitiligo",
+      "No rebound flares",
+      "Addresses gut-skin connection"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing skin diseases involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of skin diseases is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure skin diseases permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of skin diseases with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic skin diseases typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Skin Disease Homoeopathy | Psoriasis, Eczema, Vitiligo | Saarthi",
+      "description": "Homoeopathic treatment for psoriasis, eczema, vitiligo, acne, and urticaria in Surat. Deep, lasting cure."
+    },
+    "subDiseases": [
+      {
+        "name": "Eczema (Atopic Dermatitis)",
+        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Deep constitutional treatment eliminates eczema triggers, heals the skin barrier, and prevents recurrence.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Psoriasis",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies address the autoimmune root of psoriasis, clearing plaques without steroids.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Vitiligo",
+        "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy stimulates melanocyte activity and repigmentation in vitiligo patches over time.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Acne & Pimples",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Hormonal and constitutional remedies clear acne from within, preventing scars and recurrence effectively.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Urticaria (Hives)",
+        "image": "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Anti-allergic constitutional treatment reduces urticarial triggers and prevents recurrent hive outbreaks.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Fungal Skin Infections",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies combat fungal growth, restore skin flora balance, and prevent recurrent tinea infections.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Seborrhoeic Dermatitis",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment reduces scalp and facial oil gland hypersecretion, clearing dandruff and scaly patches.",
+        "iconName": "Sparkles"
+      },
+      {
+        "name": "Rosacea",
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies reduce facial flushing, visible blood vessels, and pustular eruptions in rosacea.",
+        "iconName": "Sparkles"
+      }
+    ]
+  },
+  {
+    "id": "womens-health",
+    "slug": "womens-health",
+    "title": "Women's Health",
+    "subtitle": "Holistic homoeopathic care for PCOS, fibroids, endometriosis, menstrual disorders, and menopausal issues.",
+    "heroImage": "https://images.unsplash.com/photo-1593476123561-9516f2097158?auto=format&fit=crop&w=800&q=80",
+    "category": "Women's Health",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Women's health encompasses a unique set of hormonal, reproductive, and emotional challenges across every life stage. Homoeopathy provides individualized, hormone-free treatment for conditions like PCOS, uterine fibroids, endometriosis, and menopausal disorders. Our approach restores hormonal balance, regulates menstrual cycles, supports fertility, and provides safe, non-surgical management of structural gynecological conditions.",
+    "symptoms": [
+      "Irregular or painful periods",
+      "Heavy or scanty menstrual bleeding",
+      "Pelvic pain and cramping",
+      "Vaginal discharge (leucorrhea)",
+      "Hot flashes and night sweats (menopause)",
+      "Mood swings and PMS",
+      "Infertility or difficulty conceiving"
+    ],
+    "causes": [
+      {
+        "title": "Hormonal Imbalance",
+        "desc": "Estrogen and progesterone dysregulation drives conditions like PCOS, fibroids, and endometriosis."
+      },
+      {
+        "title": "Stress & Adrenal Dysfunction",
+        "desc": "Chronic stress disrupts the HPO axis, causing menstrual irregularity and hormonal chaos."
+      },
+      {
+        "title": "Autoimmune Factors",
+        "desc": "Endometriosis and some infertility causes involve immune-mediated inflammation of reproductive tissue."
+      },
+      {
+        "title": "Genetic Predisposition",
+        "desc": "Family history of PCOS, fibroids, or early menopause significantly raises individual risk."
+      }
+    ],
+    "types": [
+      "Polycystic Ovarian Syndrome (PCOS)",
+      "Uterine Fibroids",
+      "Endometriosis",
+      "Premature Menopause",
+      "Premenstrual Syndrome (PMS)"
+    ],
+    "diagnosis": [
+      "Pelvic ultrasound",
+      "Hormonal panel (FSH, LH, AMH, Estradiol)",
+      "Thyroid function tests",
+      "CA-125 for endometriosis screening",
+      "Constitutional homoeopathic analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing women's health. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for women's health leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Regulates menstrual cycles naturally",
+      "Shrinks fibroids without surgery",
+      "Reduces endometriosis pain",
+      "Manages menopause without HRT",
+      "Improves fertility outcomes"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing women's health involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of women's health is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure women's health permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of women's health with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic women's health typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Women's Health Homoeopathy | PCOS, Fibroids, Menopause | Saarthi",
+      "description": "Homoeopathic treatment for PCOS, uterine fibroids, endometriosis, and menopause in Surat. Safe, natural."
+    },
+    "subDiseases": [
+      {
+        "name": "PCOS",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies regulate ovarian cysts, normalize periods, and balance androgen levels in PCOS.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Uterine Fibroids",
+        "image": "https://images.unsplash.com/photo-1593476123561-9516f2097158?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic treatment shrinks fibroids, reduces heavy bleeding, and avoids the need for hysterectomy.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Endometriosis",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies reduce endometrial implants, relieve pelvic pain, and improve fertility in endometriosis.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Menstrual Disorders",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment restores cycle regularity, reduces dysmenorrhea, and normalizes menstrual flow.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Menopause Symptoms",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy naturally manages hot flashes, mood swings, and bone loss without the risks of hormone therapy.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Leucorrhea (Vaginal Discharge)",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies address the infectious and constitutional causes of abnormal vaginal discharge.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Infertility (Female)",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Holistic constitutional care improves egg quality, hormonal environment, and uterine receptivity for conception.",
+        "iconName": "Heart"
+      },
+      {
+        "name": "Premenstrual Syndrome (PMS)",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies dramatically reduce PMS mood swings, cramping, and physical discomfort.",
+        "iconName": "Heart"
+      }
+    ]
+  },
+  {
+    "id": "mens-health",
+    "slug": "mens-health",
+    "title": "Men's Health",
+    "subtitle": "Confidential homoeopathic treatment for erectile dysfunction, infertility, prostatitis, and male hormonal issues.",
+    "heroImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    "category": "Men's Health",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Men's reproductive and hormonal health issues are often undertreated due to stigma. At Saarthi Homoeopathy, we provide completely confidential, deeply personalized treatment for conditions like erectile dysfunction, premature ejaculation, male infertility, prostatitis, and hormonal imbalances. Homoeopathy addresses both the physical and psychological dimensions of men's health, restoring confidence, vitality, and reproductive function naturally.",
+    "symptoms": [
+      "Erectile dysfunction or poor erection quality",
+      "Premature or delayed ejaculation",
+      "Low libido and sexual drive",
+      "Reduced sperm count or motility",
+      "Painful or frequent urination (prostate)",
+      "Testicular or pelvic pain",
+      "Low energy and testosterone symptoms"
+    ],
+    "causes": [
+      {
+        "title": "Psychological Stress & Anxiety",
+        "desc": "Performance anxiety, work stress, and depression are major drivers of erectile dysfunction."
+      },
+      {
+        "title": "Hormonal Imbalance",
+        "desc": "Low testosterone (hypogonadism) reduces libido, energy, muscle mass, and sperm production."
+      },
+      {
+        "title": "Vascular Insufficiency",
+        "desc": "Poor blood flow to penile tissue causes or worsens erectile dysfunction — often tied to cardiac health."
+      },
+      {
+        "title": "Lifestyle Factors",
+        "desc": "Obesity, smoking, alcohol, and sedentary behavior significantly impair male sexual and reproductive health."
+      }
+    ],
+    "types": [
+      "Erectile Dysfunction",
+      "Premature Ejaculation",
+      "Male Infertility",
+      "Prostatitis",
+      "Benign Prostatic Hyperplasia"
+    ],
+    "diagnosis": [
+      "Semen analysis (spermogram)",
+      "Testosterone and hormonal panel",
+      "Prostate-specific antigen (PSA)",
+      "Doppler blood flow study",
+      "Constitutional analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing men's health. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for men's health leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Restores erectile function naturally",
+      "Improves sperm count and motility",
+      "Reduces prostate inflammation",
+      "Addresses psychological root causes",
+      "No dependency on pharmaceutical drugs"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing men's health involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of men's health is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure men's health permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of men's health with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic men's health typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Men's Health Homoeopathy | ED, Infertility, Prostate | Saarthi",
+      "description": "Confidential homoeopathic treatment for erectile dysfunction, male infertility, and prostate disorders in Surat."
+    },
+    "subDiseases": [
+      {
+        "name": "Erectile Dysfunction",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies address vascular and psychological causes of ED for natural, lasting restoration.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Premature Ejaculation",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized treatment addresses neurovascular and anxiety triggers of premature ejaculation effectively.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Male Infertility",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic treatment improves sperm count, morphology, and motility for successful conception.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Prostatitis",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional care reduces prostate inflammation, pelvic pain, and urinary symptoms in acute and chronic prostatitis.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Low Testosterone (Hypogonadism)",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy naturally stimulates testosterone production, improving energy, libido, and muscle function.",
+        "iconName": "Activity"
+      },
+      {
+        "name": "Varicocele",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies reduce varicocele-associated pain and improve sperm health in subfertile men.",
+        "iconName": "Activity"
+      }
+    ]
+  },
+  {
+    "id": "child-health",
+    "slug": "child-health",
+    "title": "Child Care (Paediatrics)",
+    "subtitle": "Gentle, safe homoeopathic care for childhood illnesses, behavioural disorders, and developmental challenges.",
+    "heroImage": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=800&q=80",
+    "category": "Child Care (Paediatrics)",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Children respond remarkably well to homoeopathic treatment because their vital force is strong and their healing capacity is high. Homoeopathy offers safe, palatable, side-effect-free treatment for everything from recurrent colds and tonsillitis to behavioural conditions like ADHD and autism spectrum. We treat the whole child — physical, emotional, and developmental — ensuring healthy growth and resilience throughout childhood.",
+    "symptoms": [
+      "Recurrent fever, cold, and infections",
+      "Bedwetting after age 5",
+      "Hyperactivity and attention difficulties",
+      "Speech and developmental delays",
+      "Night crying and disturbed sleep",
+      "Poor weight gain and appetite",
+      "Skin rashes and allergies in children"
+    ],
+    "causes": [
+      {
+        "title": "Immature Immune System",
+        "desc": "Children's developing immune systems are highly susceptible to recurrent respiratory and gut infections."
+      },
+      {
+        "title": "Genetic & Hereditary Factors",
+        "desc": "ADHD, autism spectrum, and asthma have strong hereditary components in children."
+      },
+      {
+        "title": "Environmental & Dietary Factors",
+        "desc": "Processed food, screen time, and environmental toxin exposure contribute to behavioral and health issues."
+      },
+      {
+        "title": "Emotional & Social Stress",
+        "desc": "School pressure, family dynamics, and social anxiety can manifest as physical symptoms in children."
+      }
+    ],
+    "types": [
+      "Recurrent Respiratory Infections",
+      "ADHD",
+      "Autism Spectrum Disorder",
+      "Nocturnal Enuresis (Bedwetting)",
+      "Paediatric Eczema"
+    ],
+    "diagnosis": [
+      "Pediatric developmental assessment",
+      "Complete blood count and allergy testing",
+      "Behavioral and psychological evaluation",
+      "Growth and nutrition assessment",
+      "Constitutional paediatric case analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing child care (paediatrics). Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for child care (paediatrics) leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Safe for newborns to teenagers",
+      "No antibiotic overuse",
+      "Improves immunity long-term",
+      "Supports behavioral development in ADHD",
+      "Sweet pills — children love them"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing child care (paediatrics) involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of child care (paediatrics) is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure child care (paediatrics) permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of child care (paediatrics) with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic child care (paediatrics) typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Child & Paediatric Homoeopathy | ADHD, Recurrent Infections | Saarthi",
+      "description": "Gentle homoeopathic care for children including recurrent infections, ADHD, bedwetting, and autism support in Surat."
+    },
+    "subDiseases": [
+      {
+        "name": "Recurrent Cold & Cough",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment builds lasting immune resilience, reducing the frequency of childhood colds and coughs.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "ADHD",
+        "image": "https://images.unsplash.com/photo-1559757175-7cb056fba93d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies improve attention, reduce hyperactivity, and support academic performance in ADHD.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "Autism Spectrum (Support)",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Holistic constitutional care supports social skills, communication, and behavioral development in autism.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "Bedwetting (Enuresis)",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies address the neurological and emotional triggers of bedwetting for lasting resolution.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "Teething Problems",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Chamomilla and other classical remedies provide instant relief from teething pain and irritability in infants.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "Paediatric Eczema",
+        "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Deep constitutional treatment heals childhood eczema from within, eliminating steroid cream dependence.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "Tonsillitis in Children",
+        "image": "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathy treats recurrent tonsillitis, reduces throat infections, and avoids the need for tonsillectomy.",
+        "iconName": "Baby"
+      },
+      {
+        "name": "Poor Appetite & Growth",
+        "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies stimulate healthy appetite, improve nutrient absorption, and support normal growth.",
+        "iconName": "Baby"
+      }
+    ]
+  },
+  {
+    "id": "mental-emotional-health",
+    "slug": "mental-emotional-health",
+    "title": "Mental & Emotional Health",
+    "subtitle": "Gentle homoeopathic support for depression, anxiety, insomnia, OCD, and emotional trauma healing.",
+    "heroImage": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=800&q=80",
+    "category": "Mental & Emotional Health",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Mental and emotional health disorders are among the most prevalent yet undertreated conditions globally. Homoeopathy stands out in this domain by treating the whole person — body, mind, and spirit — through deeply individualized constitutional remedies. We address the root psychological constitution without sedating, addictive medications, providing gentle, long-lasting support for depression, anxiety, insomnia, and complex emotional disorders.",
+    "symptoms": [
+      "Persistent sadness, low mood, or hopelessness",
+      "Excessive worry, fear, and panic attacks",
+      "Difficulty sleeping or waking at 3am",
+      "Social withdrawal and isolation",
+      "Obsessive thoughts or compulsive behaviors",
+      "Emotional outbursts or mood swings",
+      "Physical symptoms from emotional causes"
+    ],
+    "causes": [
+      {
+        "title": "Psychological Trauma",
+        "desc": "Past trauma, grief, abuse, and loss create deep constitutional imprints that drive mental disorders."
+      },
+      {
+        "title": "Neurotransmitter Imbalance",
+        "desc": "Deficiencies in serotonin, dopamine, and GABA create conditions for depression and anxiety."
+      },
+      {
+        "title": "Chronic Life Stress",
+        "desc": "Work pressure, relationship difficulties, and financial stress accumulate into chronic mental strain."
+      },
+      {
+        "title": "Hormonal Dysregulation",
+        "desc": "Thyroid disorders, cortisol dysregulation, and reproductive hormones directly influence mental health."
+      }
+    ],
+    "types": [
+      "Major Depressive Disorder",
+      "Generalized Anxiety Disorder (GAD)",
+      "Panic Disorder",
+      "OCD",
+      "PTSD",
+      "Bipolar Disorder"
+    ],
+    "diagnosis": [
+      "Comprehensive psychiatric and emotional history",
+      "PHQ-9 depression and GAD-7 anxiety screening",
+      "Thyroid and hormonal assessment",
+      "Sleep quality evaluation",
+      "Constitutional emotional profiling"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing mental & emotional health. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for mental & emotional health leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Non-addictive anxiety and depression support",
+      "Improves sleep without sedating drugs",
+      "Addresses trauma at its emotional root",
+      "No withdrawal effects",
+      "Can be used alongside psychiatric care"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing mental & emotional health involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of mental & emotional health is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure mental & emotional health permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of mental & emotional health with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic mental & emotional health typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Mental Health Homoeopathy | Depression, Anxiety, Insomnia | Saarthi",
+      "description": "Homoeopathic treatment for depression, anxiety, OCD, and insomnia in Surat. Gentle, non-addictive support."
+    },
+    "subDiseases": [
+      {
+        "name": "Depression",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies lift mood, restore motivation, and provide gentle, antidepressant-free depression relief.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "Anxiety & Panic Attacks",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized treatment calms the hyperactive nervous system, reducing panic frequency and anxiety intensity.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "Insomnia",
+        "image": "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies restore natural sleep architecture without sedatives or dependency-forming sleep aids.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "OCD",
+        "image": "https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy reduces obsessive thoughts and compulsive rituals in OCD over consistent treatment.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "PTSD & Grief",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Specific grief and trauma remedies like Ignatia and Natrum Mur help process and heal emotional wounds.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "Stress Management",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional treatment builds emotional resilience and stress adaptation without dependency on anxiolytics.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "Phobias",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized remedies desensitize the psychological response to specific phobias over time.",
+        "iconName": "Smile"
+      },
+      {
+        "name": "Brain Fog & Concentration",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies improve cerebral clarity, focus, and mental sharpness in stress-related brain fog.",
+        "iconName": "Smile"
+      }
+    ]
+  },
+  {
+    "id": "allergy-immune-disorders",
+    "slug": "allergy-immune-disorders",
+    "title": "Allergy & Immune Disorders",
+    "subtitle": "Root-cause homoeopathic treatment for dust allergy, food allergies, autoimmune disorders, and immune dysfunction.",
+    "heroImage": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=800&q=80",
+    "category": "Allergy & Immune Disorders",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Allergic and immune disorders represent a fundamental imbalance of the body's defense systems — either hypersensitive (allergies, autoimmune) or hyposensitive (recurrent infections, immunodeficiency). Homoeopathy addresses these disorders constitutionally, gradually retraining the immune system to respond appropriately. Our treatment reduces hypersensitivity, modulates autoimmune attacks, and builds immune resilience without immunosuppressants.",
+    "symptoms": [
+      "Sneezing fits and runny nose (allergy)",
+      "Skin reactions after food or contact",
+      "Recurrent infections and slow recovery",
+      "Joint pain and fatigue (autoimmune)",
+      "Swollen lymph nodes",
+      "Chronic inflammation without obvious cause",
+      "Anaphylactic reactions history"
+    ],
+    "causes": [
+      {
+        "title": "Genetic Immune Programming",
+        "desc": "Inherited patterns of immune hypersensitivity make individuals prone to allergic and autoimmune conditions."
+      },
+      {
+        "title": "Environmental Allergen Exposure",
+        "desc": "Dust mites, pollen, pet dander, and food antigens trigger IgE-mediated allergic responses."
+      },
+      {
+        "title": "Gut Microbiome Disruption",
+        "desc": "Leaky gut and dysbiosis allow antigens to enter the bloodstream, triggering systemic immune reactions."
+      },
+      {
+        "title": "Molecular Mimicry",
+        "desc": "Pathogens that mimic the body's own proteins trigger autoimmune attacks on healthy tissues."
+      }
+    ],
+    "types": [
+      "Allergic Rhinitis",
+      "Food Allergies",
+      "Rheumatoid Arthritis",
+      "Systemic Lupus Erythematosus (SLE)",
+      "Hashimoto's Thyroiditis",
+      "Ankylosing Spondylitis"
+    ],
+    "diagnosis": [
+      "IgE and RAST allergy testing",
+      "ANA and anti-dsDNA antibodies (autoimmune)",
+      "Complete blood count with differential",
+      "Gut permeability assessment",
+      "Constitutional immune profiling"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing allergy & immune disorders. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for allergy & immune disorders leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Reduces allergic hypersensitivity",
+      "Modulates autoimmune inflammation",
+      "Decreases frequency of allergic attacks",
+      "Builds immune tolerance",
+      "Avoids immunosuppressants"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing allergy & immune disorders involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of allergy & immune disorders is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure allergy & immune disorders permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of allergy & immune disorders with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic allergy & immune disorders typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Allergy & Autoimmune Homoeopathy | Lupus, Food Allergy | Saarthi",
+      "description": "Homoeopathic treatment for allergies, autoimmune disorders, and lupus in Surat. Natural immune rebalancing."
+    },
+    "subDiseases": [
+      {
+        "name": "Dust Allergy",
+        "image": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional desensitization through homoeopathy reduces dust mite hypersensitivity and daily allergic symptoms.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "name": "Food Allergies",
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized treatment reduces food antigen hypersensitivity and broadens dietary tolerance over time.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "name": "Lupus (SLE)",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Deep constitutional care modulates lupus autoimmunity, reduces flares, and supports organ protection.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "name": "Hashimoto's Thyroiditis",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies reduce thyroid autoantibodies and stabilize thyroid function in Hashimoto's disease.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "name": "Ankylosing Spondylitis",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted anti-inflammatory treatment reduces spinal inflammation and stiffness in ankylosing spondylitis.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "name": "Chronic Urticaria",
+        "image": "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional homoeopathy identifies and addresses immune triggers of chronic urticaria for lasting remission.",
+        "iconName": "ShieldCheck"
+      },
+      {
+        "name": "Eosinophilia",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized treatment reduces eosinophil overactivation in allergic and parasitic conditions effectively.",
+        "iconName": "ShieldCheck"
+      }
+    ]
+  },
+  {
+    "id": "lifestyle-disorders",
+    "slug": "lifestyle-disorders",
+    "title": "Lifestyle Disorders",
+    "subtitle": "Natural homoeopathic management of chronic fatigue, sleep disorders, obesity, and modern lifestyle-related conditions.",
+    "heroImage": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
+    "category": "Lifestyle Disorders",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Modern lifestyles characterized by chronic stress, poor sleep, sedentary behavior, and processed diets have created an epidemic of lifestyle-related disorders. Homoeopathy addresses these conditions constitutionally — restoring energy, normalizing sleep architecture, improving metabolic function, and building resilience against the physical demands of contemporary life. No quick fixes; sustainable, deep-level healing.",
+    "symptoms": [
+      "Persistent exhaustion despite adequate sleep",
+      "Poor quality sleep and insomnia",
+      "Difficulty losing weight",
+      "Chronic headaches and body tension",
+      "Digital eye strain and screen fatigue",
+      "Irritability and burnout",
+      "Frequent illness from low immunity"
+    ],
+    "causes": [
+      {
+        "title": "Chronic Stress & Burnout",
+        "desc": "Prolonged work stress, multitasking, and always-on culture deplete adrenal reserves and cause burnout."
+      },
+      {
+        "title": "Sedentary Lifestyle",
+        "desc": "Physical inactivity slows metabolism, weakens the musculoskeletal system, and promotes systemic inflammation."
+      },
+      {
+        "title": "Poor Sleep Hygiene",
+        "desc": "Irregular sleep timing, blue light exposure, and nighttime eating disrupt circadian rhythm and recovery."
+      },
+      {
+        "title": "Ultra-Processed Diet",
+        "desc": "High sugar, refined carbs, and chemical additives in processed food drive metabolic dysfunction."
+      }
+    ],
+    "types": [
+      "Chronic Fatigue Syndrome (CFS)",
+      "Metabolic Syndrome",
+      "Tech Neck & Digital Eye Strain",
+      "Burnout Syndrome",
+      "Sleep Disorders"
+    ],
+    "diagnosis": [
+      "Adrenal function and cortisol testing",
+      "Sleep study (polysomnography)",
+      "Comprehensive metabolic panel",
+      "Nutritional deficiency assessment",
+      "Constitutional lifestyle analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing lifestyle disorders. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for lifestyle disorders leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Restores energy and vitality",
+      "Improves sleep quality naturally",
+      "Supports sustainable weight management",
+      "Reduces burnout and mental exhaustion",
+      "Builds long-term stress resilience"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing lifestyle disorders involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of lifestyle disorders is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure lifestyle disorders permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of lifestyle disorders with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic lifestyle disorders typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Lifestyle Disorder Homoeopathy | Fatigue, Obesity, Sleep | Saarthi",
+      "description": "Homoeopathic management of lifestyle disorders including chronic fatigue, obesity, and sleep disorders in Surat."
+    },
+    "subDiseases": [
+      {
+        "name": "Chronic Fatigue Syndrome",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies address adrenal exhaustion and mitochondrial dysfunction underlying chronic fatigue syndrome.",
+        "iconName": "Coffee"
+      },
+      {
+        "name": "Insomnia & Sleep Disorders",
+        "image": "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Targeted remedies restore circadian rhythm and improve deep sleep quality without dependency on sleep medication.",
+        "iconName": "Coffee"
+      },
+      {
+        "name": "Obesity",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Root-cause constitutional treatment addresses the metabolic, hormonal, and emotional drivers of excess weight.",
+        "iconName": "Coffee"
+      },
+      {
+        "name": "Digital Eye Strain",
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic eye remedies reduce digital eye strain, dryness, and headaches associated with prolonged screen use.",
+        "iconName": "Coffee"
+      },
+      {
+        "name": "Burnout Syndrome",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Adrenal support and constitutional remedies restore motivation, energy, and emotional balance in burnout.",
+        "iconName": "Coffee"
+      },
+      {
+        "name": "Tech Neck & Posture Issues",
+        "image": "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional and musculoskeletal remedies relieve the chronic pain associated with poor screen-induced posture.",
+        "iconName": "Coffee"
+      },
+      {
+        "name": "Metabolic Syndrome",
+        "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Comprehensive treatment addresses the cluster of metabolic risk factors that define metabolic syndrome.",
+        "iconName": "Coffee"
+      }
+    ]
+  },
+  {
+    "id": "chronic-diseases",
+    "slug": "chronic-diseases",
+    "title": "Chronic & Degenerative Diseases",
+    "subtitle": "Supportive homoeopathic care for cancer, Alzheimer's, fibromyalgia, and other serious degenerative conditions.",
+    "heroImage": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    "category": "Chronic & Degenerative Diseases",
+    "readTime": "6 min read",
+    "lastUpdated": "August 2026",
+    "overview": "Chronic and degenerative diseases represent the most complex and challenging conditions in modern medicine. Homoeopathy serves as a powerful supportive and palliative tool — improving quality of life, managing treatment side effects, slowing disease progression, and addressing the constitutional vulnerabilities that allow these conditions to develop. Our integrative approach complements conventional oncological and neurological care.",
+    "symptoms": [
+      "Persistent, progressive symptoms despite treatment",
+      "Extreme fatigue and rapid debilitation",
+      "Widespread pain and fibromyalgia symptoms",
+      "Cognitive decline and memory loss",
+      "Weight loss and muscle wasting",
+      "Compromised immunity and slow recovery",
+      "Emotional distress from chronic illness"
+    ],
+    "causes": [
+      {
+        "title": "Genetic Mutations & Epigenetics",
+        "desc": "DNA mutations, oncogenes, and epigenetic alterations drive cancer and neurodegenerative disease development."
+      },
+      {
+        "title": "Chronic Oxidative Stress",
+        "desc": "Free radical damage accumulates over decades, contributing to cellular degeneration and malignancy."
+      },
+      {
+        "title": "Long-term Environmental Exposure",
+        "desc": "Carcinogens, heavy metals, radiation, and chronic infections are significant causative factors."
+      },
+      {
+        "title": "Immune System Failure",
+        "desc": "The immune system normally destroys abnormal cells; when it fails, cancer and chronic infections take hold."
+      }
+    ],
+    "types": [
+      "Cancer (Supportive Care)",
+      "Alzheimer's Disease",
+      "Fibromyalgia",
+      "Chronic Lyme Disease",
+      "Multiple Sclerosis (Support)"
+    ],
+    "diagnosis": [
+      "Oncological staging and biopsy",
+      "MRI and PET scan imaging",
+      "Neuropsychological testing",
+      "Fibromyalgia tender point assessment",
+      "Constitutional chronic disease analysis"
+    ],
+    "homeopathyTreatment": "Homoeopathy offers a deeply individualized, non-invasive approach to managing chronic & degenerative diseases. Constitutional remedies are selected based on a comprehensive understanding of the patient's physical, mental, and emotional profile — not just the disease label. Treatment focuses on stimulating the body's innate healing capacity, addressing the root cause rather than suppressing symptoms. Unlike conventional medicines that carry risks of side effects and dependency, homoeopathic remedies are safe for all ages, including children, elderly, and pregnant women. Consistent homoeopathic treatment for chronic & degenerative diseases leads to lasting improvement in quality of life, reduction of disease severity, and in many cases, complete resolution of chronic conditions.",
+    "benefits": [
+      "Reduces chemotherapy side effects",
+      "Improves cancer patient quality of life",
+      "Manages fibromyalgia pain naturally",
+      "Slows cognitive decline",
+      "Addresses fear and emotional distress of illness"
+    ],
+    "lifestyleTips": [
+      {
+        "title": "Balanced Nutrition",
+        "desc": "Follow a whole-food diet rich in vegetables, fruits, and lean proteins to support healing."
+      },
+      {
+        "title": "Regular Physical Activity",
+        "desc": "Engage in 30 minutes of moderate exercise daily to improve circulation and immunity."
+      },
+      {
+        "title": "Stress Reduction",
+        "desc": "Practice daily mindfulness, yoga, or breathing exercises to calm the nervous system."
+      },
+      {
+        "title": "Quality Sleep",
+        "desc": "Maintain consistent sleep timing and aim for 7–8 hours of restorative sleep nightly."
+      }
+    ],
+    "prevention": "Preventing chronic & degenerative diseases involves early recognition of symptoms, constitutional homoeopathic treatment before conditions become severe, and adopting a lifestyle that supports natural immunity and systemic balance.",
+    "doctorAdvice": "Every case of chronic & degenerative diseases is unique. I always recommend a thorough constitutional assessment before prescribing, as the same diagnosis can require completely different remedies in different patients. Homoeopathic treatment works best when started early and followed consistently.",
+    "faq": [
+      {
+        "q": "Can homoeopathy cure chronic & degenerative diseases permanently?",
+        "a": "Homoeopathy does not just suppress symptoms — it addresses the constitutional and root causes. Many patients achieve complete, permanent resolution of chronic & degenerative diseases with consistent treatment. Results depend on disease duration, severity, and individual constitution."
+      },
+      {
+        "q": "How long does homoeopathic treatment take?",
+        "a": "Acute conditions may respond within days to weeks. Chronic chronic & degenerative diseases typically requires 3–6 months of consistent treatment to show significant and lasting improvement."
+      },
+      {
+        "q": "Are homoeopathic medicines safe alongside my current medications?",
+        "a": "Yes. Homoeopathic remedies are highly diluted and do not interact pharmacologically with conventional drugs. They can be safely used alongside any ongoing medical treatment."
+      },
+      {
+        "q": "Do I need to stop my current medicines to start homoeopathy?",
+        "a": "No. We never recommend stopping any prescribed conventional treatment abruptly. Homoeopathy can be integrated alongside your current care, and as improvement is observed, your specialist can guide reduction of conventional medicines."
+      }
+    ],
+    "seo": {
+      "title": "Chronic Disease Homoeopathy | Cancer Support, Fibromyalgia | Saarthi",
+      "description": "Homoeopathic supportive care for cancer, Alzheimer's, fibromyalgia, and chronic degenerative diseases in Surat."
+    },
+    "subDiseases": [
+      {
+        "name": "Cancer (Supportive Care)",
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Homoeopathic supportive care reduces chemotherapy side effects, improves immunity, and enhances patient well-being.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Alzheimer's (Early Support)",
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies support cognitive function, reduce confusion, and slow early Alzheimer's progression.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Fibromyalgia",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Individualized treatment addresses widespread pain, fatigue, and sleep disturbances comprehensively in fibromyalgia.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Osteoporosis",
+        "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies improve bone mineral density, calcium metabolism, and reduce fracture risk.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Multiple Sclerosis (Support)",
+        "image": "https://images.unsplash.com/photo-1607923432780-7a9c30adcb02?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Supportive constitutional care reduces MS relapse frequency and manages symptoms alongside neurologist-guided treatment.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Chronic Pain Syndrome",
+        "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Deep constitutional analysis addresses the neurological sensitization underlying chronic pain conditions.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Post-COVID Syndrome (Long COVID)",
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Constitutional remedies restore energy, clear brain fog, and address lingering Long COVID symptoms effectively.",
+        "iconName": "Infinity"
+      },
+      {
+        "name": "Palliative & End-of-Life Care",
+        "image": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?auto=format&fit=crop&w=600&q=80",
+        "shortDescription": "Compassionate homoeopathic care manages pain, fear, and distress in end-of-life and palliative care settings.",
+        "iconName": "Infinity"
+      }
+    ]
   }
 ];

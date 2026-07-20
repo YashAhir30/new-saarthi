@@ -52,7 +52,7 @@ const Banner = () => {
                   fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(28px, 4vw, 52px)',
                   fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05,
-                  color: `var(--white, #ffffff)`, marginBottom: '16px',
+                  color: 'var(--text-main)', marginBottom: '16px',
                 }}>
                   Start Your Healing{' '}
                   <span style={{
@@ -62,7 +62,7 @@ const Banner = () => {
                 </h2>
                 <p style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--text-muted)', marginBottom: '32px', maxWidth: '440px' }}>
                   Take the first step towards natural, lasting wellness.
-                  Dr. Yogin Baldaniya offers personalised homeopathic consultations for a wide range of conditions.
+                  Dr. Yogin Baldaniya offers personalised homoeopathic consultations for a wide range of conditions.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
                   <button onClick={() => navigate('/contact')} className="btn-primary">
@@ -106,10 +106,10 @@ const Banner = () => {
                       background: 'var(--grad-primary)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                     }}>
-                      <CalendarDays size={20} color={`var(--white, #ffffff)`} />
+                      <CalendarDays size={20} color={'var(--text-main)'} />
                     </div>
                     <div>
-                      <p style={{ fontWeight: 700, fontSize: '15px', color: `var(--white, #ffffff)`, margin: 0 }}>Next Available Slot</p>
+                      <p style={{ fontWeight: 700, fontSize: '15px', color: 'var(--text-main)', margin: 0 }}>Next Available Slot</p>
                       <p style={{ fontSize: '12px', color: 'var(--cyan)', margin: 0, fontWeight: 600 }}>Today · From 10:00 AM</p>
                     </div>
                   </div>

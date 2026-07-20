@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { assets } from '../assets/assets'
 import { Mail, Phone, MapPin, Clock, MessageCircle, Send, ChevronRight } from 'lucide-react'
 
 const InstagramIcon = () => (
@@ -34,28 +35,8 @@ const Contact = () => {
   }
 
   const inputStyle = {
-    width: '100%',
-    background: 'rgba(255,255,255,0.04)',
-    border: `1px solid var(--glass-border)`,
     borderRadius: '14px',
     padding: '16px 20px',
-    color: `var(--white, #ffffff)`,
-    fontFamily: 'var(--font-body)',
-    fontSize: '15px',
-    fontWeight: 500,
-    outline: 'none',
-    transition: 'all 0.3s cubic-bezier(0.23,1,0.32,1)',
-  }
-
-  const focusInput = (e) => {
-    e.target.style.background = 'rgba(255,255,255,0.07)'
-    e.target.style.borderColor = 'rgba(0,102,255,0.60)'
-    e.target.style.boxShadow = '0 0 0 3px rgba(0,102,255,0.10), 0 0 20px rgba(0,102,255,0.08)'
-  }
-  const blurInput = (e) => {
-    e.target.style.background = 'rgba(255,255,255,0.04)'
-    e.target.style.borderColor = `var(--glass-strong, rgba(255,255,255,0.10))`
-    e.target.style.boxShadow = 'none'
   }
 
   return (
@@ -67,7 +48,7 @@ const Contact = () => {
         <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <ScrollReveal>
             <div className="section-label" style={{ marginBottom: '20px', display: 'inline-flex' }}>Get In Touch</div>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 0.95, color: `var(--white, #ffffff)`, marginBottom: '20px' }}>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 0.95, color: 'var(--text-main)', marginBottom: '20px' }}>
               Let's Start Your{' '}
               <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Healing</span>
             </h1>
@@ -95,7 +76,7 @@ const Contact = () => {
                       <Icon />
                     </div>
                     <p style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>{label}</p>
-                    <p style={{ fontSize: '13px', fontWeight: 600, color: `var(--text-muted, rgba(200,215,255,0.85))`, wordBreak: 'break-all' }}>{value}</p>
+                    <p style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-muted)', wordBreak: 'break-all' }}>{value}</p>
                   </div>
                 </a>
               </ScrollReveal>
@@ -108,34 +89,34 @@ const Contact = () => {
             {/* LEFT — Contact Form */}
             <ScrollReveal className="reveal-left" style={{ flex: '1 1 420px' }}>
               <div className="glass-card" style={{ padding: 'clamp(28px,4vw,44px)' }}>
-                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '26px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '8px' }}>Send a Message</h2>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '26px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>Send a Message</h2>
                 <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginBottom: '32px' }}>We'll get back to you within 24 hours.</p>
 
                 {sent ? (
                   <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                    <div className="icon-circle" style={{ margin: '0 auto 20px' }}><Send size={22} color={`var(--white, #ffffff)`} /></div>
-                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '10px' }}>Message Sent!</h3>
+                    <div className="icon-circle" style={{ margin: '0 auto 20px' }}><Send size={22} color={'var(--text-main)'} /></div>
+                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '10px' }}>Message Sent!</h3>
                     <p style={{ color: 'var(--text-muted)' }}>Thank you for reaching out. We'll respond soon.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                     <div>
-                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: `var(--text-muted, rgba(200,215,255,0.7))`, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Full Name</label>
-                      <input type="text" required placeholder="Your full name" value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} style={inputStyle} onFocus={focusInput} onBlur={blurInput} />
+                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Full Name</label>
+                      <input className="form-input" type="text" required placeholder="Your full name" value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} style={inputStyle} />
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                       <div>
-                        <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: `var(--text-muted, rgba(200,215,255,0.7))`, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Email</label>
-                        <input type="email" required placeholder="your@email.com" value={form.email} onChange={e => setForm(p => ({ ...p, email: e.target.value }))} style={inputStyle} onFocus={focusInput} onBlur={blurInput} />
+                        <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Email</label>
+                        <input className="form-input" type="email" required placeholder="your@email.com" value={form.email} onChange={e => setForm(p => ({ ...p, email: e.target.value }))} style={inputStyle} />
                       </div>
                       <div>
-                        <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: `var(--text-muted, rgba(200,215,255,0.7))`, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Phone</label>
-                        <input type="tel" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={e => setForm(p => ({ ...p, phone: e.target.value }))} style={inputStyle} onFocus={focusInput} onBlur={blurInput} />
+                        <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Phone</label>
+                        <input className="form-input" type="tel" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={e => setForm(p => ({ ...p, phone: e.target.value }))} style={inputStyle} />
                       </div>
                     </div>
                     <div>
-                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: `var(--text-muted, rgba(200,215,255,0.7))`, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Message</label>
-                      <textarea required placeholder="Tell us about your condition or question..." value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} rows={5} style={{ ...inputStyle, resize: 'vertical', minHeight: '120px' }} onFocus={focusInput} onBlur={blurInput} />
+                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Message</label>
+                      <textarea className="form-input" required placeholder="Tell us about your health concern..." rows={4} value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} style={{ ...inputStyle, resize: 'none' }} />
                     </div>
                     <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '16px', fontSize: '16px', marginTop: '8px' }}>
                       <Send size={16} /> Send Message
@@ -149,7 +130,7 @@ const Contact = () => {
             <ScrollReveal className="reveal-right" style={{ flex: '1 1 340px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {/* Clinic image */}
               <div style={{ borderRadius: '24px', overflow: 'hidden', border: `1px solid var(--glass-border-hi)`, boxShadow: `var(--shadow-card)` }}>
-                <img src="./src/assets/contact_image.png" alt="Saarthi Clinic" loading="lazy" decoding="async" width="340" height="220" style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
+                <img src={assets.contact_image} alt="Saarthi Clinic" loading="lazy" decoding="async" width="340" height="220" style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
               </div>
 
               {/* Address */}
@@ -157,7 +138,7 @@ const Contact = () => {
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
                   <div className="icon-circle-sm"><MapPin size={16} color="var(--cyan)" /></div>
                   <div>
-                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '6px' }}>Visit Our Clinic</h4>
+                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>Visit Our Clinic</h4>
                     <p style={{ fontSize: '14px', lineHeight: 1.7, color: 'var(--text-muted)' }}>Surat, Gujarat, India</p>
                     <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ marginTop: '14px', padding: '8px 18px', fontSize: '13px' }}>
                       Open in Maps <ChevronRight size={14} />
@@ -171,7 +152,7 @@ const Contact = () => {
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
                   <div className="icon-circle-sm" style={{ background: 'rgba(0,212,255,0.12)', borderColor: `var(--glass-border, rgba(0,212,255,0.25))` }}><MessageCircle size={16} color="var(--cyan)" /></div>
                   <div>
-                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '6px' }}>Emergency Consultation</h4>
+                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>Emergency Consultation</h4>
                     <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '14px' }}>For urgent concerns, WhatsApp us any time — we respond within 2 hours.</p>
                     <a href="https://wa.me/+918733905727?text=Hi, I need urgent consultation" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: '13px', padding: '10px 20px' }}>
                       <WhatsAppIcon /> WhatsApp Now
@@ -189,17 +170,17 @@ const Contact = () => {
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <ScrollReveal style={{ marginBottom: '32px', textAlign: 'center' }}>
             <div className="section-label" style={{ display: 'inline-flex', marginBottom: '16px' }}><Clock size={11} /> Working Hours</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, color: `var(--white, #ffffff)`, letterSpacing: '-0.03em' }}>When We're <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Available</span></h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 40px)', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '-0.03em' }}>When We're <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Available</span></h2>
           </ScrollReveal>
           <div className="glass-card" style={{ overflow: 'hidden' }}>
             {workingHours.map((h, i) => (
               <div key={i} style={{
                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                 padding: '18px 28px',
-                borderBottom: i < workingHours.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+                borderBottom: i < workingHours.length - 1 ? '1px solid var(--glass-light)' : 'none',
                 background: i % 2 === 0 ? 'rgba(255,255,255,0.015)' : 'transparent',
               }}>
-                <span style={{ fontSize: '14px', fontWeight: 600, color: `var(--text-muted, rgba(200,215,255,0.85))` }}>{h.day}</span>
+                <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-muted)' }}>{h.day}</span>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: `var(--success-color, #10b981)`, boxShadow: '0 0 8px #10b981', animation: 'halo-breathe 3s ease-in-out infinite' }} />
                   <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 500 }}>{h.time}</span>
@@ -220,7 +201,7 @@ const Contact = () => {
               Visit Our Clinic or Connect Online
             </h2>
             <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
-              We proudly provide online homeopathic consultation for patients across the world, while our physical clinic is located in Surat, Gujarat, India.
+              We proudly provide online homoeopathic consultation for patients across the world, while our physical clinic is located in Surat, Gujarat, India.
             </p>
           </ScrollReveal>
 
@@ -233,7 +214,7 @@ const Contact = () => {
                 <div style={{ fontSize: '32px', marginBottom: '16px' }}>🌍</div>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '12px' }}>Online Consultation</h3>
                 <p style={{ fontSize: '15px', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '20px' }}>
-                  Receive expert homeopathic consultation from anywhere in the world through secure online appointments.
+                  Receive expert homoeopathic consultation from anywhere in the world through secure online appointments.
                 </p>
                 <span style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(0,102,255,0.1)', color: 'var(--cyan)', fontSize: '12px', fontWeight: 700, borderRadius: '8px', border: '1px solid rgba(0,102,255,0.2)' }}>
                   Available Worldwide
@@ -295,7 +276,7 @@ const Contact = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Saarthi Homeopathy Location"
+                title="Saarthi Homoeopathy Location"
               />
             </div>
           </ScrollReveal>
@@ -306,7 +287,7 @@ const Contact = () => {
               Need Treatment?
             </h2>
             <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 32px' }}>
-              Whether you're in Surat or anywhere around the world, we're here to help you with personalized homeopathic care.
+              Whether you're in Surat or anywhere around the world, we're here to help you with personalized homoeopathic care.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
               <button onClick={() => { document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }) }} className="btn-primary" style={{ padding: '16px 28px', fontSize: '15px' }}>

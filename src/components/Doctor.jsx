@@ -41,10 +41,10 @@ const Ring = ({ size, delay, color = 'rgba(0,102,255,0.20)', dashed }) => (
 )
 
 const statItems = [
-  { icon: Star, label: 'Happy Patients', value: 5000, suffix: '+' },
-  { icon: Award, label: 'Years of Excellence', value: 10, suffix: '+' },
+  { icon: Star, label: 'Happy Patients', value: 1000, suffix: '+' },
+  { icon: Award, label: 'Years of Experience', value: 5, suffix: '+' },
   { icon: BadgeCheck, label: 'Success Rate', value: 98, suffix: '%' },
-  { icon: UserCheck, label: 'Recoveries', value: 4800, suffix: '+' },
+  { icon: UserCheck, label: 'Recoveries', value: 900, suffix: '+' },
 ]
 
 const Doctor = () => {
@@ -122,12 +122,12 @@ const Doctor = () => {
               fontFamily: 'var(--font-display)',
               fontSize: 'clamp(30px, 4vw, 52px)',
               fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 1.0,
-              color: `var(--white, #ffffff)`, marginBottom: '10px',
+              color: 'var(--text-main)', marginBottom: '10px',
             }}>
               Dr. Yogin<br />Baldaniya
             </h2>
             <p style={{ fontSize: '14px', fontWeight: 700, color: 'var(--cyan)', marginBottom: '24px', letterSpacing: '0.5px' }}>
-              BHMS · Pioneer Homoeopathic Medical College
+              B.H.M.S (Consultant Homoeopath) · M.D (Hom) · S.C.P.H (ICHM, UN)
             </p>
 
             <p style={{ fontSize: '15px', lineHeight: 1.85, color: 'var(--text-muted)', marginBottom: '32px', maxWidth: '500px' }}>
@@ -155,7 +155,7 @@ const Doctor = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px' }}>
               {[
                 [BadgeCheck, 'Verified Doctor'],
-                [GraduationCap, 'BHMS Certified'],
+                [GraduationCap, 'B.H.M.S Certified'],
               ].map(([Icon, label], i) => (
                 <div key={i} className="trust-badge"><Icon size={14} />{label}</div>
               ))}

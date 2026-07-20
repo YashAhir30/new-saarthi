@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Header from '../components/Header'
 import SpecialityMenu from '../components/SpecialityMenu'
 import Doctor from '../components/Doctor'
-import Homeopathy from '../components/Homeopathy'
+import Homoeopathy from '../components/Homoeopathy'
 import Banner from '../components/Banner'
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
       <SpecialityMenu />
       <Doctor />
-      <Homeopathy />
+      <Homoeopathy />
     </div>
   )
 }

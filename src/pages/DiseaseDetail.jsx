@@ -9,8 +9,13 @@ import {
   ChevronRight, ArrowRight, Phone, CheckCircle2, Activity, HeartPulse, 
   ShieldCheck, Plus, Minus, Star, MapPin, Clock, AlertTriangle, 
   Share2, Printer, Download, ThumbsUp, ThumbsDown, Calendar, 
-  Clock3, X, ChevronLeft, Shield, Award, CheckCircle, FileText
+  Clock3, X, ChevronLeft, Shield, Award, CheckCircle, FileText,
+  Thermometer, Wind, Dna, Droplets, Bone, Brain, Sparkles, Heart, Baby, Smile, Coffee, Infinity
 } from 'lucide-react';
+
+const IconMap = {
+  Thermometer, Wind, Activity, Dna, HeartPulse, Droplets, Bone, Brain, Sparkles, Heart, Baby, Smile, ShieldCheck, Coffee, Infinity
+};
 
 const Accordion = ({ question, answer, isOpen, onClick }) => (
   <div onClick={onClick} className="glass-card" style={{ padding: '0', cursor: 'pointer', overflow: 'hidden', marginBottom: '12px', transition: 'all 0.3s ease' }}>
@@ -40,10 +45,10 @@ const Lightbox = ({ image, onClose, onNext, onPrev }) => {
       initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.95)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
     >
-      <button onClick={onClose} style={{ position: 'absolute', top: '30px', right: '30px', background: 'rgba(255,255,255,0.1)', border: 'none', color: '#fff', padding: '12px', borderRadius: '50%', cursor: 'pointer' }}>
+      <button onClick={onClose} style={{ position: 'absolute', top: '30px', right: '30px', background: 'var(--glass-strong)', border: 'none', color: 'var(--text-main)', padding: '12px', borderRadius: '50%', cursor: 'pointer' }}>
         <X size={24} />
       </button>
-      <button onClick={onPrev} style={{ position: 'absolute', left: '30px', background: 'rgba(255,255,255,0.1)', border: 'none', color: '#fff', padding: '16px', borderRadius: '50%', cursor: 'pointer' }}>
+      <button onClick={onPrev} style={{ position: 'absolute', left: '30px', background: 'var(--glass-strong)', border: 'none', color: 'var(--text-main)', padding: '16px', borderRadius: '50%', cursor: 'pointer' }}>
         <ChevronLeft size={32} />
       </button>
       <motion.img 
@@ -51,7 +56,7 @@ const Lightbox = ({ image, onClose, onNext, onPrev }) => {
         src={image} alt="Enlarged" 
         style={{ maxWidth: '90%', maxHeight: '85vh', objectFit: 'contain', borderRadius: '16px' }} 
       />
-      <button onClick={onNext} style={{ position: 'absolute', right: '30px', background: 'rgba(255,255,255,0.1)', border: 'none', color: '#fff', padding: '16px', borderRadius: '50%', cursor: 'pointer' }}>
+      <button onClick={onNext} style={{ position: 'absolute', right: '30px', background: 'var(--glass-strong)', border: 'none', color: 'var(--text-main)', padding: '16px', borderRadius: '50%', cursor: 'pointer' }}>
         <ChevronRight size={32} />
       </button>
     </motion.div>
@@ -73,8 +78,8 @@ const DiseaseDetail = () => {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   useSEO({
-    title: disease?.seo?.title || 'Disease Detail | Saarthi Homeopathy',
-    description: disease?.seo?.description || 'Learn more about homeopathy treatment.',
+    title: disease?.seo?.title || 'Disease Detail | Saarthi Homoeopathy',
+    description: disease?.seo?.description || 'Learn more about homoeopathy treatment.',
     schemaData: disease ? {
       "@type": "MedicalCondition",
       "name": disease.title,
@@ -82,7 +87,7 @@ const DiseaseDetail = () => {
       "signOrSymptom": disease.symptoms.map(s => ({ "@type": "MedicalSymptom", "name": s })),
       "possibleTreatment": {
         "@type": "MedicalTherapy",
-        "name": "Constitutional Homeopathy",
+        "name": "Constitutional Homoeopathy",
         "description": disease.homeopathyTreatment
       }
     } : null
@@ -132,7 +137,7 @@ const DiseaseDetail = () => {
     { id: 'symptoms', label: 'Symptoms' },
     { id: 'causes', label: 'Causes' },
     { id: 'types', label: 'Types & Diagnosis' },
-    { id: 'treatment', label: 'Homeopathy' },
+    { id: 'treatment', label: 'Homoeopathy' },
     { id: 'gallery', label: 'Before & After' },
     { id: 'faq', label: 'FAQ' }
   ];
@@ -194,7 +199,7 @@ const DiseaseDetail = () => {
                 <div style={{ display: 'flex', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}>
                   <div className="section-label"><HeartPulse size={12} /> {disease.category}</div>
                   <div className="section-label" style={{ background: 'rgba(16,185,129,0.1)', color: '#10b981', borderColor: 'rgba(16,185,129,0.2)' }}><Clock3 size={12} /> {disease.readTime}</div>
-                  <div className="section-label" style={{ background: 'rgba(255,255,255,0.05)' }}><Calendar size={12} /> Updated: {disease.lastUpdated}</div>
+                  <div className="section-label" style={{ background: 'var(--glass-light)' }}><Calendar size={12} /> Updated: {disease.lastUpdated}</div>
                 </div>
                 <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 6vw, 68px)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--text-main)', marginBottom: '24px' }}>
                   {disease.title}
@@ -217,10 +222,59 @@ const DiseaseDetail = () => {
               </ScrollReveal>
             </div>
             
-            <div style={{ flex: '1 1 350px', display: 'flex', justifyContent: 'center' }}>
-              <ScrollReveal delay={0.2} style={{ position: 'relative' }}>
-                <div style={{ width: '320px', height: '320px', borderRadius: '50%', background: 'var(--grad-icon)', padding: '40px', boxShadow: 'var(--shadow-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--glass-border)' }}>
-                  <img src={disease.heroImage} alt={disease.title} fetchpriority="high" loading="eager" decoding="async" width="240" height="240" style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(0,102,255,0.2))' }} />
+            <div style={{ flex: '1 1 340px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <ScrollReveal delay={0.2} style={{ position: 'relative', width: '100%', maxWidth: '520px' }}>
+                {/* Soft blue glow behind the card */}
+                <div aria-hidden style={{
+                  position: 'absolute', inset: '-20px', borderRadius: '40px',
+                  background: 'radial-gradient(ellipse at center, rgba(0,102,255,0.18) 0%, transparent 70%)',
+                  filter: 'blur(30px)', pointerEvents: 'none', zIndex: 0
+                }} />
+                {/* Premium Rectangular Image Card */}
+                <div
+                  className="hero-image-card"
+                  style={{
+                    position: 'relative', zIndex: 1,
+                    width: '100%',
+                    height: 'clamp(240px, 30vw, 360px)',
+                    borderRadius: '24px',
+                    overflow: 'hidden',
+                    background: 'var(--glass-mid, var(--glass-light))',
+                    border: '1px solid var(--glass-border-hi)',
+                    boxShadow: 'var(--shadow-glow), 0 24px 60px rgba(0,0,0,0.3)',
+                    transition: 'transform 0.45s cubic-bezier(0.23,1,0.32,1), box-shadow 0.45s ease',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 0 40px rgba(0,102,255,0.35), 0 0 80px rgba(0,212,255,0.2), 0 32px 80px rgba(0,0,0,0.35)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = 'var(--shadow-glow), 0 24px 60px rgba(0,0,0,0.3)';
+                  }}
+                >
+                  <img
+                    src={disease.heroImage}
+                    alt={disease.title}
+                    fetchpriority="high"
+                    loading="eager"
+                    decoding="async"
+                    onError={(e) => { e.target.onerror = null; e.target.src = assets.about_image; }}
+                    style={{
+                      width: '100%', height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      display: 'block',
+                      transition: 'transform 0.6s ease',
+                    }}
+                  />
+                  {/* Subtle gradient overlay at bottom for depth */}
+                  <div aria-hidden style={{
+                    position: 'absolute', bottom: 0, left: 0, right: 0,
+                    height: '40%',
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.25) 0%, transparent 100%)',
+                    pointerEvents: 'none'
+                  }} />
                 </div>
               </ScrollReveal>
             </div>
@@ -233,16 +287,17 @@ const DiseaseDetail = () => {
         
         {/* Left Sidebar - Sticky TOC */}
         <aside style={{ flex: '0 0 240px', position: 'sticky', top: '100px', display: window.innerWidth > 1024 ? 'block' : 'none' }}>
-          <div className="glass-card" style={{ padding: '24px' }}>
+          <div className="glass-card" style={{ padding: '24px', background: 'var(--toc-bg)', borderColor: 'var(--toc-border)', boxShadow: 'var(--toc-shadow)' }}>
             <h4 style={{ fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-dim)', marginBottom: '16px' }}>Table of Contents</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {sections.map(s => (
                 <li key={s.id}>
                   <button 
                     onClick={() => scrollTo(s.id)}
-                    style={{ background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer', padding: 0, fontSize: '14.5px', fontWeight: activeSection === s.id ? 700 : 500, color: activeSection === s.id ? 'var(--cyan)' : 'var(--text-muted)', transition: 'color 0.3s' }}
+                    className={`toc-item ${activeSection === s.id ? 'active' : ''}`}
                   >
-                    {s.label}
+                    {activeSection === s.id && <div style={{ width: '4px', height: '16px', background: 'var(--cyan)', borderRadius: '2px', position: 'absolute', left: 0 }} />}
+                    <span style={{ marginLeft: activeSection === s.id ? '8px' : '0', transition: 'margin 0.2s' }}>{s.label}</span>
                   </button>
                 </li>
               ))}
@@ -296,7 +351,7 @@ const DiseaseDetail = () => {
                 <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '24px' }}>Types</h2>
                 <div className="glass-card" style={{ padding: '32px' }}>
                   <ul style={{ paddingLeft: '20px', margin: 0, color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '15.5px', lineHeight: 1.6 }}>
-                    {disease.types.map((type, i) => <li key={i}>{type}</li>)}
+                    {(disease.types || []).map((type, i) => <li key={i}>{type}</li>)}
                   </ul>
                 </div>
               </ScrollReveal>
@@ -316,15 +371,15 @@ const DiseaseDetail = () => {
           <section id="treatment">
             <ScrollReveal>
               <div style={{ background: 'var(--grad-icon)', borderRadius: '32px', padding: 'clamp(40px,6vw,60px)', border: '1px solid var(--glass-border-hi)', boxShadow: 'var(--shadow-glow)' }}>
-                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, color: '#fff', marginBottom: '24px' }}>Homeopathic Treatment</h2>
-                <p style={{ fontSize: '18px', lineHeight: 1.8, color: '#fff', opacity: 0.9, margin: 0, maxWidth: '800px' }}>{disease.homeopathyTreatment}</p>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, color: 'var(--text-main)', marginBottom: '24px' }}>Homoeopathic Treatment</h2>
+                <p style={{ fontSize: '18px', lineHeight: 1.8, color: 'var(--text-main)', opacity: 0.9, margin: 0, maxWidth: '800px' }}>{disease.homeopathyTreatment}</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div style={{ marginTop: '32px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
-                {disease.benefits.map((benefit, i) => (
+                {(disease.benefits || []).map((benefit, i) => (
                   <div key={i} className="glass-card" style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-                    <div style={{ width: '36px', height: '36px', borderRadius: '12px', background: 'var(--grad-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><ShieldCheck size={18} color="#fff" /></div>
+                    <div style={{ width: '36px', height: '36px', borderRadius: '12px', background: 'var(--grad-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><ShieldCheck size={18} color='var(--text-main)' /></div>
                     <span style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-main)' }}>{benefit}</span>
                   </div>
                 ))}
@@ -341,11 +396,11 @@ const DiseaseDetail = () => {
                   {disease.beforeAfterGallery.map((item, i) => (
                     <React.Fragment key={i}>
                       <div className="glass-card glass-card-hover" onClick={() => setLightboxImg(item.before)} style={{ overflow: 'hidden', padding: 0, cursor: 'pointer', position: 'relative' }}>
-                        <span style={{ position: 'absolute', top: 16, left: 16, background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, zIndex: 1 }}>BEFORE</span>
+                        <span style={{ position: 'absolute', top: 16, left: 16, background: 'rgba(0,0,0,0.6)', color: 'var(--text-main)', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, zIndex: 1 }}>BEFORE</span>
                         <img src={item.before} alt="Before Treatment" loading="lazy" decoding="async" width="400" height="250" style={{ width: '100%', height: '250px', objectFit: 'cover', transition: 'transform 0.4s' }} />
                       </div>
                       <div className="glass-card glass-card-hover" onClick={() => setLightboxImg(item.after)} style={{ overflow: 'hidden', padding: 0, cursor: 'pointer', position: 'relative' }}>
-                        <span style={{ position: 'absolute', top: 16, left: 16, background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, zIndex: 1 }}>AFTER</span>
+                        <span style={{ position: 'absolute', top: 16, left: 16, background: 'rgba(0,0,0,0.6)', color: 'var(--text-main)', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, zIndex: 1 }}>AFTER</span>
                         <img src={item.after} alt="After Treatment" loading="lazy" decoding="async" width="400" height="250" style={{ width: '100%', height: '250px', objectFit: 'cover', transition: 'transform 0.4s' }} />
                       </div>
                       <p style={{ gridColumn: '1 / -1', fontSize: '15px', color: 'var(--text-muted)', fontStyle: 'italic', textAlign: 'center', margin: '8px 0 0' }}>"{item.caption}"</p>
@@ -362,14 +417,16 @@ const DiseaseDetail = () => {
               <div className="glass-card" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', padding: '40px', gap: '40px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '200px', height: '200px', background: 'var(--cyan)', filter: 'blur(80px)', opacity: 0.1, borderRadius: '50%' }} />
                 <div style={{ flexShrink: 0, width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', border: '4px solid var(--glass-border)' }}>
-                  <img src={assets.profile_pic} alt="Dr. Yogin" loading="lazy" decoding="async" width="140" height="140" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={assets.profile_pic} alt="Dr. Yogin Baldaniya" loading="lazy" decoding="async" width="140" height="140" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div style={{ flex: '1 1 300px' }}>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>Dr. Yogin Baldaniya</h3>
                   <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '20px' }}>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><Award size={14} color="var(--cyan)"/> BHMS</span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><Shield size={14} color="var(--cyan)"/> 10+ Years Exp</span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><CheckCircle size={14} color="var(--cyan)"/> 5000+ Happy Patients</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><Award size={14} color="var(--cyan)"/> B.H.M.S (Consultant Homoeopath)</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><Shield size={14} color="var(--cyan)"/> M.D (Hom)</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><CheckCircle size={14} color="var(--cyan)"/> S.C.P.H (ICHM, UN)</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><Star size={14} color="var(--cyan)"/> 5+ Years Experience</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: 'var(--text-muted)' }}><CheckCircle2 size={14} color="var(--cyan)"/> 1000+ Happy Patients</span>
                   </div>
                   <blockquote style={{ fontSize: '16px', fontStyle: 'italic', lineHeight: 1.7, color: 'var(--text-muted)', margin: 0, borderLeft: '3px solid var(--cyan)', paddingLeft: '16px' }}>
                     "{disease.doctorAdvice}"
@@ -378,6 +435,62 @@ const DiseaseDetail = () => {
               </div>
             </ScrollReveal>
           </section>
+
+          {/* Diseases Covered (Sub-Diseases) */}
+          {disease.subDiseases && disease.subDiseases.length > 0 && (
+            <section style={{ marginBottom: '60px' }}>
+              <ScrollReveal>
+                <div className="section-label" style={{ marginBottom: '16px' }}>Conditions Treated</div>
+                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '32px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '32px' }}>Diseases Covered</h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                  {disease.subDiseases.map((sub, i) => {
+                    const SubIcon = IconMap[sub.iconName] || Activity;
+                    return (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-50px' }}
+                        transition={{ duration: 0.5, delay: i * 0.1, ease: [0.23, 1, 0.32, 1] }}
+                        whileHover={{ scale: 1.02, y: -4, boxShadow: 'var(--shadow-glow)', borderColor: 'rgba(0,212,255,0.3)' }}
+                        style={{
+                          borderRadius: '24px', overflow: 'hidden', background: 'var(--glass-mid)',
+                          border: '1px solid var(--glass-border)', display: 'flex', flexDirection: 'column',
+                          cursor: 'default'
+                        }}
+                      >
+                        <div style={{ position: 'relative', width: '100%', height: '180px' }}>
+                          <img 
+                            src={sub.image} 
+                            alt={sub.name} 
+                            loading="lazy" decoding="async" 
+                            onError={(e) => { e.target.onerror = null; e.target.src = assets.about_image; }}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                          />
+                          <div style={{
+                            position: 'absolute', top: '16px', right: '16px',
+                            background: 'var(--grad-primary)', padding: '10px',
+                            borderRadius: '12px', color: 'var(--text-main)',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                          }}>
+                            <SubIcon size={20} />
+                          </div>
+                        </div>
+                        <div style={{ padding: '24px' }}>
+                          <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '10px', fontFamily: 'var(--font-display)' }}>
+                            {sub.name}
+                          </h3>
+                          <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
+                            {sub.shortDescription}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </ScrollReveal>
+            </section>
+          )}
 
           <section id="faq">
             <ScrollReveal>
@@ -415,7 +528,7 @@ const DiseaseDetail = () => {
                 <div aria-hidden style={{ position: 'absolute', inset: 0, background: 'var(--mesh-color-1)', filter: 'blur(60px)', opacity: 0.5, pointerEvents: 'none' }} />
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 5vw, 40px)', fontWeight: 700, color: 'var(--text-main)', marginBottom: '16px' }}>Still suffering from {disease.title.toLowerCase()}?</h2>
-                  <p style={{ fontSize: '16px', color: 'var(--text-muted)', marginBottom: '32px', maxWidth: '600px', margin: '0 auto 32px' }}>Book your consultation today and receive personalized, root-cause homeopathic treatment from anywhere in the world.</p>
+                  <p style={{ fontSize: '16px', color: 'var(--text-muted)', marginBottom: '32px', maxWidth: '600px', margin: '0 auto 32px' }}>Book your consultation today and receive personalized, root-cause homoeopathic treatment from anywhere in the world.</p>
                   <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
                     <button onClick={() => navigate('/contact')} className="btn-primary" style={{ padding: '16px 32px' }}>Book Appointment</button>
                     <a href="tel:8733905727" className="btn-outline" style={{ padding: '16px 32px', textDecoration: 'none' }}>Call Now</a>
@@ -425,16 +538,43 @@ const DiseaseDetail = () => {
             </ScrollReveal>
           </section>
 
-          {/* Related Diseases */}
+          {/* Related Treatments */}
           <section>
             <ScrollReveal>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '24px' }}>Related Treatments</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '20px' }}>
                 {relatedDiseases.map((rel, i) => (
-                  <div key={i} onClick={() => navigate(`/disease/${rel.slug}`)} className="glass-card glass-card-hover" style={{ padding: '24px', cursor: 'pointer', textAlign: 'center' }}>
-                    <img src={rel.heroImage} alt={rel.title} loading="lazy" decoding="async" width="60" height="60" style={{ width: '60px', height: '60px', objectFit: 'contain', marginBottom: '16px' }} />
-                    <h4 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>{rel.title}</h4>
-                    <span style={{ fontSize: '13px', color: 'var(--cyan)', fontWeight: 600 }}>Read More &rarr;</span>
+                  <div
+                    key={i}
+                    onClick={() => navigate(`/disease/${rel.slug}`)}
+                    className="glass-card glass-card-hover"
+                    style={{ padding: '0', cursor: 'pointer', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
+                  >
+                    {/* Image */}
+                    <div style={{ width: '100%', height: '160px', overflow: 'hidden', flexShrink: 0, position: 'relative', background: 'var(--glass-bg)' }}>
+                      <img
+                        src={rel.heroImage}
+                        alt={rel.title}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => { e.target.onerror = null; e.target.src = assets.about_image; }}
+                        style={{
+                          width: '100%', height: '100%',
+                          objectFit: 'cover', objectPosition: 'center',
+                          display: 'block',
+                          transition: 'transform 0.5s ease'
+                        }}
+                        onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.06)'}
+                        onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+                      />
+                      {/* Gradient overlay at bottom */}
+                      <div aria-hidden style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '50%', background: 'linear-gradient(to top, var(--bg-card) -20%, transparent 100%)', pointerEvents: 'none' }} />
+                    </div>
+                    {/* Content */}
+                    <div style={{ padding: '20px 20px 24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                      <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '12px', lineHeight: 1.3 }}>{rel.title}</h4>
+                      <span style={{ fontSize: '13px', color: 'var(--cyan)', fontWeight: 600, marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '4px' }}>Read More <ChevronRight size={14} /></span>
+                    </div>
                   </div>
                 ))}
               </div>

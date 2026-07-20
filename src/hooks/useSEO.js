@@ -83,7 +83,7 @@ const useSEO = ({ title, description, schemaData }) => {
         "@graph": [
           {
             "@type": "MedicalOrganization",
-            "name": "Saarthi Homeopathy",
+            "name": "Saarthi Homoeopathy",
             "url": "https://yashahir30.github.io/Saarthi-App/",
             "logo": "https://yashahir30.github.io/Saarthi-App/logo.png",
             "contactPoint": {
@@ -95,7 +95,7 @@ const useSEO = ({ title, description, schemaData }) => {
           {
             "@type": "Physician",
             "name": "Dr. Yogin Baldaniya",
-            "medicalSpecialty": "Homeopathy",
+            "medicalSpecialty": "Homoeopathy",
             "url": "https://yashahir30.github.io/Saarthi-App/about"
           }
         ]

@@ -5,6 +5,7 @@ import { Search, X, ChevronRight, Activity, Stethoscope } from 'lucide-react';
 import { diseasesData } from '../data/diseases';
 import useSEO from '../hooks/useSEO';
 import ScrollReveal from '../components/animations/ScrollReveal';
+import { assets } from '../assets/assets';
 
 // Extract unique categories
 const categories = ["All", ...new Set(diseasesData.map(d => d.category))];
@@ -17,12 +18,12 @@ const Diseases = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useSEO({
-    title: 'Explore Diseases & Treatments | Saarthi Homeopathy',
-    description: 'Browse our comprehensive list of diseases and homeopathic treatments. Filter by category, symptoms, or search directly for your condition.',
+    title: 'Explore Diseases & Treatments | Saarthi Homoeopathy',
+    description: 'Browse our comprehensive list of diseases and homoeopathic treatments. Filter by category, symptoms, or search directly for your condition.',
     schemaData: {
       "@type": "MedicalWebPage",
       "name": "Diseases & Treatments Directory",
-      "description": "Comprehensive list of diseases treated at Saarthi Homeopathy."
+      "description": "Comprehensive list of diseases treated at Saarthi Homoeopathy."
     }
   });
 
@@ -89,7 +90,7 @@ const Diseases = () => {
                   width: '100%',
                   padding: '20px 20px 20px 54px',
                   borderRadius: '20px',
-                  background: 'rgba(255,255,255,0.03)',
+                  background: 'var(--glass-light)',
                   border: '1px solid var(--glass-border-hi)',
                   color: 'var(--text-main)',
                   fontSize: '16px',
@@ -122,7 +123,7 @@ const Diseases = () => {
                 style={{
                   padding: '10px 24px',
                   borderRadius: '30px',
-                  background: activeCategory === cat ? 'var(--cyan)' : 'rgba(255,255,255,0.05)',
+                  background: activeCategory === cat ? 'var(--cyan)' : 'var(--glass-light)',
                   color: activeCategory === cat ? '#0f172a' : 'var(--text-main)',
                   border: `1px solid ${activeCategory === cat ? 'var(--cyan)' : 'var(--glass-border)'}`,
                   fontSize: '15px',
@@ -185,8 +186,18 @@ const Diseases = () => {
                   >
                     <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--grad-primary)', filter: 'blur(60px)', opacity: 0.1, borderRadius: '50%' }} />
                     
-                    <div style={{ width: '100%', height: '200px', borderRadius: '16px', overflow: 'hidden', marginBottom: '20px', background: 'var(--glass-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img src={disease.heroImage} alt={disease.title} loading="lazy" decoding="async" width="120" height="120" style={{ width: '60%', height: '60%', objectFit: 'contain' }} />
+                    <div style={{ width: '100%', height: '220px', borderRadius: '18px', overflow: 'hidden', marginBottom: '20px', background: 'var(--glass-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <img 
+                        src={disease.heroImage} 
+                        alt={disease.title} 
+                        loading="lazy" 
+                        decoding="async" 
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = assets.about_image;
+                        }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} 
+                      />
                     </div>
                     
                     <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--cyan)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>

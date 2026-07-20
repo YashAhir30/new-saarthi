@@ -14,27 +14,9 @@ const MyProfile = () => {
   const [isEdit, setIsEdit] = useState(false)
 
   const inp = {
-    background: 'rgba(255,255,255,0.04)',
-    border: `1px solid var(--glass-border)`,
     borderRadius: '12px',
     padding: '12px 16px',
-    color: `var(--white, #ffffff)`,
-    fontFamily: 'var(--font-body)',
     fontSize: '14px',
-    fontWeight: 500,
-    outline: 'none',
-    width: '100%',
-    transition: 'all 0.3s ease',
-  }
-  const foc = (e) => {
-    e.target.style.borderColor = 'rgba(0,102,255,0.60)'
-    e.target.style.boxShadow = '0 0 0 3px rgba(0,102,255,0.10)'
-    e.target.style.background = 'rgba(255,255,255,0.07)'
-  }
-  const bl = (e) => {
-    e.target.style.borderColor = `var(--glass-strong, rgba(255,255,255,0.10))`
-    e.target.style.boxShadow = 'none'
-    e.target.style.background = 'rgba(255,255,255,0.04)'
   }
 
   const InfoRow = ({ icon: Icon, label, children }) => (
@@ -63,17 +45,17 @@ const MyProfile = () => {
             </div>
             {isEdit && (
               <div style={{ position: 'absolute', bottom: '2px', right: '2px', width: '30px', height: '30px', borderRadius: '50%', background: 'linear-gradient(135deg, #0066FF, #00D4FF)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,102,255,0.40)' }}>
-                <Camera size={14} color={`var(--white, #ffffff)`} />
+                <Camera size={14} color={'var(--text-main)'} />
               </div>
             )}
           </div>
           <div style={{ flex: 1 }}>
             {isEdit ? (
-              <input type="text" value={userData.name} onChange={e => setUserData(p => ({ ...p, name: e.target.value }))} style={{ ...inp, fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, marginBottom: '4px', padding: '10px 16px' }} onFocus={foc} onBlur={bl} />
+              <input className="form-input" type="text" value={userData.name} onChange={e => setUserData(p => ({ ...p, name: e.target.value }))} style={{ ...inp, fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, marginBottom: '4px', padding: '10px 16px' }} />
             ) : (
-              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '4px' }}>{userData.name}</h1>
+              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 700, color: 'var(--text-main)', marginBottom: '4px' }}>{userData.name}</h1>
             )}
-            <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Saarthi Homeopathy Patient</p>
+            <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Saarthi Homoeopathy Patient</p>
           </div>
           <button
             onClick={() => setIsEdit(!isEdit)}
@@ -89,22 +71,22 @@ const MyProfile = () => {
           <p style={{ fontSize: '12px', fontWeight: 700, color: 'var(--cyan)', letterSpacing: '2px', textTransform: 'uppercase', padding: '20px 0 4px' }}>Contact Information</p>
 
           <InfoRow icon={Mail} label="Email">
-            <p style={{ fontSize: '14px', color: `var(--text-muted, #7dd3fc)` }}>{userData.email}</p>
+            <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>{userData.email}</p>
           </InfoRow>
 
           <InfoRow icon={Phone} label="Phone">
             {isEdit ? (
-              <input type="tel" value={userData.phone} onChange={e => setUserData(p => ({ ...p, phone: e.target.value }))} style={inp} onFocus={foc} onBlur={bl} />
+              <input className="form-input" type="tel" value={userData.phone} onChange={e => setUserData(p => ({ ...p, phone: e.target.value }))} style={inp} />
             ) : (
-              <p style={{ fontSize: '14px', color: `var(--text-muted, #7dd3fc)` }}>{userData.phone}</p>
+              <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>{userData.phone}</p>
             )}
           </InfoRow>
 
           <InfoRow icon={MapPin} label="Address">
             {isEdit ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <input type="text" value={userData.address.line1} onChange={e => setUserData(p => ({ ...p, address: { ...p.address, line1: e.target.value } }))} style={inp} onFocus={foc} onBlur={bl} />
-                <input type="text" value={userData.address.line2} onChange={e => setUserData(p => ({ ...p, address: { ...p.address, line2: e.target.value } }))} style={inp} onFocus={foc} onBlur={bl} />
+                <input className="form-input" type="text" value={userData.address.line1} onChange={e => setUserData(p => ({ ...p, address: { ...p.address, line1: e.target.value } }))} style={inp} />
+                <input className="form-input" type="text" value={userData.address.line2} onChange={e => setUserData(p => ({ ...p, address: { ...p.address, line2: e.target.value } }))} style={inp} />
               </div>
             ) : (
               <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6 }}>{userData.address.line1}<br />{userData.address.line2}</p>
@@ -126,7 +108,7 @@ const MyProfile = () => {
 
           <InfoRow icon={Calendar} label="Date of Birth">
             {isEdit ? (
-              <input type="date" value={userData.dob} onChange={e => setUserData(p => ({ ...p, dob: e.target.value }))} style={{ ...inp, width: 'auto', colorScheme: 'dark' }} onFocus={foc} onBlur={bl} />
+              <input className="form-input" type="date" value={userData.dob} onChange={e => setUserData(p => ({ ...p, dob: e.target.value }))} style={{ ...inp, width: 'auto', colorScheme: 'dark' }} />
             ) : (
               <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>{userData.dob}</p>
             )}

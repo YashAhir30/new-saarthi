@@ -143,13 +143,7 @@ const Header = () => {
         {/* LEFT */}
         <div style={{ flex: '1 1 400px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
 
-          {/* Badge */}
-          <div style={{ animation: 'fade-up 0.7s ease 0.1s both' }}>
-            <div className="section-label">
-              <Sparkles size={11} />
-              Award-Winning Homeopathy
-            </div>
-          </div>
+         
 
           {/* Heading */}
           <div style={{ animation: 'fade-up 0.7s ease 0.2s both' }}>
@@ -159,7 +153,7 @@ const Header = () => {
               fontWeight: 700,
               lineHeight: 0.96,
               letterSpacing: '-0.04em',
-              color: `var(--white, #ffffff)`,
+              color: 'var(--text-main)',
               margin: 0,
             }}>
               Trusted<br />
@@ -180,7 +174,7 @@ const Header = () => {
             color: 'var(--text-muted)', maxWidth: '460px', margin: 0,
             animation: 'fade-up 0.7s ease 0.3s both',
           }}>
-            Personalised homeopathic care with Dr. Yogin Baldaniya.
+            Personalised homoeopathic care with Dr. Yogin Baldaniya.
             Safe, science-backed treatment — tailored to your unique needs.
           </p>
 
@@ -197,14 +191,14 @@ const Header = () => {
           {/* Trust Row */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', animation: 'fade-up 0.7s ease 0.5s both' }}>
             <div className="trust-badge"><ShieldCheck size={13} /> Verified Doctor</div>
-            <div className="trust-badge"><Star size={13} /> 5000+ Patients</div>
+            <div className="trust-badge"><Star size={13} /> 1000+ Patients</div>
             <div className="trust-badge"><HeartPulse size={13} /> 98% Success Rate</div>
           </div>
 
           {/* Stat Cards */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-            <StatCard number="10+" label="Years of Excellence" delay={0.6} />
-            <StatCard number="5K+" label="Happy Patients" delay={0.7} />
+            <StatCard number="5+" label="Years of Experience" delay={0.6} />
+            <StatCard number="1K+" label="Happy Patients" delay={0.7} />
             <StatCard number="98%" label="Success Rate" delay={0.8} />
           </div>
         </div>

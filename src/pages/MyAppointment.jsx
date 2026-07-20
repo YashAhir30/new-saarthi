@@ -12,7 +12,7 @@ const MyAppointment = () => {
 
         <ScrollReveal style={{ marginBottom: '40px' }}>
           <div className="section-label" style={{ marginBottom: '16px', display: 'inline-flex' }}><Clock size={11} /> Upcoming</div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: '-0.03em', color: `var(--white, #ffffff)` }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text-main)' }}>
             My Appointments
           </h1>
         </ScrollReveal>
@@ -27,7 +27,7 @@ const MyAppointment = () => {
                 </div>
                 {/* Info */}
                 <div style={{ flex: '1 1 200px' }}>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '4px' }}>{item.name}</h3>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '4px' }}>{item.name}</h3>
                   <p style={{ fontSize: '13px', fontWeight: 700, color: 'var(--cyan)', marginBottom: '12px' }}>{item.speciality}</p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
@@ -36,7 +36,7 @@ const MyAppointment = () => {
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Calendar size={13} color="var(--text-muted)" />
-                      <span style={{ fontSize: '13px', fontWeight: 600, color: `var(--text-muted, rgba(200,215,255,0.85))` }}>25 July, 2025 · 8:30 PM</span>
+                      <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-muted)' }}>25 July, 2025 · 8:30 PM</span>
                     </div>
                   </div>
                 </div>

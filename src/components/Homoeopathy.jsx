@@ -6,7 +6,7 @@ const benefits = [
   {
     icon: ShieldCheck,
     title: 'Zero Side Effects',
-    description: 'Homeopathy uses highly diluted natural substances — completely safe for all ages, including infants, pregnant women, and the elderly.',
+    description: 'Homoeopathy uses highly diluted natural substances — completely safe for all ages, including infants, pregnant women, and the elderly.',
     number: '100%',
     numberLabel: 'Natural',
   },
@@ -47,7 +47,7 @@ const benefits = [
   },
 ]
 
-const Homeopathy = () => {
+const Homoeopathy = () => {
   return (
     <section style={{ padding: 'clamp(60px,8vw,120px) clamp(20px,5vw,60px)', position: 'relative', overflow: 'hidden' }}>
 
@@ -64,13 +64,13 @@ const Homeopathy = () => {
         {/* Heading */}
         <ScrollReveal style={{ textAlign: 'center', marginBottom: '64px' }}>
           <div className="section-label" style={{ marginBottom: '20px' }}>
-            <Sparkles size={11} /> Why Homeopathy
+            <Sparkles size={11} /> Why Homoeopathy
           </div>
           <h2 style={{
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(32px, 4.5vw, 58px)',
             fontWeight: 700, letterSpacing: '-0.035em', lineHeight: 1.0,
-            color: `var(--white, #ffffff)`, marginBottom: '16px',
+            color: 'var(--text-main)', marginBottom: '16px',
           }}>
             Why Choose{' '}
             <span style={{
@@ -99,7 +99,7 @@ const Homeopathy = () => {
                     <b.icon size={24} color="var(--cyan)" />
                   </div>
                   <div>
-                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '6px' }}>
+                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>
                       {b.title}
                     </h3>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
@@ -125,4 +125,4 @@ const Homeopathy = () => {
   )
 }
 
-export default Homeopathy
+export default Homoeopathy

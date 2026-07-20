@@ -32,7 +32,7 @@ const Navbar = () => {
     borderRadius: '999px',
     fontSize: '14px',
     fontWeight: isActive ? 600 : 500,
-    color: isActive ? `var(--white, #ffffff)` : `var(--text-muted, rgba(200,215,255,0.65))`,
+    color: isActive ? 'var(--text-main)' : 'var(--text-muted)',
     background: isActive ? 'rgba(0,102,255,0.22)' : 'transparent',
     border: isActive ? '1px solid rgba(0,102,255,0.35)' : '1px solid transparent',
     transition: 'all 0.25s ease',
@@ -67,7 +67,7 @@ const Navbar = () => {
         >
           <img
             src={assets.logo}
-            alt="Saarthi Homeopathy"
+            alt="Saarthi Homoeopathy"
             style={{
               height: scrolled ? "34px" : "40px",
               width: "auto",
@@ -115,14 +115,14 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             style={{
-              background: `var(--glass-light, rgba(255,255,255,0.06))`,
-              border: '1px solid rgba(255,255,255,0.12)',
+              background: `var(--glass-light, var(--glass-light))`,
+              border: '1px solid var(--glass-border)',
               borderRadius: '14px',
               padding: '9px',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              color: `var(--text-muted, rgba(200,215,255,0.80))`,
+              color: 'var(--text-muted)',
               transition: 'all 0.5s ease',
               position: 'relative',
               overflow: 'hidden',
@@ -156,14 +156,14 @@ const Navbar = () => {
             onClick={() => setShowMenu(true)}
             id="nav-hamburger"
             style={{
-              background: theme === 'light' ? '#ffffff' : `var(--glass-light, rgba(255,255,255,0.06))`,
-              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid rgba(255,255,255,0.12)',
+              background: theme === 'light' ? 'var(--text-main)' : `var(--glass-light, var(--glass-light))`,
+              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid var(--glass-border)',
               borderRadius: '14px',
               padding: '9px',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              color: theme === 'light' ? '#0f172a' : `var(--text-muted, rgba(200,215,255,0.80))`,
+              color: theme === 'light' ? '#0f172a' : 'var(--text-muted)',
               boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
               transition: 'all 0.25s ease',
             }}
@@ -191,10 +191,10 @@ const Navbar = () => {
             style={{ height: "38px" }}
           />
           <button onClick={() => setShowMenu(false)} style={{
-            background: theme === 'light' ? '#ffffff' : `var(--glass-light, rgba(255,255,255,0.06))`,
-            border: theme === 'light' ? '1px solid #dbeafe' : '1px solid rgba(255,255,255,0.12)',
+            background: theme === 'light' ? 'var(--text-main)' : `var(--glass-light, var(--glass-light))`,
+            border: theme === 'light' ? '1px solid #dbeafe' : '1px solid var(--glass-border)',
             borderRadius: '14px', padding: '9px',
-            cursor: 'pointer', color: theme === 'light' ? '#0f172a' : `var(--text-muted, rgba(200,215,255,0.80))`,
+            cursor: 'pointer', color: theme === 'light' ? '#0f172a' : 'var(--text-muted)',
             boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
           }}>
             <X size={22} />
@@ -212,7 +212,7 @@ const Navbar = () => {
                   fontFamily: 'var(--font-display)',
                   fontWeight: 700,
                   color: isActive 
-                    ? (theme === 'light' ? '#0284c7' : '#ffffff') 
+                    ? (theme === 'light' ? '#0284c7' : 'var(--text-main)') 
                     : (theme === 'light' ? '#475569' : 'rgba(200,215,255,0.6)'),
                   background: isActive 
                     ? (theme === 'light' ? '#e0f2fe' : 'rgba(0,102,255,0.15)') 
@@ -234,8 +234,8 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             style={{
-              background: theme === 'light' ? '#ffffff' : `var(--glass-light, rgba(255,255,255,0.06))`,
-              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid rgba(255,255,255,0.12)',
+              background: theme === 'light' ? 'var(--text-main)' : `var(--glass-light, var(--glass-light))`,
+              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid var(--glass-border)',
               borderRadius: '16px',
               padding: '16px',
               cursor: 'pointer',
@@ -243,7 +243,7 @@ const Navbar = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '12px',
-              color: theme === 'light' ? '#0284c7' : `var(--white, #ffffff)`,
+              color: theme === 'light' ? '#0284c7' : 'var(--text-main)',
               boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
               fontSize: '18px',
               fontWeight: 600,

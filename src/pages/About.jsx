@@ -41,7 +41,7 @@ const FAQ = ({ question, answer }) => {
       onClick={() => setOpen(!open)}
     >
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', gap: '16px' }}>
-        <h4 style={{ fontSize: '15px', fontWeight: 700, color: open ? 'var(--cyan)' : `var(--white, #ffffff)`, margin: 0, flex: 1, lineHeight: 1.4 }}>
+        <h4 style={{ fontSize: '15px', fontWeight: 700, color: open ? 'var(--cyan)' : 'var(--text-main)', margin: 0, flex: 1, lineHeight: 1.4 }}>
           {question}
         </h4>
         <div style={{ flexShrink: 0, color: open ? 'var(--cyan)' : 'var(--text-muted)', transition: 'color 0.3s ease' }}>
@@ -63,32 +63,32 @@ const FAQ = ({ question, answer }) => {
 
 const faqs = [
   {
-    question: 'Is homeopathy scientifically proven?',
-    answer: 'Homeopathy has been practiced for over 200 years and is supported by a growing body of clinical research. While it works differently from conventional medicine, many studies demonstrate its effectiveness for a wide range of acute and chronic conditions.',
+    question: 'Is homoeopathy scientifically proven?',
+    answer: 'Homoeopathy has been practiced for over 200 years and is supported by a growing body of clinical research. While it works differently from conventional medicine, many studies demonstrate its effectiveness for a wide range of acute and chronic conditions.',
   },
   {
-    question: 'Are there side effects to homeopathic treatments?',
-    answer: 'One of the greatest strengths of homeopathy is its safety profile. Remedies are highly diluted and non-toxic, making them safe for infants, pregnant women, the elderly, and those on other medications.',
+    question: 'Are there side effects to homoeopathic treatments?',
+    answer: 'One of the greatest strengths of homoeopathy is its safety profile. Remedies are highly diluted and non-toxic, making them safe for infants, pregnant women, the elderly, and those on other medications.',
   },
   {
     question: 'How long does it take to see results?',
     answer: 'Acute conditions (like colds, fevers) often respond within hours to days. Chronic conditions may require several weeks to months, as we address the root cause rather than suppressing symptoms.',
   },
   {
-    question: 'Can homeopathy be taken alongside conventional medicine?',
-    answer: 'Yes, homeopathic remedies are generally compatible with conventional medications. We recommend informing both your homeopath and conventional doctor about all treatments for the best coordinated care.',
+    question: 'Can homoeopathy be taken alongside conventional medicine?',
+    answer: 'Yes, homoeopathic remedies are generally compatible with conventional medications. We recommend informing both your homoeopath and conventional doctor about all treatments for the best coordinated care.',
   },
   {
-    question: 'What makes Saarthi Homeopathy different?',
-    answer: 'We combine classical homeopathic principles with a modern, personalised approach. Every patient receives a comprehensive assessment, and treatment plans are continuously refined based on your progress.',
+    question: 'What makes Saarthi Homoeopathy different?',
+    answer: 'We combine classical homoeopathic principles with a modern, personalised approach. Every patient receives a comprehensive assessment, and treatment plans are continuously refined based on your progress.',
   },
 ]
 
 const milestones = [
-  { year: '2015', title: 'Foundation', desc: 'Saarthi Homeopathy was founded with a mission to bring accessible, personalised homeopathic care to Surat.' },
+  { year: '2015', title: 'Foundation', desc: 'Saarthi Homoeopathy was founded with a mission to bring accessible, personalised homoeopathic care to Surat.' },
   { year: '2017', title: 'First 500 Patients', desc: 'Reached a milestone of 500 successfully treated patients, building trust through consistent results.' },
   { year: '2019', title: 'Expanded Specialities', desc: 'Extended our practice to cover complex chronic conditions — including thyroid disorders, kidney diseases, and cancer support care.' },
-  { year: '2022', title: 'Online Consultations', desc: 'Launched online consultation services, enabling patients across India to access expert homeopathic care from home.' },
+  { year: '2022', title: 'Online Consultations', desc: 'Launched online consultation services, enabling patients across India to access expert homoeopathic care from home.' },
   { year: '2025', title: '5000+ Healings', desc: 'Over 5000 patients healed and counting — a testament to the power of compassionate, holistic healthcare.' },
 ]
 
@@ -111,7 +111,7 @@ const About = () => {
               fontFamily: 'var(--font-display)',
               fontSize: 'clamp(40px, 6vw, 80px)',
               fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 0.95,
-              color: `var(--white, #ffffff)`, marginBottom: '24px',
+              color: 'var(--text-main)', marginBottom: '24px',
             }}>
               Healing with{' '}
               <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
@@ -119,7 +119,7 @@ const About = () => {
               </span>
             </h1>
             <p style={{ fontSize: 'clamp(15px, 1.8vw, 18px)', lineHeight: 1.8, color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 32px' }}>
-              Saarthi Homeopathy was built on a simple but powerful belief — that every person deserves healthcare that treats them as a whole human being, not just a collection of symptoms.
+              Saarthi Homoeopathy was built on a simple but powerful belief — that every person deserves healthcare that treats them as a whole human being, not just a collection of symptoms.
             </p>
               <button onClick={() => navigate('/contact')} className="btn-primary">
               Meet the Doctor <ArrowRight size={16} />
@@ -133,14 +133,14 @@ const About = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px' }}>
             {[
-              { label: 'Patients Healed', value: 5000, suffix: '+', icon: Users },
-              { label: 'Years Experience', value: 10, suffix: '+', icon: Award },
+              { label: 'Patients Healed', value: 1000, suffix: '+', icon: Users },
+              { label: 'Years Experience', value: 5, suffix: '+', icon: Award },
               { label: 'Success Rate', value: 98, suffix: '%', icon: Star },
               { label: 'Conditions Treated', value: 50, suffix: '+', icon: Heart },
             ].map(({ label, value, suffix, icon: Icon }, i) => (
               <ScrollReveal key={i} delay={i * 0.1} className="reveal-scale">
                 <div className="glass-card" style={{ padding: '28px', textAlign: 'center' }}>
-                  <div className="icon-circle" style={{ margin: '0 auto 16px' }}><Icon size={22} color={`var(--white, #ffffff)`} /></div>
+                  <div className="icon-circle" style={{ margin: '0 auto 16px' }}><Icon size={22} color={'var(--text-main)'} /></div>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '36px', fontWeight: 700, lineHeight: 1, background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     <Counter target={value} suffix={suffix} />
                   </div>
@@ -157,8 +157,8 @@ const About = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
             {[
-              { icon: ShieldCheck, title: 'Our Mission', color: '#0066FF', body: 'To provide personalised, evidence-based homeopathic care that heals from the root — empowering every patient to achieve optimal health, naturally and safely.' },
-              { icon: Star, title: 'Our Vision', color: '#00D4FF', body: 'To be India\'s most trusted name in integrative homeopathic healthcare — where ancient wisdom meets modern science for a healthier tomorrow.' },
+              { icon: ShieldCheck, title: 'Our Mission', color: '#0066FF', body: 'To provide personalised, evidence-based homoeopathic care that heals from the root — empowering every patient to achieve optimal health, naturally and safely.' },
+              { icon: Star, title: 'Our Vision', color: '#00D4FF', body: 'To be India\'s most trusted name in integrative homoeopathic healthcare — where ancient wisdom meets modern science for a healthier tomorrow.' },
               { icon: Heart, title: 'Our Values', color: '#A78BFA', body: 'Compassion, integrity, and individualised attention guide every consultation. We believe that healing begins with truly listening to each patient.' },
             ].map(({ icon: Icon, title, color, body }, i) => (
               <ScrollReveal key={i} delay={i * 0.1} className="reveal" style={{ flex: '1 1 280px' }}>
@@ -166,7 +166,7 @@ const About = () => {
                   <div style={{ width: '54px', height: '54px', borderRadius: '18px', background: `linear-gradient(135deg, ${color}22, ${color}11)`, border: `1px solid ${color}30`, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px', boxShadow: `0 8px 20px ${color}20` }}>
                     <Icon size={24} color={color} />
                   </div>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '12px' }}>{title}</h3>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '12px' }}>{title}</h3>
                   <p style={{ fontSize: '14.5px', lineHeight: 1.8, color: 'var(--text-muted)' }}>{body}</p>
                 </div>
               </ScrollReveal>
@@ -181,7 +181,7 @@ const About = () => {
         <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <ScrollReveal style={{ textAlign: 'center', marginBottom: '64px' }}>
             <div className="section-label" style={{ marginBottom: '20px', display: 'inline-flex' }}>Our Journey</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.035em', color: `var(--white, #ffffff)` }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.035em', color: 'var(--text-main)' }}>
               A Decade of <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Healing</span>
             </h2>
           </ScrollReveal>
@@ -196,7 +196,7 @@ const About = () => {
                 <div style={{ position: 'absolute', left: '11px', top: '8px', width: '20px', height: '20px', borderRadius: '50%', background: 'linear-gradient(135deg, #0066FF, #00D4FF)', boxShadow: '0 0 0 4px rgba(0,102,255,0.15), 0 0 16px rgba(0,102,255,0.30)' }} />
                 <div className="glass-card" style={{ padding: '24px 28px' }}>
                   <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--cyan)', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '6px' }}>{m.year}</div>
-                  <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: `var(--white, #ffffff)`, marginBottom: '8px' }}>{m.title}</h4>
+                  <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>{m.title}</h4>
                   <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.7, margin: 0 }}>{m.desc}</p>
                 </div>
               </ScrollReveal>
@@ -211,51 +211,70 @@ const About = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '60px', alignItems: 'center' }}>
             <ScrollReveal className="reveal-left" style={{ flex: '1 1 300px', position: 'relative' }}>
               <div style={{
-                borderRadius: '32px', overflow: 'hidden',
+                borderRadius: '24px', overflow: 'hidden',
                 border: `1px solid var(--glass-border-hi)`,
                 boxShadow: `var(--shadow-card)`,
               }}>
-                <img src={assets.about_image} alt="About Saarthi" style={{ width: '100%', height: '450px', objectFit: 'cover', display: 'block' }} />
+                <img src={assets.yoginAppoinment} alt="Dr. Yogin Baldaniya" style={{ width: '100%', height: '500px', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
               </div>
-              {/* floating badge */}
+              {/* premium floating badge */}
               <div style={{
-                position: 'absolute', bottom: '24px', right: '-12px',
-                background: 'rgba(5,13,26,0.90)', backdropFilter: 'blur(20px)',
-                borderRadius: '16px', padding: '16px 20px',
+                position: 'absolute', bottom: '24px', right: '-20px',
+                background: 'var(--glass-mid)', backdropFilter: 'blur(16px)',
+                borderRadius: '20px', padding: '20px 24px',
                 border: `1px solid var(--glass-border-hi)`,
-                boxShadow: '0 8px 30px rgba(0,102,255,0.20)',
+                boxShadow: 'var(--shadow-card)',
+                display: 'flex', alignItems: 'flex-start', gap: '14px',
+                maxWidth: '290px'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <BadgeCheck size={22} color="var(--cyan)" />
-                  <div>
-                    <p style={{ fontWeight: 700, fontSize: '14px', color: `var(--white, #ffffff)`, margin: 0 }}>BHMS Certified</p>
-                    <p style={{ fontSize: '11px', color: 'var(--text-muted)', margin: 0 }}>Pioneer Homoeopathic College</p>
-                  </div>
+                <BadgeCheck size={24} color="#0EA5E9" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <div>
+                  <h4 style={{ fontWeight: 700, fontSize: '20px', color: 'var(--text-main)', margin: 0, lineHeight: 1.2, marginBottom: '6px' }}>Dr. Yogin Baldaniya</h4>
+                  <p style={{ fontWeight: 500, fontSize: '14px', color: 'var(--text-secondary)', margin: 0, marginBottom: '2px' }}>B.H.M.S (Consultant Homoeopath)</p>
+                  <p style={{ fontWeight: 500, fontSize: '14px', color: 'var(--text-secondary)', margin: 0, marginBottom: '2px' }}>M.D (Hom)</p>
+                  <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: 0 }}>S.C.P.H (ICHM, UN)</p>
                 </div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal className="reveal-right" style={{ flex: '1 1 380px' }}>
               <div className="section-label" style={{ marginBottom: '20px' }}>The Story</div>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.03em', color: `var(--white, #ffffff)`, marginBottom: '20px' }}>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text-main)', marginBottom: '20px' }}>
                 Dr. Yogin's<br />
                 <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Healing Philosophy</span>
               </h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '28px' }}>
                 {[
-                  'Dr. Yogin Baldaniya\'s journey into homeopathy began with a personal conviction — that the human body has an innate ability to heal itself when given the right support.',
-                  'After completing his BHMS at Pioneer Homoeopathic Medical College and earning his S.C.P.H from ICHM United Nation, he undertook extensive clinical training across Surat\'s leading homeopathic clinics.',
-                  'Today, Dr. Yogin blends classical homeopathic principles with a modern, evidence-informed approach — listening deeply to each patient, addressing emotional and physical dimensions together.',
+                  'Dr. Yogin Baldaniya\'s journey into Homoeopathy began with a personal conviction — that the human body has an innate ability to heal itself when given the right support.',
+                  'After completing his B.H.M.S at Pioneer Homoeopathic Medical College, earning his M.D (Hom), and his S.C.P.H from ICHM United Nation, he undertook extensive clinical training across Surat\'s leading homoeopathic clinics.',
+                  'Today, Dr. Yogin blends classical homoeopathic principles with a modern, evidence-informed approach — listening deeply to each patient, addressing emotional and physical dimensions together.',
                 ].map((text, i) => (
                   <p key={i} style={{ fontSize: '15px', lineHeight: 1.85, color: 'var(--text-muted)' }}>{text}</p>
                 ))}
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '28px' }}>
-                {['BHMS', 'S.C.P.H', 'ICHM', '10+ Years', '5000+ Patients'].map(tag => (
-                  <span key={tag} className="trust-badge">{tag}</span>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '32px' }}>
+                {[
+                  { label: 'B.H.M.S', icon: GraduationCap },
+                  { label: 'M.D (Hom)', icon: GraduationCap },
+                  { label: 'S.C.P.H (ICHM, UN)', icon: GraduationCap },
+                  { label: '5+ Years Experience', icon: Clock },
+                  { label: '1000+ Happy Patients', icon: Heart }
+                ].map((tag, i) => (
+                  <div key={i} style={{ 
+                    display: 'flex', alignItems: 'center', gap: '8px', 
+                    background: 'var(--glass-mid)', border: '1px solid rgba(14,165,233,0.3)', 
+                    color: 'var(--text-main)', padding: '8px 20px', borderRadius: '999px',
+                    fontSize: '14px', fontWeight: 600, transition: 'all 0.3s ease',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)', cursor: 'default'
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(14,165,233,0.15)' }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)' }}
+                  >
+                    <tag.icon size={16} color="#0EA5E9" /> {tag.label}
+                  </div>
                 ))}
               </div>
-                <button onClick={() => navigate('/contact')} className="btn-primary">
+              <button onClick={() => navigate('/contact')} className="btn-primary">
                 Book Consultation <ArrowRight size={16} />
               </button>
             </ScrollReveal>
@@ -268,7 +287,7 @@ const About = () => {
         <div style={{ maxWidth: '780px', margin: '0 auto' }}>
           <ScrollReveal style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div className="section-label" style={{ marginBottom: '20px', display: 'inline-flex' }}>FAQ</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.03em', color: `var(--white, #ffffff)` }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text-main)' }}>
               Common <span style={{ background: `var(--grad-primary)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Questions</span>
             </h2>
           </ScrollReveal>

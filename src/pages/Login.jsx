@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LogIn, UserPlus, Eye, EyeOff, Mail, Lock, User, ArrowRight } from 'lucide-react'
+import { assets } from '../assets/assets'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -18,43 +19,24 @@ const Login = () => {
     display: 'block',
     fontSize: '11px',
     fontWeight: 700,
-    color: `var(--text-muted, rgba(200,215,255,0.65))`,
+    color: 'var(--text-muted)',
     letterSpacing: '1.5px',
     textTransform: 'uppercase',
     marginBottom: '8px',
   }
   const baseInput = {
-    width: '100%',
-    background: 'rgba(255,255,255,0.04)',
-    border: `1px solid var(--glass-border)`,
-    borderRadius: '14px',
     padding: '15px 44px 15px 44px',
-    color: `var(--white, #ffffff)`,
-    fontFamily: 'var(--font-body)',
-    fontSize: '15px',
-    fontWeight: 500,
-    outline: 'none',
-    transition: 'all 0.3s cubic-bezier(0.23,1,0.32,1)',
-  }
-  const focus = (e) => {
-    e.target.style.background = 'rgba(255,255,255,0.07)'
-    e.target.style.borderColor = 'rgba(0,102,255,0.60)'
-    e.target.style.boxShadow = '0 0 0 3px rgba(0,102,255,0.10)'
-  }
-  const blur = (e) => {
-    e.target.style.background = 'rgba(255,255,255,0.04)'
-    e.target.style.borderColor = `var(--glass-strong, rgba(255,255,255,0.10))`
-    e.target.style.boxShadow = 'none'
+    borderRadius: '14px',
   }
 
   const FieldWrap = ({ icon: Icon, children, right }) => (
     <div style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', top: '50%', left: '16px', transform: 'translateY(-50%)', color: `var(--text-muted, rgba(200,215,255,0.40))`, pointerEvents: 'none', zIndex: 1 }}>
+      <div style={{ position: 'absolute', top: '50%', left: '16px', transform: 'translateY(-50%)', color: 'var(--text-muted)', pointerEvents: 'none', zIndex: 1 }}>
         <Icon size={16} />
       </div>
       {children}
       {right && (
-        <button type="button" onClick={right.action} style={{ position: 'absolute', top: '50%', right: '14px', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: `var(--text-muted, rgba(200,215,255,0.50))`, display: 'flex', alignItems: 'center' }}>
+        <button type="button" onClick={right.action} style={{ position: 'absolute', top: '50%', right: '14px', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
           {right.icon}
         </button>
       )}
@@ -75,8 +57,8 @@ const Login = () => {
       <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: '440px', animation: 'fade-up 0.7s ease 0.1s both' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-          <img src="./src/assets/logo.png" alt="Saarthi Homeopathy" style={{ height: '44px', marginBottom: '24px' }} />
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '30px', fontWeight: 700, letterSpacing: '-0.03em', color: `var(--white, #ffffff)`, marginBottom: '8px' }}>
+          <img src={assets.logo} alt="Saarthi Homoeopathy" style={{ height: '44px', marginBottom: '24px' }} />
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '30px', fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text-main)', marginBottom: '8px' }}>
             {state === 'Sign Up' ? 'Create Account' : 'Welcome Back'}
           </h1>
           <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>
@@ -91,7 +73,7 @@ const Login = () => {
               <div>
                 <label style={labelStyle}>Full Name</label>
                 <FieldWrap icon={User}>
-                  <input type="text" value={name} onChange={e => setName(e.target.value)} required placeholder="Your full name" style={baseInput} onFocus={focus} onBlur={blur} />
+                  <input className="form-input" type="text" value={name} onChange={e => setName(e.target.value)} required placeholder="Your full name" style={baseInput} />
                 </FieldWrap>
               </div>
             )}
@@ -99,14 +81,14 @@ const Login = () => {
             <div>
               <label style={labelStyle}>Email Address</label>
               <FieldWrap icon={Mail}>
-                <input type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="your@email.com" style={baseInput} onFocus={focus} onBlur={blur} />
+                <input className="form-input" type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="your@email.com" style={baseInput} />
               </FieldWrap>
             </div>
 
             <div>
               <label style={labelStyle}>Password</label>
               <FieldWrap icon={Lock} right={{ action: () => setShowPass(!showPass), icon: showPass ? <EyeOff size={16} /> : <Eye size={16} /> }}>
-                <input type={showPass ? 'text' : 'password'} value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" style={{ ...baseInput, paddingRight: '44px' }} onFocus={focus} onBlur={blur} />
+                <input className="form-input" type={showPass ? 'text' : 'password'} value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" style={{ ...baseInput, paddingRight: '44px' }} />
               </FieldWrap>
             </div>
 
