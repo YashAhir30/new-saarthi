@@ -173,58 +173,75 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ── Mobile Full-Screen Menu ── */}
+      {/* ── Mobile Drawer Overlay & Container ── */}
       <div
-        className={`mobile-nav-overlay ${theme === 'light' ? 'mobile-drawer-light' : ''}`}
         style={{
           position: 'fixed', inset: 0, zIndex: 2000,
-          display: 'flex', flexDirection: 'column', padding: '28px 24px',
-          transform: showMenu ? 'translateX(0)' : 'translateX(100%)',
-          transition: 'all 0.45s cubic-bezier(0.23,1,0.32,1)',
-          background: theme === 'dark' ? 'rgba(5, 13, 26, 0.97)' : undefined,
+          background: 'rgba(15,23,42,0.35)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          opacity: showMenu ? 1 : 0,
+          pointerEvents: showMenu ? 'auto' : 'none',
+          transition: 'opacity 0.3s ease',
         }}
+        onClick={() => setShowMenu(false)}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>
-          <img
-            src={assets.logo}
-            alt="Saarthi"
-            style={{ height: "38px" }}
-          />
-          <button onClick={() => setShowMenu(false)} className={theme === 'light' ? 'mobile-menu-btn-light' : ''} style={{
-            background: `var(--glass-light, var(--glass-light))`,
-            border: '1px solid var(--glass-border)',
-            borderRadius: '14px', padding: '9px',
-            cursor: 'pointer', color: 'var(--text-muted)',
-            transition: 'all 0.25s ease',
-          }}>
-            <X size={22} />
-          </button>
-        </div>
+        {/* ── Mobile Side Drawer ── */}
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`mobile-nav-drawer ${theme === 'light' ? 'mobile-drawer-light' : ''}`}
+          style={{
+            position: 'absolute', top: '16px', bottom: '16px', right: '16px',
+            borderRadius: '24px',
+            display: 'flex', flexDirection: 'column', padding: '24px 20px',
+            transform: showMenu ? 'translateX(0)' : 'translateX(120%)',
+            transition: 'transform 0.4s cubic-bezier(0.23,1,0.32,1)',
+            background: theme === 'dark' ? '#0F172A' : undefined,
+            border: theme === 'dark' ? '1px solid rgba(255,255,255,0.08)' : undefined,
+            boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+            <img
+              src={assets.logo}
+              alt="Saarthi"
+              style={{ height: "32px" }}
+            />
+            <button onClick={() => setShowMenu(false)} className={theme === 'light' ? 'mobile-menu-btn-light' : ''} style={{
+              background: `var(--glass-light, var(--glass-light))`,
+              border: '1px solid var(--glass-border)',
+              borderRadius: '12px', padding: '8px',
+              cursor: 'pointer', color: 'var(--text-muted)',
+              transition: 'all 0.25s ease',
+            }}>
+              <X size={20} />
+            </button>
+          </div>
 
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          {NAV_LINKS.map(({ to, label }, i) => (
-            <NavLink key={to} to={to} onClick={() => setShowMenu(false)} style={{ textDecoration: 'none' }}>
-              {({ isActive }) => (
-                <div 
-                  className={theme === 'light' ? `mobile-nav-link-light ${isActive ? 'active' : ''}` : ''}
-                  style={{
-                  padding: '20px 24px',
-                  borderRadius: '16px',
-                  fontSize: '22px',
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 700,
-                  color: theme === 'dark' ? (isActive ? 'var(--text-main)' : 'rgba(200,215,255,0.6)') : undefined,
-                  background: theme === 'dark' ? (isActive ? 'rgba(0,102,255,0.15)' : 'transparent') : undefined,
-                  borderLeft: theme === 'dark' ? (isActive ? '3px solid #0066FF' : '3px solid transparent') : undefined,
-                  transition: 'all 0.25s ease',
-                  animation: `fade-up 0.5s ease ${i * 0.08}s both`,
-                }}>
-                  {label}
-                </div>
-              )}
-            </NavLink>
-          ))}
-        </nav>
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {NAV_LINKS.map(({ to, label }, i) => (
+              <NavLink key={to} to={to} onClick={() => setShowMenu(false)} style={{ textDecoration: 'none' }}>
+                {({ isActive }) => (
+                  <div 
+                    className={theme === 'light' ? `mobile-nav-link-light ${isActive ? 'active' : ''}` : ''}
+                    style={{
+                    padding: '14px 18px',
+                    borderRadius: '14px',
+                    fontSize: '18px',
+                    fontFamily: 'var(--font-display)',
+                    fontWeight: 700,
+                    color: theme === 'dark' ? (isActive ? 'var(--text-main)' : 'rgba(200,215,255,0.6)') : undefined,
+                    background: theme === 'dark' ? (isActive ? 'rgba(0,102,255,0.15)' : 'transparent') : undefined,
+                    borderLeft: theme === 'dark' ? (isActive ? '3px solid #0066FF' : '3px solid transparent') : undefined,
+                    transition: 'all 0.25s ease',
+                    animation: showMenu ? `fade-up 0.4s ease ${i * 0.05}s both` : 'none',
+                  }}>
+                    {label}
+                  </div>
+                )}
+              </NavLink>
+            ))}
+          </nav>
 
         <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <button
@@ -256,9 +273,10 @@ const Navbar = () => {
             onClick={() => setShowMenu(false)}
             style={{ width: '100%', justifyContent: 'center', padding: '18px', fontSize: '17px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}
           >
-            <Phone size={18} />
+            <Phone size={16} />
             Call Us Now
           </a>
+        </div>
         </div>
       </div>
 
@@ -266,6 +284,11 @@ const Navbar = () => {
         @media (min-width: 768px) {
           .desktop-nav { display: flex !important; }
           #nav-hamburger { display: none !important; }
+          .mobile-nav-drawer { max-width: 360px !important; }
+        }
+        .mobile-nav-drawer {
+          width: 75%;
+          max-width: 320px;
         }
         .mobile-menu-btn-light {
           background: #ffffff !important;
@@ -282,8 +305,8 @@ const Navbar = () => {
           background: rgba(255, 255, 255, 0.96) !important;
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border-left: 1px solid #e2e8f0;
-          box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+          border: 1px solid #e2e8f0 !important;
+          box-shadow: -10px 0 30px rgba(0,0,0,0.05) !important;
         }
         .mobile-nav-link-light {
           color: #334155 !important;

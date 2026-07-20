@@ -181,7 +181,7 @@ const SpecialityMenu = () => {
             className="btn-outline"
             style={{ color: theme === 'light' ? '#0F172A' : 'var(--text-main)' }}
           >
-            Book for Any Condition <ArrowRight size={16} />
+            Book for Any Diseases <ArrowRight size={16} />
           </button>
         </ScrollReveal>
       </div>
