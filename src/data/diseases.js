@@ -7,6 +7,16 @@ export const diseasesData = [
     title: 'Uterine Fibroids',
     subtitle: 'Comprehensive homeopathic management for uterine fibroids without invasive procedures.',
     heroImage: assets.fibroids,
+    category: "Women's Health",
+    readTime: '5 min read',
+    lastUpdated: 'July 2026',
+    beforeAfterGallery: [
+      { 
+        before: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80', 
+        after: 'https://images.unsplash.com/photo-1584308666744-24d5e4a77cc5?auto=format&fit=crop&w=800&q=80', 
+        caption: 'Significant reduction in pelvic pressure and bleeding after 6 months of constitutional treatment.' 
+      }
+    ],
     overview: 'Uterine fibroids are noncancerous growths of the uterus that often appear during childbearing years. Also called leiomyomas or myomas, they aren\'t associated with an increased risk of uterine cancer and almost never develop into cancer. While many women have fibroids without any symptoms, others experience significant discomfort that can disrupt their daily lives.',
     causes: [
       { title: 'Genetic Changes', desc: 'Many fibroids contain changes in genes that differ from those in normal uterine muscle cells.' },
@@ -83,6 +93,16 @@ export const diseasesData = [
     title: 'Integrative Cancer Support',
     subtitle: 'Holistic homeopathic support to improve quality of life and manage treatment side effects.',
     heroImage: assets.cancer,
+    category: "Cancer Care",
+    readTime: '6 min read',
+    lastUpdated: 'July 2026',
+    beforeAfterGallery: [
+      { 
+        before: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80', 
+        after: 'https://images.unsplash.com/photo-1542736667-069246bdbc6d?auto=format&fit=crop&w=800&q=80', 
+        caption: 'Visible improvement in patient vitality and reduced chemotherapy-induced fatigue.' 
+      }
+    ],
     overview: 'Cancer refers to a large group of diseases characterized by the development of abnormal cells that divide uncontrollably and have the ability to infiltrate and destroy normal body tissue. While conventional medicine (surgery, chemotherapy, radiation) remains the primary line of treatment for cancer, many patients turn to integrative approaches, including homeopathy, to support their overall well-being and manage the harsh side effects of standard therapies.',
     causes: [
       { title: 'Genetic Mutations', desc: 'Inherited genetic mutations play a role in about 5 to 10 percent of all cancers.' },
@@ -159,6 +179,16 @@ export const diseasesData = [
     title: 'Hair Loss & Alopecia',
     subtitle: 'Restore your confidence with root-cause homeopathic treatment for hair thinning and loss.',
     heroImage: assets.hairloss,
+    category: "Hair & Scalp",
+    readTime: '4 min read',
+    lastUpdated: 'July 2026',
+    beforeAfterGallery: [
+      { 
+        before: 'https://images.unsplash.com/photo-1620052327685-643c1c53e025?auto=format&fit=crop&w=800&q=80', 
+        after: 'https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&w=800&q=80', 
+        caption: 'Restored hair density and reversed thinning after 8 months of consistent homeopathic care.' 
+      }
+    ],
     overview: 'Hair loss (alopecia) can affect just your scalp or your entire body, and it can be temporary or permanent. It can be the result of heredity, hormonal changes, medical conditions, or a normal part of aging. Anyone can lose hair on their head, but it\'s more common in men. Baldness typically refers to excessive hair loss from your scalp. Hereditary hair loss with age is the most common cause.',
     causes: [
       { title: 'Family History (Heredity)', desc: 'The most common cause of hair loss is a hereditary condition that happens with aging (androgenic alopecia).' },
@@ -234,6 +264,16 @@ export const diseasesData = [
     title: 'Kidney & Renal Disorders',
     subtitle: 'Protect your renal health with natural, supportive homeopathic care.',
     heroImage: assets.kidney,
+    category: "Kidney Care",
+    readTime: '5 min read',
+    lastUpdated: 'July 2026',
+    beforeAfterGallery: [
+      { 
+        before: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80', 
+        after: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80', 
+        caption: 'Reduced edema and improved kidney function markers after targeted homeopathic support.' 
+      }
+    ],
     overview: 'The kidneys are vital organs that filter waste, excess fluid, and toxins from the blood. Kidney disorders encompass a variety of conditions, ranging from kidney stones and urinary tract infections (UTIs) to chronic kidney disease (CKD). When kidney function is compromised, dangerous levels of fluid and waste can build up in the body. Early intervention and supportive care are crucial to maintaining renal health.',
     causes: [
       { title: 'Diabetes and Hypertension', desc: 'High blood sugar and high blood pressure are the leading causes of chronic kidney damage.' },
@@ -312,6 +352,16 @@ export const diseasesData = [
     title: 'Thyroid Disorders',
     subtitle: 'Balance your hormones naturally with constitutional homeopathic care.',
     heroImage: assets.organ,
+    category: "Thyroid Disorders",
+    readTime: '4 min read',
+    lastUpdated: 'July 2026',
+    beforeAfterGallery: [
+      { 
+        before: 'https://images.unsplash.com/photo-1596541223130-5d564415f44b?auto=format&fit=crop&w=800&q=80', 
+        after: 'https://images.unsplash.com/photo-1522845015757-50bce044e5da?auto=format&fit=crop&w=800&q=80', 
+        caption: 'Reduction in goiter swelling and normalized metabolic markers after 1 year.' 
+      }
+    ],
     overview: 'The thyroid is a small, butterfly-shaped gland located at the base of your neck. It produces hormones that regulate the body\'s metabolic rate, heart and digestive function, muscle control, brain development, and bone maintenance. When the thyroid produces too much hormone (hyperthyroidism) or too little (hypothyroidism), it can disrupt virtually every system in the body. Autoimmune conditions like Hashimoto\'s and Graves\' disease are common culprits.',
     causes: [
       { title: 'Autoimmune Diseases', desc: 'Conditions like Hashimoto’s thyroiditis or Graves’ disease where the immune system attacks the gland.' },
@@ -390,6 +440,16 @@ export const diseasesData = [
     title: 'Heart Diseases',
     subtitle: 'Holistic cardiovascular support to strengthen your heart and improve circulation.',
     heroImage: assets.heart,
+    category: "Heart Diseases",
+    readTime: '6 min read',
+    lastUpdated: 'July 2026',
+    beforeAfterGallery: [
+      { 
+        before: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=800&q=80', 
+        after: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=80', 
+        caption: 'Improved ECG readings and stamina following 12 months of holistic cardiac care.' 
+      }
+    ],
     overview: 'Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you\'re born with (congenital heart defects). Cardiovascular diseases are the leading cause of globally. A proactive, holistic approach focusing on lifestyle, stress management, and supportive therapies is essential for prevention and management.',
     causes: [
       { title: 'High Blood Pressure', desc: 'Uncontrolled hypertension damages arteries and forces the heart to work harder.' },
