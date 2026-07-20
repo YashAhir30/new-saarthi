@@ -117,7 +117,7 @@ const SpecialityMenu = () => {
         {/* Cards */}
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
           {specialityData.map((item, i) => (
-            <div key={i} onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>
+            <div key={i} onClick={() => navigate(`/disease/${item.slug}`)} style={{ cursor: 'pointer' }}>
               <TiltCard item={item} index={i} />
             </div>
           ))}

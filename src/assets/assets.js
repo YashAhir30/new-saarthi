@@ -68,27 +68,33 @@ export const assets = {
 export const specialityData = [
     {
         speciality: 'Fibroids',
-        image: fibroids
+        image: fibroids,
+        slug: 'fibroids'
     },
     {
         speciality: 'Cancer',
-        image: cancer
+        image: cancer,
+        slug: 'cancer'
     },
     {
         speciality: 'Hair Loss',
-        image: hairloss
+        image: hairloss,
+        slug: 'hair-loss'
     },
     {
         speciality: 'Kidney Disorders',
-        image: kidney
+        image: kidney,
+        slug: 'kidney-disorders'
     },
     {
         speciality: 'Thyroid Disorders',
-        image: organ
+        image: organ,
+        slug: 'thyroid-disorders'
     },
     {
         speciality: 'Heart Diseases',
-        image:heart
+        image: heart,
+        slug: 'heart-diseases'
     },
 ]
 
