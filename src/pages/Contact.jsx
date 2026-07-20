@@ -103,7 +103,7 @@ const Contact = () => {
           </div>
 
           {/* ── SPLIT: Form + Info ── */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px' }}>
+          <div id="contact-form" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px' }}>
 
             {/* LEFT — Contact Form */}
             <ScrollReveal className="reveal-left" style={{ flex: '1 1 420px' }}>
@@ -210,21 +210,114 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* ── GOOGLE MAPS ── */}
-      <section style={{ padding: 'clamp(20px,3vw,40px) clamp(20px,5vw,60px) clamp(60px,8vw,100px)' }}>
+      {/* ── GOOGLE MAPS & CLINIC INFO ── */}
+      <section id="clinic-location" style={{ padding: 'clamp(40px,5vw,80px) clamp(20px,5vw,60px) clamp(60px,8vw,100px)', position: 'relative' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ borderRadius: '32px', overflow: 'hidden', border: `1px solid var(--glass-border-hi)`, boxShadow: `var(--shadow-card)` }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119063.86396917065!2d72.73123085!3d21.1646883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="400"
-              style={{ border: 'none', display: 'block', filter: 'invert(0.9) hue-rotate(180deg) brightness(0.85) contrast(1.1)' }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Saarthi Homeopathy Location"
-            />
+          
+          {/* Title & Subtitle */}
+          <ScrollReveal style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, color: 'var(--text-main)', marginBottom: '16px' }}>
+              Visit Our Clinic or Connect Online
+            </h2>
+            <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
+              We proudly provide online homeopathic consultation for patients across the world, while our physical clinic is located in Surat, Gujarat, India.
+            </p>
+          </ScrollReveal>
+
+          {/* Info Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '48px' }}>
+            {/* Card 1: Online */}
+            <ScrollReveal delay={0.1} style={{ height: '100%' }}>
+              <div className="glass-card glass-card-hover" style={{ padding: '32px', position: 'relative', overflow: 'hidden', height: '100%' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'var(--grad-primary)', filter: 'blur(60px)', opacity: 0.15, borderRadius: '50%' }} />
+                <div style={{ fontSize: '32px', marginBottom: '16px' }}>🌍</div>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '12px' }}>Online Consultation</h3>
+                <p style={{ fontSize: '15px', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '20px' }}>
+                  Receive expert homeopathic consultation from anywhere in the world through secure online appointments.
+                </p>
+                <span style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(0,102,255,0.1)', color: 'var(--cyan)', fontSize: '12px', fontWeight: 700, borderRadius: '8px', border: '1px solid rgba(0,102,255,0.2)' }}>
+                  Available Worldwide
+                </span>
+              </div>
+            </ScrollReveal>
+
+            {/* Card 2: Offline */}
+            <ScrollReveal delay={0.2} style={{ height: '100%' }}>
+              <div className="glass-card glass-card-hover" style={{ padding: '32px', position: 'relative', overflow: 'hidden', height: '100%' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'var(--cyan)', filter: 'blur(60px)', opacity: 0.1, borderRadius: '50%' }} />
+                <div style={{ fontSize: '32px', marginBottom: '16px' }}>📍</div>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '12px' }}>Offline Clinic</h3>
+                <p style={{ fontSize: '15px', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '20px' }}>
+                  Visit our clinic in Surat for personalized face-to-face consultation and treatment.
+                </p>
+                <span style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(0,212,255,0.1)', color: 'var(--cyan)', fontSize: '12px', fontWeight: 700, borderRadius: '8px', border: '1px solid rgba(0,212,255,0.2)' }}>
+                  Surat, Gujarat
+                </span>
+              </div>
+            </ScrollReveal>
           </div>
+
+          {/* Map with Floating Badges */}
+          <ScrollReveal delay={0.3}>
+            <div style={{ borderRadius: '32px', overflow: 'hidden', border: `1px solid var(--glass-border-hi)`, boxShadow: `var(--shadow-card)`, position: 'relative' }}>
+              
+              {/* Floating Badge: Location (Top Right) */}
+              <div className="glass-card" style={{ 
+                position: 'absolute', top: '24px', right: '24px', zIndex: 10, padding: '12px 16px', 
+                display: 'flex', alignItems: 'center', gap: '8px', borderRadius: '16px', 
+                boxShadow: '0 8px 32px rgba(0,0,0,0.15)' 
+              }}>
+                <span style={{ fontSize: '18px' }}>📍</span>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Clinic Location</div>
+                  <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-main)' }}>Surat, Gujarat, India</div>
+                </div>
+              </div>
+
+              {/* Floating Badge: Online (Bottom Left) */}
+              <div className="glass-card" style={{ 
+                position: 'absolute', bottom: '24px', left: '24px', zIndex: 10, padding: '12px 16px', 
+                display: 'flex', alignItems: 'center', gap: '8px', borderRadius: '16px', 
+                boxShadow: '0 8px 32px rgba(0,0,0,0.15)' 
+              }}>
+                <span style={{ fontSize: '18px' }}>🌍</span>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Online Consultation</div>
+                  <div style={{ fontSize: '13px', fontWeight: 700, color: '#10b981' }}>Available Worldwide</div>
+                </div>
+              </div>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119063.86396917065!2d72.73123085!3d21.1646883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 'none', display: 'block', filter: 'invert(0.9) hue-rotate(180deg) brightness(0.85) contrast(1.1)' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Saarthi Homeopathy Location"
+              />
+            </div>
+          </ScrollReveal>
+
+          {/* CTA Section Below Map */}
+          <ScrollReveal delay={0.4} style={{ textAlign: 'center', marginTop: '60px' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, color: 'var(--text-main)', marginBottom: '16px' }}>
+              Need Treatment?
+            </h2>
+            <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 32px' }}>
+              Whether you're in Surat or anywhere around the world, we're here to help you with personalized homeopathic care.
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
+              <button onClick={() => { document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }) }} className="btn-primary" style={{ padding: '16px 28px', fontSize: '15px' }}>
+                Book Online Consultation
+              </button>
+              <button onClick={() => { document.getElementById('clinic-location')?.scrollIntoView({ behavior: 'smooth' }) }} className="btn-outline" style={{ padding: '16px 28px', fontSize: '15px' }}>
+                Visit Surat Clinic
+              </button>
+            </div>
+          </ScrollReveal>
+
         </div>
       </section>
 
