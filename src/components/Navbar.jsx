@@ -156,14 +156,15 @@ const Navbar = () => {
             onClick={() => setShowMenu(true)}
             id="nav-hamburger"
             style={{
-              background: `var(--glass-light, rgba(255,255,255,0.06))`,
-              border: '1px solid rgba(255,255,255,0.12)',
+              background: theme === 'light' ? '#ffffff' : `var(--glass-light, rgba(255,255,255,0.06))`,
+              border: theme === 'light' ? '1px solid #dbeafe' : '1px solid rgba(255,255,255,0.12)',
               borderRadius: '14px',
               padding: '9px',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              color: `var(--text-muted, rgba(200,215,255,0.80))`,
+              color: theme === 'light' ? '#0f172a' : `var(--text-muted, rgba(200,215,255,0.80))`,
+              boxShadow: theme === 'light' ? '0 4px 12px rgba(0,0,0,0.05)' : 'none',
               transition: 'all 0.25s ease',
             }}
           >
@@ -174,13 +175,13 @@ const Navbar = () => {
 
       {/* ── Mobile Full-Screen Menu ── */}
       <div
-        className={`mobile-nav-overlay ${theme === 'light' ? 'bg-[#f8fbff] text-[#0f172a]' : 'bg-[#081423] text-white'}`}
+        className="mobile-nav-overlay"
         style={{
           position: 'fixed', inset: 0, zIndex: 2000,
           display: 'flex', flexDirection: 'column', padding: '28px 24px',
           transform: showMenu ? 'translateX(0)' : 'translateX(100%)',
           transition: 'all 0.45s cubic-bezier(0.23,1,0.32,1)',
-          background: theme === 'light' ? '#f8fbff' : 'rgba(5,13,26,0.97)',
+          background: theme === 'light' ? 'rgba(248, 251, 255, 0.95)' : 'rgba(5, 13, 26, 0.97)',
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>

@@ -149,7 +149,7 @@ const Contact = () => {
             <ScrollReveal className="reveal-right" style={{ flex: '1 1 340px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {/* Clinic image */}
               <div style={{ borderRadius: '24px', overflow: 'hidden', border: `1px solid var(--glass-border-hi)`, boxShadow: `var(--shadow-card)` }}>
-                <img src="./src/assets/contact_image.png" alt="Saarthi Clinic" style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
+                <img src="./src/assets/contact_image.png" alt="Saarthi Clinic" loading="lazy" decoding="async" width="340" height="220" style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
               </div>
 
               {/* Address */}

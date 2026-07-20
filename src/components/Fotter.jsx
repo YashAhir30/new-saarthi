@@ -200,4 +200,4 @@ const Fotter = () => {
   )
 }
 
-export default Fotter
+export default React.memo(Fotter)

@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
 import Navbar from './components/Navbar'
 import Fotter from './components/Fotter'
 import { AppProvider } from './context/AppProvider'

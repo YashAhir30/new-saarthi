@@ -220,7 +220,7 @@ const DiseaseDetail = () => {
             <div style={{ flex: '1 1 350px', display: 'flex', justifyContent: 'center' }}>
               <ScrollReveal delay={0.2} style={{ position: 'relative' }}>
                 <div style={{ width: '320px', height: '320px', borderRadius: '50%', background: 'var(--grad-icon)', padding: '40px', boxShadow: 'var(--shadow-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--glass-border)' }}>
-                  <img src={disease.heroImage} alt={disease.title} style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(0,102,255,0.2))' }} />
+                  <img src={disease.heroImage} alt={disease.title} fetchpriority="high" loading="eager" decoding="async" width="240" height="240" style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(0,102,255,0.2))' }} />
                 </div>
               </ScrollReveal>
             </div>
@@ -342,11 +342,11 @@ const DiseaseDetail = () => {
                     <React.Fragment key={i}>
                       <div className="glass-card glass-card-hover" onClick={() => setLightboxImg(item.before)} style={{ overflow: 'hidden', padding: 0, cursor: 'pointer', position: 'relative' }}>
                         <span style={{ position: 'absolute', top: 16, left: 16, background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, zIndex: 1 }}>BEFORE</span>
-                        <img src={item.before} alt="Before Treatment" style={{ width: '100%', height: '250px', objectFit: 'cover', transition: 'transform 0.4s' }} />
+                        <img src={item.before} alt="Before Treatment" loading="lazy" decoding="async" width="400" height="250" style={{ width: '100%', height: '250px', objectFit: 'cover', transition: 'transform 0.4s' }} />
                       </div>
                       <div className="glass-card glass-card-hover" onClick={() => setLightboxImg(item.after)} style={{ overflow: 'hidden', padding: 0, cursor: 'pointer', position: 'relative' }}>
                         <span style={{ position: 'absolute', top: 16, left: 16, background: 'rgba(0,0,0,0.6)', color: '#fff', padding: '4px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 700, zIndex: 1 }}>AFTER</span>
-                        <img src={item.after} alt="After Treatment" style={{ width: '100%', height: '250px', objectFit: 'cover', transition: 'transform 0.4s' }} />
+                        <img src={item.after} alt="After Treatment" loading="lazy" decoding="async" width="400" height="250" style={{ width: '100%', height: '250px', objectFit: 'cover', transition: 'transform 0.4s' }} />
                       </div>
                       <p style={{ gridColumn: '1 / -1', fontSize: '15px', color: 'var(--text-muted)', fontStyle: 'italic', textAlign: 'center', margin: '8px 0 0' }}>"{item.caption}"</p>
                     </React.Fragment>
@@ -362,7 +362,7 @@ const DiseaseDetail = () => {
               <div className="glass-card" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', padding: '40px', gap: '40px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '200px', height: '200px', background: 'var(--cyan)', filter: 'blur(80px)', opacity: 0.1, borderRadius: '50%' }} />
                 <div style={{ flexShrink: 0, width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', border: '4px solid var(--glass-border)' }}>
-                  <img src={assets.profile_pic} alt="Dr. Yogin" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={assets.profile_pic} alt="Dr. Yogin" loading="lazy" decoding="async" width="140" height="140" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div style={{ flex: '1 1 300px' }}>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>Dr. Yogin Baldaniya</h3>
@@ -432,7 +432,7 @@ const DiseaseDetail = () => {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
                 {relatedDiseases.map((rel, i) => (
                   <div key={i} onClick={() => navigate(`/disease/${rel.slug}`)} className="glass-card glass-card-hover" style={{ padding: '24px', cursor: 'pointer', textAlign: 'center' }}>
-                    <img src={rel.heroImage} alt={rel.title} style={{ width: '60px', height: '60px', objectFit: 'contain', marginBottom: '16px' }} />
+                    <img src={rel.heroImage} alt={rel.title} loading="lazy" decoding="async" width="60" height="60" style={{ width: '60px', height: '60px', objectFit: 'contain', marginBottom: '16px' }} />
                     <h4 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>{rel.title}</h4>
                     <span style={{ fontSize: '13px', color: 'var(--cyan)', fontWeight: 600 }}>Read More &rarr;</span>
                   </div>

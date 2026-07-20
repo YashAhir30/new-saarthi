@@ -64,7 +64,7 @@ const TiltCard = ({ item, index }) => {
         boxShadow: 'var(--shadow-glow)',
         transition: 'all 0.4s ease',
       }}>
-        <img src={item.image} alt={item.speciality} style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
+        <img src={item.image} alt={item.speciality} loading="lazy" decoding="async" width="48" height="48" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
       </div>
       <p style={{ 
         fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: 700, 

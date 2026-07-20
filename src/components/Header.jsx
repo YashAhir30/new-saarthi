@@ -248,6 +248,11 @@ const Header = () => {
             <img
               src={assets.header_img}
               alt="Dr. Yogin Baldaniya"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              width="600"
+              height="800"
               style={{
                 position: 'relative', zIndex: 1,
                 maxHeight: '500px', width: 'auto', objectFit: 'contain',

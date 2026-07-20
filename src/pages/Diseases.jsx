@@ -186,7 +186,7 @@ const Diseases = () => {
                     <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--grad-primary)', filter: 'blur(60px)', opacity: 0.1, borderRadius: '50%' }} />
                     
                     <div style={{ width: '100%', height: '200px', borderRadius: '16px', overflow: 'hidden', marginBottom: '20px', background: 'var(--glass-bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img src={disease.heroImage} alt={disease.title} style={{ width: '60%', height: '60%', objectFit: 'contain' }} />
+                      <img src={disease.heroImage} alt={disease.title} loading="lazy" decoding="async" width="120" height="120" style={{ width: '60%', height: '60%', objectFit: 'contain' }} />
                     </div>
                     
                     <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--cyan)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>
