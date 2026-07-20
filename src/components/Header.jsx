@@ -250,7 +250,9 @@ const Header = () => {
               style={{
                 position: 'relative', zIndex: 1,
                 maxHeight: '500px', width: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 40px 80px rgba(0,80,200,0.55)) drop-shadow(0 0 60px rgba(0,212,255,0.18))',
+                filter: 'drop-shadow(0 25px 40px rgba(0,120,255,0.18))',
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 82%, rgba(0,0,0,.95) 88%, rgba(0,0,0,.65) 94%, rgba(0,0,0,0) 100%)',
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 82%, rgba(0,0,0,.95) 88%, rgba(0,0,0,.65) 94%, rgba(0,0,0,0) 100%)',
               }}
             />
           </div>
