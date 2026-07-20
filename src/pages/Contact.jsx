@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { assets } from '../assets/assets'
-import { Mail, Phone, MapPin, Clock, MessageCircle, Send, ChevronRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, MessageCircle, ChevronRight } from 'lucide-react'
 
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
@@ -26,19 +26,6 @@ const workingHours = [
 ]
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
-  const [sent, setSent] = useState(false)
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSent(true)
-  }
-
-  const inputStyle = {
-    borderRadius: '14px',
-    padding: '16px 20px',
-  }
-
   return (
     <div style={{ background: 'var(--navy)', paddingTop: '80px' }}>
 
@@ -84,79 +71,37 @@ const Contact = () => {
           </div>
 
           {/* ── SPLIT: Form + Info ── */}
-          <div id="contact-form" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px' }}>
+          <div id="contact-info-expanded" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
 
-            {/* LEFT — Contact Form */}
-            <ScrollReveal className="reveal-left" style={{ flex: '1 1 420px' }}>
-              <div className="glass-card" style={{ padding: 'clamp(28px,4vw,44px)' }}>
-                <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '26px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '8px' }}>Send a Message</h2>
-                <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginBottom: '32px' }}>We'll get back to you within 24 hours.</p>
+            <ScrollReveal className="reveal-up" style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%' }}>
+              
 
-                {sent ? (
-                  <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                    <div className="icon-circle" style={{ margin: '0 auto 20px' }}><Send size={22} color={'var(--text-main)'} /></div>
-                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '10px' }}>Message Sent!</h3>
-                    <p style={{ color: 'var(--text-muted)' }}>Thank you for reaching out. We'll respond soon.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+                {/* Address */}
+                <div className="glass-card" style={{ padding: '24px' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                    <div className="icon-circle-sm"><MapPin size={16} color="var(--cyan)" /></div>
                     <div>
-                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Full Name</label>
-                      <input className="form-input" type="text" required placeholder="Your full name" value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} style={inputStyle} />
+                      <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>Visit Our Clinic</h4>
+                      <p style={{ fontSize: '14px', lineHeight: 1.7, color: 'var(--text-muted)' }}>Surat, Gujarat, India</p>
+                      <a href="https://www.google.com/maps/dir//Saarthi+Homoeopathic+Clinic+-+Dr.+Yogin+Baldaniya,+1st+FLOOR,+Midas+Square,+110,+Godadara+Rd,+Shakti+Nagar,+Surat,+Gujarat+395010/@22.5608807,72.9342447,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be04fcbd733deb7:0xf414a2a825e532e8!2m2!1d72.8718587!2d21.1805783?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ marginTop: '14px', padding: '8px 18px', fontSize: '13px' }}>
+                        Open in Maps <ChevronRight size={14} />
+                      </a>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                      <div>
-                        <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Email</label>
-                        <input className="form-input" type="email" required placeholder="your@email.com" value={form.email} onChange={e => setForm(p => ({ ...p, email: e.target.value }))} style={inputStyle} />
-                      </div>
-                      <div>
-                        <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Phone</label>
-                        <input className="form-input" type="tel" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={e => setForm(p => ({ ...p, phone: e.target.value }))} style={inputStyle} />
-                      </div>
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px' }}>Message</label>
-                      <textarea className="form-input" required placeholder="Tell us about your health concern..." rows={4} value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))} style={{ ...inputStyle, resize: 'none' }} />
-                    </div>
-                    <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '16px', fontSize: '16px', marginTop: '8px' }}>
-                      <Send size={16} /> Send Message
-                    </button>
-                  </form>
-                )}
-              </div>
-            </ScrollReveal>
-
-            {/* RIGHT — Clinic Info */}
-            <ScrollReveal className="reveal-right" style={{ flex: '1 1 340px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              {/* Clinic image */}
-              <div style={{ borderRadius: '24px', overflow: 'hidden', border: `1px solid var(--glass-border-hi)`, boxShadow: `var(--shadow-card)` }}>
-                <img src={assets.contact_image} alt="Saarthi Clinic" loading="lazy" decoding="async" width="340" height="220" style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
-              </div>
-
-              {/* Address */}
-              <div className="glass-card" style={{ padding: '24px' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-                  <div className="icon-circle-sm"><MapPin size={16} color="var(--cyan)" /></div>
-                  <div>
-                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>Visit Our Clinic</h4>
-                    <p style={{ fontSize: '14px', lineHeight: 1.7, color: 'var(--text-muted)' }}>Surat, Gujarat, India</p>
-                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{ marginTop: '14px', padding: '8px 18px', fontSize: '13px' }}>
-                      Open in Maps <ChevronRight size={14} />
-                    </a>
                   </div>
                 </div>
-              </div>
 
-              {/* Emergency */}
-              <div className="glass-card" style={{ padding: '24px', borderColor: `var(--glass-border, rgba(0,212,255,0.25))` }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-                  <div className="icon-circle-sm" style={{ background: 'rgba(0,212,255,0.12)', borderColor: `var(--glass-border, rgba(0,212,255,0.25))` }}><MessageCircle size={16} color="var(--cyan)" /></div>
-                  <div>
-                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>Emergency Consultation</h4>
-                    <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '14px' }}>For urgent concerns, WhatsApp us any time — we respond within 2 hours.</p>
-                    <a href="https://wa.me/+918733905727?text=Hi, I need urgent consultation" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: '13px', padding: '10px 20px' }}>
-                      <WhatsAppIcon /> WhatsApp Now
-                    </a>
+                {/* Emergency */}
+                <div className="glass-card" style={{ padding: '24px', borderColor: `var(--glass-border, rgba(0,212,255,0.25))` }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                    <div className="icon-circle-sm" style={{ background: 'rgba(0,212,255,0.12)', borderColor: `var(--glass-border, rgba(0,212,255,0.25))` }}><MessageCircle size={16} color="var(--cyan)" /></div>
+                    <div>
+                      <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>Emergency Consultation</h4>
+                      <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '14px' }}>For urgent concerns, WhatsApp us any time — we respond within 2 hours.</p>
+                      <a href="https://wa.me/+918733905727?text=Hi, I need urgent consultation" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: '13px', padding: '10px 20px' }}>
+                        <WhatsAppIcon /> WhatsApp Now
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
